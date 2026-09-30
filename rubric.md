@@ -2,7 +2,7 @@
 
 Version 1.0 · September 2026 · Owner: Business Development
 
-This document defines what the weekly Market Scan covers, how items are scored and selected, how they are written, and how the output maps onto the two-page template (`market-scan-template.html`). The agent is prompted directly from this file; changing this file changes the product.
+This document defines what the weekly Market Scan covers, how items are scored and selected, how they are written, and how the output maps onto the template (`template.html`). The agent is prompted directly from this file; changing this file changes the product.
 
 ---
 
@@ -18,17 +18,21 @@ This document defines what the weekly Market Scan covers, how items are scored a
 | Energy | Charge-point operators, utilities and grid operators, battery/storage OEMs, V2G/V2X, energy retailers touching vehicles | Commodity prices, generation policy with no asset-connectivity angle |
 | Agri / industrial OEMs | Agricultural, construction, mining, materials-handling and off-highway equipment makers | Crop prices, real-estate, pure commodity news |
 
-### 1.2 Lenses (columns of the heat-map)
+### 1.2 Themes / lenses (columns of the heat-map)
 
-An item must touch at least one lens to qualify.
+An item must touch at least one theme to qualify. Tag every theme an item genuinely touches, up to four, using the codes in brackets.
 
 | Lens | The question it answers |
 |---|---|
-| SDV | Is the machine becoming a software product — vehicle OS, OTA, app stores, feature-on-demand, centralised compute? |
-| Connectivity | Who provides, orchestrates, or pays for the link — eSIM, MVNO deals, satellite/NTN, roaming, network APIs, spectrum? |
-| AI | Is AI being deployed on the machine or on its data — edge inference, fleet-level models, copilots, autonomy licensing? |
-| Data management | Who owns, moves, monetises, or is regulated on the data — platforms, marketplaces, data-access rules, privacy? |
-| Digital twins | Is a live model of the asset or fleet being built and used for simulation, prediction, or operations? |
+| SDV (`sdv`) | Is the machine becoming a software product — vehicle OS, OTA, app stores, feature-on-demand, centralised compute? |
+| Connectivity (`connectivity`) | Who provides, orchestrates, or pays for the link — eSIM, MVNO deals, satellite/NTN, roaming, network APIs, spectrum? |
+| AI (`ai`) | Is AI being deployed on the machine or on its data — edge inference, fleet-level models, copilots, autonomy licensing? |
+| Data management (`data`) | Who owns, moves, monetises, or is regulated on the data — platforms, marketplaces, data-access rules, privacy? |
+| Digital twins (`twins`) | Is a live model of the asset or fleet being built and used for simulation, prediction, or operations? |
+| Regulatory framework (`regulatory`) | What laws, rules, type-approval or standards obligations change what makers and operators must do — EU Data Act, Cyber Resilience Act, UNECE R155/R156, AV and robotaxi rules, FCC and MIIT decisions, V2G and grid codes? |
+| Cybersecurity (`cyber`) | Is the security of connected machines changing — vulnerabilities and attacks, security recalls, R155 / ISO/SAE 21434 compliance, security certifications, secure elements and eSIM security assurance? |
+| Quality (`quality`) | Is product quality or safety in question — safety investigations, recalls, OTA fixes for defects, software quality, ISO 26262 / functional safety, reliability programmes? |
+| Telematics services (`telematics`) | Who sells services on top of the connection — TSP and fleet-telematics offers, remote diagnostics, usage-based insurance, stolen-vehicle tracking, eCall, fleet-management platforms and their pricing? |
 
 ### 1.3 Time window
 
@@ -38,9 +42,9 @@ Items published Monday 00:00 to Sunday 23:59 UTC of the scan week. Items older t
 
 ## 2. Sources
 
-Tier 1 (always scanned): OEM and vendor newsrooms; regulator and standards bodies (UNECE, EU Commission, GSMA, 3GPP, AUTOSAR, COVESA, SOAFEE, ISO/SAE); SoftBank Group and portfolio announcements.
+Tier 1 (always scanned): OEM and vendor newsrooms; regulator and standards bodies (UNECE WP.29, EU Commission, NHTSA, FCC, MIIT, national type-approval authorities such as KBA, GSMA, 3GPP, AUTOSAR, COVESA, SOAFEE, ISO/SAE); recall databases and security advisories (NHTSA recalls, EU Safety Gate, Auto-ISAC, CISA/ENISA, vendor PSIRTs); SoftBank Group and portfolio announcements.
 
-Tier 2 (scanned, weighted lower): Trade press for automotive, robotics, fleets and logistics, energy, and agri/construction; telco and IoT trade press; analyst briefings.
+Tier 2 (scanned, weighted lower): Trade press for automotive, robotics, fleets and logistics, energy, and agri/construction; telco and IoT trade press; telematics and fleet-management press; automotive cybersecurity research and press; law-firm regulatory briefings; analyst briefings.
 
 Tier 3 (context only, never sole source): General business press, aggregator sites, social posts by executives.
 
@@ -74,7 +78,7 @@ Thresholds:
 3. No actor appears in more than two items on the same page, so the scan is not captured by one company's news cycle.
 4. Deals table: every qualifying item that is a signed agreement, investment, or acquisition, regardless of whether it also appears as a card. Maximum 6 rows.
 5. Watch list: up to 6 items scored 4–5, preferring items likely to mature within a month.
-6. Heat-map counts: the number of qualifying items (score ≥ 6) per domain × lens cell; an item tagged with two lenses counts once in each.
+6. Heat-map counts: the number of qualifying items (score ≥ 6) per domain × theme cell; an item tagged with several themes counts once in each. The script computes the heat-map from the items; the agent does not.
 7. Read-across: written last, after selection, and must reference the heat-map.
 
 ---
@@ -87,10 +91,10 @@ The curation pass emits one JSON object per item. The publish step fills the tem
 {
   "id": "2026-W37-007",
   "domain": "automotive | robotics | fleets | energy | agri",
-  "lenses": ["sdv", "connectivity", "ai", "data", "twins"],
+  "lenses": ["sdv", "connectivity", "ai", "data", "twins", "regulatory", "cyber", "quality", "telematics"],
   "headline": "≤ 14 words, present tense, names the actor",
-  "summary": "2–3 sentences, ≤ 60 words, facts only",
-  "so_what": "1 sentence, ≤ 16 words, plain factual significance; no advice or actions",
+  "summary": "2–3 sentences, ≤ 40 words, facts only",
+  "so_what": "1 sentence, ≤ 20 words, plain factual significance; no advice or actions",
   "sources": [{"outlet": "", "date": "YYYY-MM-DD", "url": "", "tier": 1}],
   "score": {"significance": 3, "novelty": 2, "relevance": 3, "modifiers": 0, "total": 8},
   "actors": ["Company A", "Company B"],
@@ -123,7 +127,7 @@ Edition-level fields:
 - British English, sentence case, numerals for all numbers over nine, currency in the original with a GBP or EUR conversion in brackets where above £10m.
 - Company names as they style themselves; no stock tickers.
 - Sources are named with the date of publication, never "reports say".
-- Total length target: page 1 ≈ 620 words, page 2 ≈ 640 words. The template's fixed slots enforce this; the agent must stay within the per-field word limits in §5 or the PDF spills to three pages.
+- Layout: page 1 is the overview (Signal of the week, the nine-theme heat-map, the read-across); the verticals, deals and watch list follow from page 2. The edition is capped at `layout.max_pages` in config.yaml (default 4); the script trims deals, the watch list and then cards to stay within it. The agent must keep to the per-field word limits in §5; over-length text is rewritten, never cut mid-sentence.
 
 ---
 
@@ -133,7 +137,7 @@ Edition-level fields:
 |---|---|
 | Masthead edition and week | `edition`, `week_label` |
 | Signal of the Week | item referenced by `signal`: headline, summary, so_what, sources |
-| Heat-map | `heatmap`; cell class h0 (0), h1 (1–2), h2 (3–5), h3 (6+) |
+| Heat-map | computed from items with score ≥ 6: domain × nine themes; cell class h0 (0), h1 (1–2), h2 (3–5), h3 (6+) |
 | The read-across | `read_across[0..1]`; stats from `counts` |
 | Domain sections | top 3 items per domain by score; tags from `lenses` |
 | Deals table | items with a non-empty `deal` |
@@ -144,13 +148,13 @@ Edition-level fields:
 
 ## 8. Agent prompt skeleton (for the pipeline build)
 
-**Scan pass** — 20 searches: 4 domains × 5 lenses, past 7 days, English and Japanese, returning up to 10 candidates each with outlet, date, URL, and a two-line gist. De-duplicate on actor + event.
+**Scan pass** — one web-search call per domain (5 domains) covering all nine themes, with dedicated searches for regulatory, cybersecurity, quality and telematics services; past 7 days, English and Japanese, returning up to 10 candidates each with outlet, date, URL, and a two-line gist. De-duplicate on actor + event.
 
 **Curation pass** — receives candidate list and this rubric (§1–§4, §6). Scores each candidate, returns the JSON in §5, and writes the read-across last.
 
 **Review pass** — a second model call checks: every item has a Tier 1–2 source and date; no field exceeds its word limit; no actor exceeds two cards per page; the Signal is the top score; the heat-map counts reconcile with the items. Failures are corrected before render.
 
-**Publish** — fill `market-scan-template.html`, render to A4 PDF with WeasyPrint, assert page count = 2, email as attachment with the Signal headline as the subject line.
+**Publish** — fill `template.html`, render to A4 PDF with WeasyPrint within `layout.max_pages`, email as attachment with the Signal headline as the subject line.
 
 ---
 
