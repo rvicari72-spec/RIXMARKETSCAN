@@ -4,279 +4,31 @@
  "generated": "2026-09-30",
  "counts": {
   "screened": 75,
-  "qualified": 18,
+  "qualified": 14,
   "customer_relevant": 6
- },
- "heatmap": {
-  "automotive": {
-   "sdv": 4,
-   "connectivity": 3,
-   "ai": 2,
-   "data": 2,
-   "twins": 0
-  },
-  "robotics": {
-   "sdv": 3,
-   "connectivity": 0,
-   "ai": 4,
-   "data": 1,
-   "twins": 0
-  },
-  "fleets": {
-   "sdv": 2,
-   "connectivity": 2,
-   "ai": 3,
-   "data": 3,
-   "twins": 0
-  },
-  "energy": {
-   "sdv": 2,
-   "connectivity": 0,
-   "ai": 2,
-   "data": 3,
-   "twins": 0
-  },
-  "agri": {
-   "sdv": 1,
-   "connectivity": 1,
-   "ai": 3,
-   "data": 1,
-   "twins": 1
-  }
  },
  "signal": "2026-W40-001",
  "read_across": [
-  "Regulation is the through-line this week. The EU Data Act's design-by-default duties applied from 12 September, and by month-end Wialon, High-Mobility and Flespi were shipping OEM-native data pipelines to fleets. Six of 18 qualified items touch a named Cubic³ account.",
-  "The heat-map shows SDV and AI concentrating in automotive and robotics, whilst data and connectivity dominate fleets and energy. Kigen's SGP.32 v1.3 eSIM certification, Elli's commercial V2G launch and SoftBank's October GPU cloud go-live mark a week in which orchestration layers hardened across five domains."
+  "Regulators dominated the week. NHTSA activity around Tesla's Cybercab self-certification, Zoox's robotaxi exemption, Waymo's flooded-road OTA recall and the Recalls Next notice signals a US framework being rewritten around driverless vehicles. In Europe, Volkswagen and Elli's Q4 V2G launch and the IEA's first standalone V2G report coincide with a maturing EU Data Act regime that has moved fleet telematics access closer to a commodity.",
+  "Connectivity and cyber signals reinforced each other. Kigen's SGP.32 v1.3 eSIM certification, the Iridium–Deutsche Telekom–Toyota NB-IoT satellite voice demonstration and Thales's five-operator SGP.32 rollout show the eSIM-plus-NTN stack reaching commercial readiness. UN R155/R156, the EU Cyber Resilience Act and Japan's Active Cyber Defence law extend certified CSMS and SBOM obligations from cars to robots, chargers and off-highway machines, with quality and cyber recalls increasingly indistinguishable."
  ],
  "items": [
   {
    "id": "2026-W40-001",
-   "domain": "automotive",
+   "domain": "robotics",
    "lenses": [
-    "connectivity"
-   ],
-   "headline": "Kigen wins first GSMA eSA certification for SGP.32 v1.3 automotive eSIM",
-   "summary": "Arm's Kigen unit earned GSMA SGP.32 v1.3 automotive eSIM certification, paired with Infineon's TEGRION SLI22. OEM sampling in ETSI MFF2 begins October 2026; China Mobile International is connectivity partner.",
-   "so_what": "Sets the reference eSIM stack competing directly with Cubic³ orchestration for long-life vehicle fleets.",
-   "sources": [
-    {
-     "outlet": "Kigen press release (media-outreach.com)",
-     "date": "2026-09-29",
-     "url": "https://www.media-outreach.com/news/united-kingdom/2026/09/29/490584/",
-     "tier": 1
-    },
-    {
-     "outlet": "IoT Business News",
-     "date": "2026-09-29",
-     "url": "https://iotbusinessnews.com/2026/09/24/kigen-brings-sgp-32-v1-3-to-esa-certified-automotive-esims",
-     "tier": 2
-    }
-   ],
-   "score": {
-    "significance": 4,
-    "novelty": 3,
-    "relevance": 3,
-    "modifiers": 0,
-    "total": 10
-   },
-   "actors": [
-    "Arm Kigen",
-    "Infineon",
-    "China Mobile International",
-    "GSMA"
-   ],
-   "deal": {
-    "who": "Arm Kigen",
-    "with": "Infineon, China Mobile International",
-    "what": "First SGP.32 v1.3 automotive eSIM certified, OEM sampling Oct 2026",
-    "relevance": "Competitive"
-   },
-   "relationship_flags": [
-    "competitor"
-   ]
-  },
-  {
-   "id": "2026-W40-002",
-   "domain": "automotive",
-   "lenses": [
-    "sdv",
-    "ai"
-   ],
-   "headline": "SoundHound launches on-device agentic voice AI for vehicles",
-   "summary": "SoundHound unveiled OASYS Edge on 24 September 2026, an embedded LLM voice system running agentic reasoning fully on-device. Automotive deployment is due late 2026, with CES 2027 demonstrations across cloud, edge and hybrid environments.",
-   "so_what": "Shifts cockpit AI inference from cloud to edge, reducing dependence on cellular data pipes.",
-   "sources": [
-    {
-     "outlet": "SoundHound Investor Newsroom",
-     "date": "2026-09-24",
-     "url": "https://investors.soundhound.com/news-releases/news-release-details/soundhound-ai-introduces-oasys-edge",
-     "tier": 1
-    }
-   ],
-   "score": {
-    "significance": 3,
-    "novelty": 3,
-    "relevance": 2,
-    "modifiers": 0,
-    "total": 8
-   },
-   "actors": [
-    "SoundHound AI"
-   ],
-   "deal": null,
-   "relationship_flags": []
-  },
-  {
-   "id": "2026-W40-003",
-   "domain": "automotive",
-   "lenses": [
-    "data",
+    "regulatory",
+    "quality",
     "sdv"
    ],
-   "headline": "EU Data Act design-by-default duties bite on connected vehicles",
-   "summary": "EU Data Act design-by-default obligations applied from 12 September 2026, requiring connected vehicle makers to embed real-time third-party data access. Direct user access must be free; B2B sharing follows FRAND compensation rules.",
-   "so_what": "Every European connected car sold from now must ship with open data access as standard.",
+   "headline": "NHTSA orders Tesla to justify Cybercab self-certification by 30 September",
+   "summary": "NHTSA issued a Special Order on 10 September under Audit Query AQ26002, demanding sworn answers to 21 questions on how Tesla self-certified the no-wheel, no-pedal Cybercab as FMVSS-compliant. Around 1,000 units operate in Austin; responses were due 30 September 2026.",
+   "so_what": "First formal US challenge to self-certification of a purpose-built driverless vehicle already carrying paying riders.",
    "sources": [
     {
-     "outlet": "vxlabs.ai regulatory brief",
-     "date": "2026-09-12",
-     "url": "https://vxlabs.ai/resources/eu-data-act-connected-vehicles/",
-     "tier": 2
-    },
-    {
-     "outlet": "Mordor Intelligence / marqstats.com",
-     "date": "2026-09-18",
-     "url": "https://www.mordorintelligence.com/industry-reports/automotive-data-monetization-market",
-     "tier": 2
-    }
-   ],
-   "score": {
-    "significance": 4,
-    "novelty": 2,
-    "relevance": 3,
-    "modifiers": 1,
-    "total": 10
-   },
-   "actors": [
-    "European Commission",
-    "CARIAD",
-    "BMW Group",
-    "Mercedes-Benz"
-   ],
-   "deal": null,
-   "relationship_flags": [
-    "inferred"
-   ]
-  },
-  {
-   "id": "2026-W40-004",
-   "domain": "robotics",
-   "lenses": [
-    "ai",
-    "sdv"
-   ],
-   "headline": "Wayve signs Nissan, Uber and Mercedes-Benz for AI autonomy",
-   "summary": "Wayve partnered with Nissan and Uber to launch a Tokyo robotaxi service combining Wayve's AI with Nissan ProPilot, and separately signed Mercedes-Benz to embed its stack in Mercedes SDV platforms.",
-   "so_what": "Positions Wayve as the leading independent autonomy licensor across three major OEM programmes.",
-   "sources": [
-    {
-     "outlet": "TechCrunch Mobility",
-     "date": "2026-09-27",
-     "url": "https://techcrunch.com/2026/09/27/techcrunch-mobility-av-companies-pick-their-lanes",
-     "tier": 2
-    },
-    {
-     "outlet": "AV Market Strategist (Substack)",
-     "date": "2026-09-28",
-     "url": "https://avmarketstrategist.substack.com/p/waymos-54-fleet-growth-in-texas-and",
-     "tier": 2
-    }
-   ],
-   "score": {
-    "significance": 4,
-    "novelty": 3,
-    "relevance": 3,
-    "modifiers": 1,
-    "total": 11
-   },
-   "actors": [
-    "Wayve",
-    "Nissan",
-    "Uber",
-    "Mercedes-Benz"
-   ],
-   "deal": {
-    "who": "Wayve",
-    "with": "Nissan, Uber, Mercedes-Benz",
-    "what": "Tokyo robotaxi launch and Mercedes SDV integration",
-    "relevance": "Prospect"
-   },
-   "relationship_flags": [
-    "prospect",
-    "inferred"
-   ]
-  },
-  {
-   "id": "2026-W40-005",
-   "domain": "robotics",
-   "lenses": [
-    "ai",
-    "sdv",
-    "data"
-   ],
-   "headline": "Uber commits $10bn to AVs with Rivian and Avride deals",
-   "summary": "Uber announced roughly $10bn in AV investment, including $7.5bn for fleet procurement and a Rivian deal for 10,000 robotaxis, with an option for 50,000 by 2030. The Waymo partnership unwinds by 2028; Avride and Motional cover Dallas and Las Vegas.",
-   "so_what": "Reshapes the robotaxi supply chain with Uber owning fleet capital rather than platform rides.",
-   "sources": [
-    {
-     "outlet": "Smart Cities Dive (citing FT)",
-     "date": "2026-09-22",
-     "url": "https://www.smartcitiesdive.com/news/robotaxi-wars-uber-waymo-zoox-tesla/830930/",
-     "tier": 2
-    }
-   ],
-   "score": {
-    "significance": 4,
-    "novelty": 3,
-    "relevance": 2,
-    "modifiers": 1,
-    "total": 10
-   },
-   "actors": [
-    "Uber",
-    "Rivian",
-    "Waymo",
-    "Avride",
-    "Motional",
-    "Lucid"
-   ],
-   "deal": {
-    "who": "Uber",
-    "with": "Rivian",
-    "what": "10,000 robotaxis, option to 50,000 by 2030 (~$10bn)",
-    "relevance": "Prospect"
-   },
-   "relationship_flags": [
-    "prospect",
-    "inferred"
-   ]
-  },
-  {
-   "id": "2026-W40-006",
-   "domain": "robotics",
-   "lenses": [
-    "sdv",
-    "ai"
-   ],
-   "headline": "NHTSA opens audit into Tesla Cybercab safety self-certification",
-   "summary": "NHTSA opened Audit Query AQ26002 on 3 September 2026 into Tesla's self-certification that the Cybercab meets Federal Motor Vehicle Safety Standards after it entered paid public service in Austin. The Cybercab has no steering wheel or pedals.",
-   "so_what": "First federal audit of a supervisorless robotaxi tests the limits of self-certification.",
-   "sources": [
-    {
-     "outlet": "NHTSA record via Tesla Robotaxi article",
-     "date": "2026-09-03",
-     "url": "https://en.wikipedia.org/wiki/Tesla_Robotaxi",
+     "outlet": "NHTSA",
+     "date": "2026-09-30",
+     "url": "https://www.nhtsa.gov/press-releases/investigation-tesla-cybercab-self-certification",
      "tier": 1
     }
    ],
@@ -291,65 +43,64 @@
     "Tesla",
     "NHTSA"
    ],
-   "deal": null,
-   "relationship_flags": []
+   "deal": {},
+   "relationship_flags": [
+    "competitor"
+   ]
   },
   {
-   "id": "2026-W40-007",
-   "domain": "fleets",
+   "id": "2026-W40-002",
+   "domain": "automotive",
    "lenses": [
-    "data",
-    "connectivity"
+    "quality",
+    "sdv",
+    "regulatory"
    ],
-   "headline": "Wialon opens OEM-native vehicle data to fleets via High-Mobility and Flespi",
-   "summary": "Wialon established a data pipeline via High-Mobility and Flespi, giving fleet owners direct, warranty-safe OEM vehicle data without aftermarket hardware, framed as an EU Data Act compliance response.",
-   "so_what": "Removes the aftermarket dongle from fleet telematics for EU operators using Wialon.",
+   "headline": "Volkswagen recalls 49,958 MY2025 Tiguans over BCM software that can stall engine",
+   "summary": "NHTSA campaign 26V587 covers 49,958 MY2025 Tiguans whose Body Control Module mishandles ECC errors, resetting mid-drive and disabling ignition, exterior lights, airbags and rearview camera. Dealers will reflash to BCM version 0326; owner letters follow on 6 November 2026.",
+   "so_what": "Named account faces a software-defect recall touching airbags and drivetrain, remediated only in-workshop.",
    "sources": [
     {
-     "outlet": "Work Truck Online",
-     "date": "2026-09-09",
-     "url": "https://www.worktruckonline.com/news/wialon-unlocks-oem-data-to-give-fleet-owners-data-ownership-operational-clarity",
-     "tier": 2
+     "outlet": "NHTSA",
+     "date": "2026-09-25",
+     "url": "https://static.nhtsa.gov/odi/rcl/2026/RCLRPT-26V587-5272.pdf",
+     "tier": 1
     }
    ],
    "score": {
     "significance": 3,
-    "novelty": 3,
+    "novelty": 2,
     "relevance": 3,
     "modifiers": 1,
-    "total": 10
+    "total": 9
    },
    "actors": [
-    "Wialon (Gurtam)",
-    "High-Mobility",
-    "Flespi"
+    "Volkswagen Group of America",
+    "NHTSA"
    ],
-   "deal": {
-    "who": "Wialon",
-    "with": "High-Mobility, Flespi",
-    "what": "Native OEM data pipeline for fleet operators",
-    "relevance": "Partner"
-   },
+   "deal": {},
    "relationship_flags": [
-    "partner"
+    "prospect",
+    "inferred"
    ]
   },
   {
-   "id": "2026-W40-008",
-   "domain": "fleets",
+   "id": "2026-W40-003",
+   "domain": "automotive",
    "lenses": [
-    "ai",
-    "connectivity"
+    "connectivity",
+    "cyber",
+    "sdv"
    ],
-   "headline": "SoftBank launches NVIDIA GB200 AI data-centre GPU cloud in October",
-   "summary": "SoftBank is launching its AI Data Centre GPU Cloud in October 2026 using NVIDIA GB200 NVL72 systems in Japanese data centres, integrated with its mobile network as distributed AI-RAN infrastructure.",
-   "so_what": "Gives SoftBank a native latency-sensitive AI hosting layer adjacent to its mobile network.",
+   "headline": "Kigen automotive eSIM is first certified to GSMA SGP.32 v1.3",
+   "summary": "Arm's Kigen unit achieved GSMA eUICC Security Assurance certification for an automotive eSIM on Infineon's TEGRION SLI22, the first to SGP.32 v1.3 with emergency-profile and post-quantum mitigations. OEM sampling in MFF2 and GSMA interoperability testing both begin October 2026.",
+   "so_what": "Sets the reference security bar competitors must match to sell SGP.32 automotive eSIMs to long-life fleets.",
    "sources": [
     {
-     "outlet": "TelecomLead",
-     "date": "2026-09-30",
-     "url": "https://telecomlead.com/telecom-services/ai-network-infrastructure-2026-why-telecom-operators-are-rebuilding-fiber-data-centers-and-ai-ran-127939",
-     "tier": 2
+     "outlet": "Media OutReach Newswire",
+     "date": "2026-09-29",
+     "url": "https://laotiantimes.com/2026/09/29/kigen-automotive-esim-first-to-achieve-gsma-esa-certification-bringing-latest-sgp-32-security-to-connected-vehicle-oems-for-long-life-fleets",
+     "tier": 1
     }
    ],
    "score": {
@@ -360,35 +111,36 @@
     "total": 9
    },
    "actors": [
-    "SoftBank",
-    "NVIDIA"
+    "Arm Kigen",
+    "Infineon",
+    "GSMA"
    ],
    "deal": {
-    "who": "SoftBank",
-    "with": "NVIDIA",
-    "what": "GB200 NVL72 AI GPU cloud launch, October 2026",
-    "relevance": "SoftBank"
+    "who": "Arm Kigen",
+    "with": "Infineon",
+    "what": "SGP.32 v1.3 automotive eSIM certified by GSMA",
+    "relevance": "Competitive"
    },
    "relationship_flags": [
-    "softbank"
+    "competitor"
    ]
   },
   {
-   "id": "2026-W40-009",
-   "domain": "fleets",
+   "id": "2026-W40-004",
+   "domain": "energy",
    "lenses": [
-    "sdv",
-    "ai",
-    "data"
+    "regulatory",
+    "connectivity",
+    "telematics"
    ],
-   "headline": "Google Cloud and Valtech build Nexus SDV platform on Bigtable",
-   "summary": "Google Cloud partner Valtech detailed Nexus SDV, linking AAOS in-vehicle services to fleet telemetry in Google Bigtable. Continuous materialised views pre-compute fleet-wide metrics such as battery temperature and torque distribution.",
-   "so_what": "Puts Google's SDV stack directly against orchestration incumbents for OEM fleet telemetry.",
+   "headline": "Volkswagen and Elli set Q4 2026 launch of integrated V2G package in Germany",
+   "summary": "Volkswagen and energy subsidiary Elli confirmed a Q4 2026 German launch of a bundled V2G offer combining an EV, bidirectional charger, smart meter, app and tariff, letting customers export stored power for revenue. Pre-registration opened June 2026.",
+   "so_what": "First major OEM to sell V2G as a single retail bundle rather than a pilot, standardising the customer journey.",
    "sources": [
     {
-     "outlet": "Google Cloud Blog (Japanese)",
-     "date": "2026-07-29",
-     "url": "https://cloud.google.com/blog/ja/products/databases/nexus-sdv-uses-bigtable-android-automotive-for-agentic-vehicles?hl=ja",
+     "outlet": "Volkswagen Group Newsroom",
+     "date": "2026-09-29",
+     "url": "https://www.volkswagen-group.com/en/press-releases/electric-vehicle-batteries-as-grid-storage-volkswagen-and-elli-to-launch-vehicle-to-grid-offer-20329",
      "tier": 1
     }
    ],
@@ -396,33 +148,115 @@
     "significance": 3,
     "novelty": 3,
     "relevance": 2,
-    "modifiers": 0,
-    "total": 8
+    "modifiers": 1,
+    "total": 9
    },
    "actors": [
-    "Google Cloud",
-    "Valtech"
+    "Volkswagen",
+    "Elli"
    ],
-   "deal": null,
+   "deal": {
+    "who": "Volkswagen",
+    "with": "Elli",
+    "what": "Integrated V2G retail bundle for Germany",
+    "relevance": "Prospect"
+   },
    "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-005",
+   "domain": "fleets",
+   "lenses": [
+    "connectivity",
+    "telematics"
+   ],
+   "headline": "Iridium, Deutsche Telekom IoT and Toyota send first NB-IoT satellite voice message",
+   "summary": "On 10 September 2026, Iridium and Deutsche Telekom IoT demonstrated a standards-based NB-IoT voice message from a Toyota vehicle via Iridium LEO satellites, completing a global roaming agreement. Commercial availability for automotive and logistics customers is planned for Q4 2026.",
+   "so_what": "Named-account OEM validates a live NB-IoT NTN path for connected-vehicle services beyond cellular coverage.",
+   "sources": [
+    {
+     "outlet": "Iridium newsroom",
+     "date": "2026-09-10",
+     "url": "https://investor.iridium.com/2026-09-10-Iridium,-Deutsche-Telekom-IoT,-and-Toyota-Demonstrate-Voice-Messaging-over-Satellite-via-Iridium-NTN-Direct",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Iridium Communications",
+    "Deutsche Telekom IoT",
+    "Toyota"
+   ],
+   "deal": {
+    "who": "Iridium",
+    "with": "Deutsche Telekom IoT",
+    "what": "Global NB-IoT NTN roaming agreement with Toyota demo",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "customer",
     "competitor"
    ]
   },
   {
-   "id": "2026-W40-010",
-   "domain": "energy",
+   "id": "2026-W40-006",
+   "domain": "robotics",
    "lenses": [
-    "sdv",
-    "data"
+    "regulatory",
+    "quality"
    ],
-   "headline": "VW's Elli launches commercial V2G package in Germany",
-   "summary": "Elli commercially launched its V2G package in Germany — a DC bidirectional charger, Volkswagen Naturstrom V2G Flow tariff and Elli BiDi App — targeting around 360,000 V2G-ready vehicles. ID. Software 6 OTA extends compatibility beyond the 77 kWh threshold.",
-   "so_what": "First European OEM to package V2G hardware, tariff and app as a retail bundle.",
+   "headline": "NHTSA grants Zoox first commercial exemption for a purpose-built robotaxi",
+   "summary": "NHTSA granted Zoox a temporary exemption allowing up to 2,500 purpose-built robotaxis annually for two years, the first for a driverless vehicle without conventional controls. The agency also signalled FMVSS updates and is developing National Competency Standards for ADS-equipped vehicles.",
+   "so_what": "Creates a US legal route to scale non-conventional robotaxis before FMVSS is rewritten.",
    "sources": [
     {
-     "outlet": "Elli / Volkswagen Group Newsroom",
-     "date": "2026-10-01",
-     "url": "https://www.elli.eco/en/about-elli/news/newsroom/vehicle-to-grid",
+     "outlet": "Advocates for Highway and Auto Safety citing NHTSA",
+     "date": "2026-07-30",
+     "url": "https://saferoads.org/july-2026-nhtsa-av-action/",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "Zoox",
+    "NHTSA",
+    "Amazon"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W40-007",
+   "domain": "robotics",
+   "lenses": [
+    "regulatory",
+    "cyber"
+   ],
+   "headline": "FCC adds foreign humanoid and quadruped robots to Covered List",
+   "summary": "FCC Public Notice DA 26-786 added foreign-produced networked robots over 4.4 lb to the Covered List on 28 July 2026, citing remote-takeover and supply-chain risks. New foreign models require conditional approval; previously authorised units are grandfathered through 2029.",
+   "so_what": "Ties robotics market access in the US to cybersecurity and origin, reshaping OEM sourcing decisions.",
+   "sources": [
+    {
+     "outlet": "FCC",
+     "date": "2026-07-28",
+     "url": "https://docs.fcc.gov/public/attachments/DOC-423682A1.pdf",
      "tier": 1
     }
    ],
@@ -434,36 +268,148 @@
     "total": 10
    },
    "actors": [
-    "Volkswagen",
-    "Elli"
+    "FCC",
+    "CISA"
    ],
-   "deal": {
-    "who": "Elli",
-    "with": "Volkswagen Group brands",
-    "what": "Commercial V2G bundle launch across Germany",
-    "relevance": "Prospect"
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W40-008",
+   "domain": "automotive",
+   "lenses": [
+    "quality",
+    "sdv"
+   ],
+   "headline": "Rivian recalls 100,700 vehicles over prompt obscuring rearview camera",
+   "summary": "Rivian filed a recall on 23 September 2026 covering 2022–2026 R1T, 2022–2027 R1S and 2027 R2 vehicles because a stability-control prompt can obscure the rearview image in reverse, breaching FMVSS 111. Over 95% of affected vehicles already carried the OTA fix.",
+   "so_what": "Illustrates recalls becoming administrative closure of already-deployed OTA remedies, not workshop events.",
+   "sources": [
+    {
+     "outlet": "CNBC",
+     "date": "2026-09-23",
+     "url": "https://cnbc.com/2026/09/23/rivian-recalls-about-100700-vehicles-over-rearview-camera-issue.html",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 7
    },
+   "actors": [
+    "Rivian Automotive",
+    "NHTSA"
+   ],
+   "deal": {},
    "relationship_flags": [
     "prospect",
     "inferred"
    ]
   },
   {
-   "id": "2026-W40-011",
-   "domain": "energy",
+   "id": "2026-W40-009",
+   "domain": "fleets",
    "lenses": [
-    "sdv",
-    "connectivity"
+    "telematics",
+    "data",
+    "ai"
    ],
-   "headline": "GM commits all future EVs to V2G and ISO 15118 standards",
-   "summary": "GM committed to V2G capability across all planned future EV models. Its current fleet of around 250,000 V2G-capable vehicles could power 120,000 homes for a week. ISO 15118 is the cited communication framework.",
-   "so_what": "Locks in bidirectional charging across GM's future range using an open communication standard.",
+   "headline": "GM launches OnStar Fleet Intelligence platform",
+   "summary": "On 30 September 2026 GM unveiled OnStar Fleet Intelligence, a centralised service integrating factory-embedded vehicle data with connected services to optimise asset utilisation, risk and operating cost for fleet managers. The launch extends OnStar's B2B position against aftermarket TSPs.",
+   "so_what": "Named-account OEM pushes deeper into fleet telematics using its own embedded data as the baseline product.",
    "sources": [
     {
-     "outlet": "GM Newsroom",
-     "date": "2026-06-09",
-     "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2026/jun/0609-bidirectional-evs.html",
-     "tier": 1
+     "outlet": "PR Newswire via GuruFocus",
+     "date": "2026-09-30",
+     "url": "https://gurufocus.com/news/9103684/general-motors-gm-launches-onstar-fleet-intelligence-platform-to-enhance-fleet-management",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "General Motors",
+    "OnStar"
+   ],
+   "deal": {
+    "who": "General Motors",
+    "with": "OnStar",
+    "what": "OnStar Fleet Intelligence platform launch",
+    "relevance": "Customer"
+   },
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W40-010",
+   "domain": "fleets",
+   "lenses": [
+    "connectivity",
+    "regulatory",
+    "telematics"
+   ],
+   "headline": "Thales and four APAC operators deploy multi-network IoT eSIM using SGP.32",
+   "summary": "Thales, Singtel, Optus, AIS and Globe Telecom launched a multi-operator IoT eSIM network based on GSMA SGP.32, letting connected vehicles and fleet devices switch between participating networks across borders without SIM replacement. The rollout targets the automotive and commercial-fleet segment.",
+   "so_what": "First live cross-border SGP.32 deployment in Asia-Pacific for vehicle and fleet devices.",
+   "sources": [
+    {
+     "outlet": "PaveInsight",
+     "date": "2026-09-28",
+     "url": "https://www.paveinsight.com/news/tag/m2m",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Thales",
+    "Singtel",
+    "Optus",
+    "AIS",
+    "Globe Telecom"
+   ],
+   "deal": {
+    "who": "Thales",
+    "with": "Singtel, Optus, AIS, Globe Telecom",
+    "what": "Multi-operator SGP.32 IoT eSIM network for vehicles",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W40-011",
+   "domain": "agri",
+   "lenses": [
+    "ai",
+    "sdv",
+    "twins",
+    "data"
+   ],
+   "headline": "Komatsu and EARTHBRAIN partner with AIM Intelligent Machines on autonomous dozers and excavators",
+   "summary": "Komatsu and subsidiary EARTHBRAIN announced a partnership with AIM Intelligent Machines to deliver autonomous bulldozers and excavators in the US and Japan, integrating AIM's physical-AI stack with Komatsu's Smart Construction platform. US deployment is underway; Japan follows in 2027.",
+   "so_what": "Named agri/industrial account commits to a physical-AI autonomy stack across two flagship machine categories.",
+   "sources": [
+    {
+     "outlet": "Power Progress",
+     "date": "2026-08-03",
+     "url": "https://www.powerprogress.com/news/komatsu-aim-intelligent-machines-partner-on-autonomy/8128401.article",
+     "tier": 2
     }
    ],
    "score": {
@@ -474,9 +420,16 @@
     "total": 9
    },
    "actors": [
-    "General Motors"
+    "Komatsu",
+    "EARTHBRAIN",
+    "AIM Intelligent Machines"
    ],
-   "deal": null,
+   "deal": {
+    "who": "Komatsu",
+    "with": "AIM Intelligent Machines",
+    "what": "Autonomy partnership for dozers and excavators in US and Japan",
+    "relevance": "Customer"
+   },
    "relationship_flags": [
     "customer"
    ]
@@ -485,55 +438,49 @@
    "id": "2026-W40-012",
    "domain": "energy",
    "lenses": [
-    "ai",
-    "data"
+    "regulatory",
+    "connectivity"
    ],
-   "headline": "ELECTRA AI files updated SEC prospectus for Nasdaq battery-intelligence SPAC",
-   "summary": "ELECTRA AI and Iron Horse Acquisition II filed an updated Form 425 detailing a multi-terawatt-hour BESS pipeline built on agentic AI and physics-informed battery modelling. The combined company expects to list on Nasdaq as AIBR in H2 2026.",
-   "so_what": "Creates the first pure-play listed AI battery-intelligence company for grid-scale storage.",
+   "headline": "IEA publishes first standalone V2G report finding 75% cut in transformer overloads",
+   "summary": "The IEA released its first dedicated V2G report on 25 September 2026, concluding bidirectional charging could prevent three-quarters of distribution-transformer overloads by 2050 versus uncontrolled charging, based on San Francisco modelling. Inconsistent standards are the main commercial barrier.",
+   "so_what": "Puts V2G on the agenda of grid regulators worldwide with a concrete infrastructure-avoidance number.",
    "sources": [
     {
-     "outlet": "U.S. SEC EDGAR (Form 425)",
-     "date": "2026-10-01",
-     "url": "https://www.sec.gov/Archives/edgar/data/0002051985/000121390026101966/ea030611001ex99-1.htm",
+     "outlet": "IEA via GCN",
+     "date": "2026-09-25",
+     "url": "https://gcn.com/v2g-charging-iea-report-cites-study/21926",
      "tier": 1
     }
    ],
    "score": {
     "significance": 3,
-    "novelty": 3,
+    "novelty": 2,
     "relevance": 2,
     "modifiers": 0,
-    "total": 8
+    "total": 7
    },
    "actors": [
-    "ELECTRA AI",
-    "Iron Horse Acquisition II Corp"
+    "International Energy Agency"
    ],
-   "deal": {
-    "who": "ELECTRA AI",
-    "with": "Iron Horse Acquisition II Corp",
-    "what": "SPAC merger, Nasdaq listing as AIBR H2 2026",
-    "relevance": "Competitive"
-   },
+   "deal": {},
    "relationship_flags": []
   },
   {
    "id": "2026-W40-013",
-   "domain": "agri",
+   "domain": "energy",
    "lenses": [
-    "ai",
-    "data"
+    "quality",
+    "sdv"
    ],
-   "headline": "John Deere unveils JD AI Assistant at Farm Progress Show",
-   "summary": "John Deere unveiled its JD AI Assistant at Farm Progress Show 2026, an AI copilot analysing field, machine and operational data. Rivals PTx Trimble and CNH rely on API-driven telemetry hubs linked to Raven Slingshot and AFS Connect.",
-   "so_what": "Puts a native Deere copilot against telematics-hub rivals for mixed-fleet farm data.",
+   "headline": "Toyota recalls 8,521 2026 C-HR EVs for BEV ECU software allowing battery overcharge",
+   "summary": "NHTSA recall 26V570000 covers 8,521 MY2026 Toyota C-HR EVs built February–July 2026 after a Denso ECU software flaw can allow regenerative braking to overcharge the traction battery and trigger a full drive shutdown. Dealers apply a software update; owner letters began mid-October 2026.",
+   "so_what": "Named-account EV recall centres on battery-management software, a growing category of electric-drive defects.",
    "sources": [
     {
-     "outlet": "AgriTech Magazine",
-     "date": "2026-09-28",
-     "url": "https://agritechmag.com/news/115317-john-deere-unveils-jd-ai-assistant-at-farm-progress-show-2026",
-     "tier": 2
+     "outlet": "NHTSA via rswebsols.com",
+     "date": "2026-09-02",
+     "url": "https://www.rswebsols.com/news/toyota-issues-recall-for-2026-c-hr-electric-vehicle-due-to-bev-ecu-software-problem/",
+     "tier": 1
     }
    ],
    "score": {
@@ -544,27 +491,30 @@
     "total": 8
    },
    "actors": [
-    "John Deere"
+    "Toyota",
+    "NHTSA",
+    "Denso"
    ],
-   "deal": null,
+   "deal": {},
    "relationship_flags": [
     "customer"
    ]
   },
   {
    "id": "2026-W40-014",
-   "domain": "agri",
+   "domain": "robotics",
    "lenses": [
+    "regulatory",
     "ai"
    ],
-   "headline": "Hitachi to launch GENIAC-backed Physical AI project for autonomous excavators",
-   "summary": "Hitachi Construction Machinery will begin the GENIAC R&D project in October 2026, developing Physical AI trained on skilled-operator footage and lever logs for excavators. The collaboration with Jizai Inc. targets disaster recovery, construction and mining.",
-   "so_what": "Aligns Japanese public funding with excavator autonomy training on operator behaviour data.",
+   "headline": "China's CSRC applies three-criteria guidance to cool humanoid-robot IPO pipeline",
+   "summary": "China's securities regulator informally told humanoid-robot IPO applicants they must demonstrate sustainable revenue, a three-year loss-narrowing forecast and ownership of core technology. The guidance followed Unitree's Shanghai debut, which surged nearly 500% before retreating sharply.",
+   "so_what": "Raises the listing bar for at least two dozen embodied-AI companies filed in Hong Kong and Shanghai.",
    "sources": [
     {
-     "outlet": "Heavy Equipment Magazine",
-     "date": "2026-09-21",
-     "url": "https://www.heavyquipmag.com/2026/09/21/hitachi-develops-physical-ai-for-autonomous-excavator-operation/",
+     "outlet": "CNBC",
+     "date": "2026-09-29",
+     "url": "https://cnbc.com/2026/09/29/china-criteria-humanoid-robot-ipos.html",
      "tier": 2
     }
    ],
@@ -576,65 +526,134 @@
     "total": 8
    },
    "actors": [
-    "Hitachi Construction Machinery",
-    "Jizai Inc.",
-    "GENIAC"
+    "CSRC",
+    "Unitree Robotics",
+    "Agibot"
    ],
-   "deal": null,
+   "deal": {},
    "relationship_flags": [
-    "inferred"
+    "softbank"
    ]
   },
   {
    "id": "2026-W40-015",
-   "domain": "agri",
+   "domain": "automotive",
    "lenses": [
-    "ai",
+    "regulatory",
+    "quality",
     "sdv"
    ],
-   "headline": "Applied Intuition launches Dana agentic AI platform with Komatsu",
-   "summary": "Applied Intuition launched Dana, an agentic AI platform unifying data curation, simulation, training, evaluation and deployment for safety-critical machines. Komatsu received early access for mining autonomy, with development cycles reportedly 20× faster.",
-   "so_what": "Places Komatsu on a shared autonomy toolchain with automotive and defence customers.",
+   "headline": "NHTSA calls 'Recalls Next' meeting on OTA updates and technological innovation",
+   "summary": "NHTSA published a Federal Register notice in late September 2026 announcing a public meeting on how connected-vehicle technologies, OTA updates and mobile repair are reshaping recall remediation, framing OTA as a tool to reduce recall time and burden.",
+   "so_what": "Signals US regulator moving to codify OTA's role in recall procedure, affecting all connected-vehicle OEMs.",
    "sources": [
     {
-     "outlet": "Automotive World",
-     "date": "2026-07-21",
-     "url": "https://www.automotiveworld.com/news/applied-intuition-launches-dana-agentic-ai-platform/",
-     "tier": 2
+     "outlet": "Federal Register",
+     "date": "2026-09-28",
+     "url": "https://thefederalregister.org/documents/2026-19712/recalls-next-technological-innovations-and-safety-recalls",
+     "tier": 1
     }
    ],
    "score": {
     "significance": 3,
     "novelty": 2,
-    "relevance": 3,
-    "modifiers": 1,
-    "total": 9
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
    },
    "actors": [
-    "Applied Intuition",
-    "Komatsu",
-    "Isuzu Motors"
+    "NHTSA",
+    "U.S. Department of Transportation"
    ],
-   "deal": {
-    "who": "Applied Intuition",
-    "with": "Komatsu",
-    "what": "Dana agentic AI early-access partnership for mining autonomy",
-    "relevance": "Customer"
-   },
-   "relationship_flags": [
-    "customer"
-   ]
+   "deal": {},
+   "relationship_flags": []
   },
   {
    "id": "2026-W40-016",
    "domain": "fleets",
    "lenses": [
+    "telematics",
     "data",
-    "connectivity"
+    "sdv"
    ],
-   "headline": "EU Data Act reshapes fleet telematics one year on",
-   "summary": "A one-year assessment finds major OEMs including Stellantis, VW, BMW, Mercedes, Ford, Renault and Hyundai completed FRAND-priced API infrastructure by early 2026. Consent chains in multi-stakeholder leases remain the key bottleneck.",
-   "so_what": "Confirms OEM-native telematics APIs are now the default channel for European fleets.",
+   "headline": "Stellantis rebrands Mobilisights as Mobilisights Connect and expands B2B fleet offer",
+   "summary": "Stellantis rebranded its connected-vehicle data division as Mobilisights Connect and broadened its B2B software offer with APIs and tools tied to factory-embedded telematics for fleet managers. The move intensifies competition with aftermarket TSPs on remote diagnostics and usage analytics.",
+   "so_what": "OEM data business steps directly onto TSP turf, using embedded telematics as its default distribution.",
+   "sources": [
+    {
+     "outlet": "Automotive Fleet",
+     "date": "2026-09-28",
+     "url": "https://www.automotive-fleet.com/gps-telematics",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "Stellantis",
+    "Mobilisights"
+   ],
+   "deal": {
+    "who": "Stellantis",
+    "with": "Mobilisights Connect",
+    "what": "Expanded B2B connected-vehicle data offer",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor",
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-017",
+   "domain": "agri",
+   "lenses": [
+    "cyber",
+    "quality",
+    "regulatory"
+   ],
+   "headline": "NMFTA reveals Bendix EC80 truck brake recall silently patched remote code execution flaws",
+   "summary": "At Black Hat USA 2026, NMFTA researchers disclosed that a 2024 safety recall for Bendix's EC80 brake controller also fixed cyber vulnerabilities, including a wirelessly reachable remote code execution flaw and a hardcoded password able to disable traction control. Security fixes were not publicly disclosed.",
+   "so_what": "Raises questions about transparency when safety recalls also carry undisclosed cybersecurity remediations.",
+   "sources": [
+    {
+     "outlet": "SecurityWeek",
+     "date": "2026-08-07",
+     "url": "https://www.securityweek.com/truck-brake-controllers-safety-recall-doubled-as-hidden-security-fix/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "NMFTA",
+    "Bendix"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W40-018",
+   "domain": "automotive",
+   "lenses": [
+    "regulatory",
+    "data",
+    "telematics"
+   ],
+   "headline": "EU Data Act one year on: OEM APIs live, fleet data access nearing commodity",
+   "summary": "A September 2026 Optivo analysis found all major automotive groups completed API infrastructure between October 2025 and March 2026 to expose telematics data to third parties under Regulation (EU) 2023/2854. Fleet managers can nominate telematics recipients without OEM contracts, though EU adoption remains uneven.",
+   "so_what": "Confirms the EU has moved from mandate to live infrastructure, shifting negotiating power to fleet operators.",
    "sources": [
     {
      "outlet": "Optivo Logistics",
@@ -646,110 +665,75 @@
    "score": {
     "significance": 3,
     "novelty": 2,
-    "relevance": 2,
+    "relevance": 3,
     "modifiers": 1,
-    "total": 8
+    "total": 9
    },
    "actors": [
-    "Stellantis / Mobilisights",
+    "Stellantis",
     "Volkswagen Group",
     "BMW",
     "Mercedes-Benz",
     "Ford",
-    "Geotab",
-    "Targa Telematics"
+    "Renault",
+    "Hyundai"
    ],
-   "deal": null,
+   "deal": {},
    "relationship_flags": [
-    "inferred"
+    "customer",
+    "prospect"
    ]
-  },
-  {
-   "id": "2026-W40-017",
-   "domain": "automotive",
-   "lenses": [
-    "connectivity",
-    "sdv"
-   ],
-   "headline": "Tata Communications embeds MOVE into Tata Motors N.IO SDV platform",
-   "summary": "Tata Communications embedded its MOVE Connected Vehicle Platform into Tata Motors' N.IO SDV architecture, delivering built-in 5G to the Sierra.ev SUV. The integration supports OTA, remote diagnostics, emergency call, in-cabin streaming and subscription management.",
-   "so_what": "In-house telco-OEM stack replaces external orchestration for Tata's SDV programme.",
-   "sources": [
-    {
-     "outlet": "Autocar Pro India",
-     "date": "2026-08-25",
-     "url": "https://www.autocarpro.in/news/tata-motors-passenger-vehicles-partners-with-tata-communications-for-5g-enabled-sierraev-134269",
-     "tier": 2
-    }
-   ],
-   "score": {
-    "significance": 3,
-    "novelty": 2,
-    "relevance": 2,
-    "modifiers": 1,
-    "total": 8
-   },
-   "actors": [
-    "Tata Communications",
-    "Tata Motors Passenger Vehicles"
-   ],
-   "deal": {
-    "who": "Tata Communications",
-    "with": "Tata Motors",
-    "what": "MOVE platform embedded in N.IO SDV architecture on Sierra.ev",
-    "relevance": "Competitive"
-   },
-   "relationship_flags": [
-    "competitor"
-   ]
-  },
-  {
-   "id": "2026-W40-018",
-   "domain": "robotics",
-   "lenses": [
-    "ai",
-    "sdv"
-   ],
-   "headline": "Amazon Zoox begins public driverless rides on the Las Vegas Strip",
-   "summary": "Amazon's Zoox began serving paying riders on the Las Vegas Strip in September 2026 with its purpose-built driverless vehicle, following testing that began in 2023. Zoox has opened a San Francisco waitlist pending permits.",
-   "so_what": "Zoox joins Waymo and Tesla as a live-commercial robotaxi service in the US.",
-   "sources": [
-    {
-     "outlet": "Smart Cities Dive",
-     "date": "2026-09-04",
-     "url": "https://www.smartcitiesdive.com/news/robotaxi-waymo-motional-zoox-tesla-uber-lyft/759895/",
-     "tier": 2
-    }
-   ],
-   "score": {
-    "significance": 3,
-    "novelty": 2,
-    "relevance": 2,
-    "modifiers": 0,
-    "total": 7
-   },
-   "actors": [
-    "Amazon",
-    "Zoox"
-   ],
-   "deal": null,
-   "relationship_flags": []
   },
   {
    "id": "2026-W40-019",
    "domain": "fleets",
    "lenses": [
+    "quality",
     "ai",
-    "data"
+    "regulatory"
    ],
-   "headline": "Verizon Connect finds AI video telematics adoption at 46%",
-   "summary": "Verizon Connect's 2026 Fleet Technology Trends Report finds AI-powered video telematics used by 46% of fleet professionals, up 10 points since 2023, with 74% reporting improved driver safety. GPS tracking stands at 80% adoption, up 11 points year on year.",
-   "so_what": "Video AI has crossed from early adopter to mainstream fleet telematics feature.",
+   "headline": "Waymo recalls 3,791 robotaxis after ADS failed to stop on flooded road",
+   "summary": "NHTSA reported that Waymo recalled 3,791 vehicles with 5th- and 6th-generation ADS after a driverless vehicle failed to stop on a flooded high-speed road, with a 100% assumed defect rate. All affected units received an OTA fix by 20 April 2026.",
+   "so_what": "Established robotaxi operator uses OTA to close a safety recall covering its entire ADS fleet.",
    "sources": [
     {
-     "outlet": "Verizon Connect Newsroom",
-     "date": "2026-03-01",
-     "url": "https://www.verizon.com/about/news/2026-verizon-connect-fleet-technology-trends-report",
+     "outlet": "Fox Business citing NHTSA",
+     "date": "2026-05-12",
+     "url": "https://www.foxbusiness.com/lifestyle/waymo-recalls-massive-autonomous-fleet-incident-flags-major-safety-issue",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 1,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "Waymo",
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W40-020",
+   "domain": "energy",
+   "lenses": [
+    "cyber",
+    "regulatory"
+   ],
+   "headline": "CSA Group reissues intent to publish EV charger cybersecurity standard",
+   "summary": "CSA Group reissued a public notice of intent for a Canadian cybersecurity standard covering all EV charging equipment, from residential Level 1/2 to DC fast chargers and V2G units, across design, procurement, operation and decommissioning. A second comment period ran through 30 June 2026.",
+   "so_what": "Signals a formal North American cyber baseline for charger OEMs and CPOs is close to publication.",
+   "sources": [
+    {
+     "outlet": "Standards Council of Canada",
+     "date": "2026-06-09",
+     "url": "https://scc-ccn.ca/standards/notices-of-intent/csa-group/standard-evaluating-cybersecurity-ev-charging-infrastructure",
      "tier": 1
     }
    ],
@@ -758,46 +742,13 @@
     "novelty": 2,
     "relevance": 2,
     "modifiers": 0,
-    "total": 5
-   },
-   "actors": [
-    "Verizon Connect"
-   ],
-   "deal": null,
-   "relationship_flags": [
-    "competitor"
-   ]
-  },
-  {
-   "id": "2026-W40-020",
-   "domain": "energy",
-   "lenses": [
-    "data",
-    "connectivity"
-   ],
-   "headline": "AFIR forces European CPOs onto OCPP 2.0.1 open APIs",
-   "summary": "With EU AFIR Article 5 in force, charge-point operators must provide real-time open-API data on pricing, availability, connector status and energy delivered via OCPP 2.0.1. US CPOs simultaneously face NEVI uptime and FERC Order 2222 DER requirements.",
-   "so_what": "Charging data becomes a regulated open feed across Europe, not a proprietary asset.",
-   "sources": [
-    {
-     "outlet": "Codibly",
-     "date": "2026-06-15",
-     "url": "https://codibly.com/blog/articles/ev-charging-regulations-2026-implementation-guide",
-     "tier": 2
-    }
-   ],
-   "score": {
-    "significance": 3,
-    "novelty": 1,
-    "relevance": 2,
-    "modifiers": 0,
     "total": 6
    },
    "actors": [
-    "European Commission",
-    "EU CPOs"
+    "CSA Group",
+    "Standards Council of Canada"
    ],
-   "deal": null,
+   "deal": {},
    "relationship_flags": []
   }
  ]
