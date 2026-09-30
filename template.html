@@ -37,7 +37,7 @@ h1,h2,h3,.display{ font-family:"Barlow Condensed","DejaVu Sans Condensed","Arial
 /* ---------- masthead ---------- */
 .masthead{
   display:flex; align-items:flex-end; justify-content:space-between;
-  border-bottom:3px solid var(--navy); padding-bottom:3mm; margin-bottom:5mm;
+  border-bottom:3px solid var(--navy); padding-bottom:3mm; margin-bottom:4mm;
 }
 .masthead h1{ font-size:30pt; font-weight:700; letter-spacing:-.01em; color:var(--navy); line-height:.95; }
 .masthead h1 span{ display:block; font-size:11pt; font-weight:500; letter-spacing:.04em; color:var(--orange); margin-top:1.5mm; }
@@ -46,19 +46,19 @@ h1,h2,h3,.display{ font-family:"Barlow Condensed","DejaVu Sans Condensed","Arial
 
 /* ---------- signal of the week (the one bold element) ---------- */
 .signal{
-  display:grid; grid-template-columns:8mm 1fr; margin-bottom:5mm;
+  display:grid; grid-template-columns:8mm 1fr; margin-bottom:4mm;
 }
 .signal .bar{ background:var(--orange); }
 .signal .body{ background:var(--navy); color:#fff; padding:4mm 6mm 4mm 6mm; }
 .signal .kicker{ font-size:8.5pt; color:var(--orange); font-weight:600; margin-bottom:1mm; }
-.signal h2{ font-size:19pt; font-weight:700; line-height:1.05; margin-bottom:2.2mm; }
+.signal h2{ font-size:17pt; font-weight:700; line-height:1.05; margin-bottom:2.2mm; }
 .signal p{ font-size:9.6pt; color:#E5EAF3; margin-bottom:2mm; max-width:150mm; }
 .signal .why{ border-top:1px solid rgba(255,255,255,.25); padding-top:2mm; font-size:9.2pt; }
 .signal .why b{ color:var(--orange); font-weight:600; }
 .signal .src{ font-size:7.8pt; color:#A8B3C8; margin-top:1.5mm; }
 
 /* ---------- two-column band: heat-map + notes ---------- */
-.band{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-bottom:5mm; }
+.band{ display:grid; grid-template-columns:1fr 1fr; gap:6mm; margin-bottom:4mm; }
 .heat h3, .section h3, .box h3, .watch h3{ font-size:12.5pt; font-weight:700; color:var(--navy); margin-bottom:2mm; }
 .heat table{ border-collapse:collapse; width:100%; font-size:8pt; }
 .heat th{ font-weight:600; color:var(--ink-2); text-align:center; padding:1mm .5mm; vertical-align:bottom; line-height:1.1; }
@@ -69,22 +69,22 @@ h1,h2,h3,.display{ font-family:"Barlow Condensed","DejaVu Sans Condensed","Arial
 .heat .legend i{ display:inline-block; width:3mm; height:3mm; vertical-align:-.5px; margin:0 1mm 0 2mm; border:1px solid #fff; }
 
 .reading h3{ font-size:12.5pt; font-weight:700; color:var(--navy); margin-bottom:2mm; }
-.reading p{ margin-bottom:1.6mm; }
+.reading p{ margin-bottom:1.6mm; font-size:9pt; }
 .reading .stat{ display:flex; gap:5mm; margin-top:2.5mm; }
 .reading .stat div{ border-left:2px solid var(--orange); padding-left:2.5mm; }
 .reading .stat b{ display:block; font-family:"Barlow Condensed","DejaVu Sans Condensed",sans-serif; font-size:17pt; color:var(--navy); line-height:1; }
 .reading .stat span{ font-size:8pt; color:var(--ink-2); }
 
 /* ---------- domain sections ---------- */
-.section{ margin-bottom:4.5mm; }
+.section{ margin-bottom:3.5mm; }
 .section h3{ display:flex; align-items:center; gap:2.5mm; }
 .section h3::before{ content:""; width:3.5mm; height:3.5mm; border-radius:50%; }
 .section.auto h3::before{ background:var(--auto);} .section.robo h3::before{ background:var(--robo);}
 .section.energy h3::before{ background:var(--energy);} .section.agri h3::before{ background:var(--agri);}
 .items{ display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; }
 .items.two{ grid-template-columns:repeat(2,1fr); }
-.item h4{ font-size:10.5pt; font-weight:700; line-height:1.15; margin-bottom:1.2mm; color:var(--navy); }
-.item p{ font-size:9pt; margin-bottom:1.2mm; }
+.item h4{ font-size:10pt; font-weight:700; line-height:1.15; margin-bottom:1.2mm; color:var(--navy); }
+.item p{ font-size:8.7pt; margin-bottom:1.2mm; }
 .item .so{ font-size:8.8pt; color:var(--ink); }
 .item .so b{ color:var(--orange); font-weight:600; }
 .item .src{ font-size:7.6pt; color:var(--ink-2); }
@@ -121,7 +121,7 @@ table.deals td:last-child{ color:var(--orange); font-weight:600; }
   <h4>{{ it.headline }}</h4>
   <p>{{ it.summary }}</p>
   <p class="so"><b>So what —</b> {{ it.so_what }}</p>
-  <div class="src">{% for s in it.sources[:2] %}{{ s.outlet }}, {{ s.date }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
+  <div class="src">{% for s in it.sources[:1] %}{{ s.outlet }}, {{ s.date }}{% if not loop.last %} · {% endif %}{% endfor %}</div>
 </div>
 {% endmacro %}
 {% macro section(key, label, cls) %}
@@ -149,7 +149,7 @@ table.deals td:last-child{ color:var(--orange); font-weight:600; }
       <h2>{{ signal.headline }}</h2>
       <p>{{ signal.summary }}</p>
       <div class="why"><b>Why it matters to Cubic³ —</b> {{ signal.so_what }}</div>
-      <div class="src">Sources: {% for s in signal.sources[:3] %}{{ s.outlet }} ({{ s.date }}){% if not loop.last %} · {% endif %}{% endfor %}</div>
+      <div class="src">Sources: {% for s in signal.sources[:2] %}{{ s.outlet }} ({{ s.date }}){% if not loop.last %} · {% endif %}{% endfor %}</div>
     </div>
   </div>
 
