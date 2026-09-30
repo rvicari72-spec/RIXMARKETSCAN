@@ -48,3 +48,6 @@ jobs:
         with:
           name: market-scan-pdf
           path: editions/*.pdf
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+      - uses: actions/upload-artifact@v5
