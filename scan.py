@@ -63,11 +63,30 @@ def text_of(resp) -> str:
     return "\n".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
 
 
-def parse_json(raw: str):
-    """Tolerate ```json fences and leading prose."""
-    raw = re.sub(r"```(?:json)?", "", raw).strip()
-    start = min(i for i in (raw.find("{"), raw.find("[")) if i >= 0)
-    return json.loads(raw[start:])
+def parse_json(raw: str, expect=(dict, list)):
+    """Extract the largest JSON object/array of the expected type from model output.
+
+    Web-search calls interleave prose ("I'll search for...", "[1]", notes) with the JSON,
+    so we scan every { or [ and keep the biggest block that parses cleanly.
+    """
+    raw = re.sub(r"```(?:json)?", "", raw)
+    dec = json.JSONDecoder()
+    best, i = None, 0
+    while i < len(raw):
+        if raw[i] in "{[":
+            try:
+                obj, end = dec.raw_decode(raw, i)
+            except json.JSONDecodeError:
+                i += 1
+                continue
+            if isinstance(obj, expect) and (best is None or end - i > best[1]):
+                best = (obj, end - i)
+            i = end
+        else:
+            i += 1
+    if best is None:
+        raise ValueError("no JSON of the expected type found in model output")
+    return best[0]
 
 
 def week_window(today: dt.date | None = None):
@@ -86,7 +105,7 @@ def week_window(today: dt.date | None = None):
 
 
 def next_edition_number() -> int:
-    return len(list(EDITIONS.glob("*.json"))) + 1
+    return len([p for p in EDITIONS.glob("*.json") if "candidates" not in p.name]) + 1
 
 
 # ------------------------------------------------------------------- scan
@@ -120,7 +139,7 @@ Exclude anything outside the date window. De-duplicate the same event across out
             tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": CFG["scan"]["max_searches_per_domain"]}],
         )
         try:
-            items = parse_json(text_of(resp))
+            items = parse_json(text_of(resp), expect=list)
         except Exception as exc:  # noqa: BLE001
             log(f"  could not parse scan output for {d}: {exc}")
             items = []
@@ -170,7 +189,7 @@ Return ONLY a JSON object with this exact shape (no prose, no markdown fences):
         max_tokens=16000,
         messages=[{"role": "user", "content": prompt}],
     )
-    return parse_json(text_of(resp))
+    return parse_json(text_of(resp), expect=dict)
 
 
 # ----------------------------------------------------------------- review
@@ -200,7 +219,14 @@ Return ONLY the corrected JSON object, same shape."""
         max_tokens=16000,
         messages=[{"role": "user", "content": prompt}],
     )
-    return parse_json(text_of(resp))
+    try:
+        fixed = parse_json(text_of(resp), expect=dict)
+        if fixed.get("items"):
+            return fixed
+        log("  review returned no items; keeping curated edition")
+    except Exception as exc:  # noqa: BLE001
+        log(f"  review output unusable ({exc}); keeping curated edition")
+    return edition
 
 
 # ----------------------------------------------------------------- render
@@ -264,6 +290,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-email", action="store_true")
     ap.add_argument("--from-json", help="skip scan/curate/review; render this edition JSON")
+    ap.add_argument("--rescan", action="store_true", help="ignore saved candidates for this week")
     args = ap.parse_args()
 
     start, end, week_id, week_label = week_window()
@@ -274,7 +301,13 @@ def main() -> None:
         edition = json.loads(Path(args.from_json).read_text())
     else:
         edition_no = next_edition_number()
-        candidates = scan(start, end)
+        cand_path = EDITIONS / f"{week_id}-candidates.json"
+        if cand_path.exists() and not args.rescan:
+            candidates = json.loads(cand_path.read_text())
+            log(f"reusing {len(candidates)} saved candidates from {cand_path.name}")
+        else:
+            candidates = scan(start, end)
+            cand_path.write_text(json.dumps(candidates, ensure_ascii=False, indent=1))
         if not candidates:
             raise SystemExit("Scan returned no candidates — aborting before spending on curation.")
         edition = curate(candidates, edition_no, week_label, start, end)
