@@ -1,0 +1,13 @@
+# Cubic³ Market Scan — configuration. Secrets never go here (see README).
+models:
+  scan:   claude-sonnet-5     # runs the web searches; cost-sensitive
+  curate: claude-opus-5       # scores and writes the edition; quality-sensitive
+  review: claude-sonnet-5     # QA pass
+scan:
+  max_searches_per_domain: 9  # 5 lenses + 1 Japanese + 3 follow-ups
+email:
+  from_name: Cubic³ Market Scan
+  to:
+    - ric@example.com          # <- replace with your work address; add more lines for more recipients
+  smtp_host: smtp.gmail.com
+  smtp_port: 465
