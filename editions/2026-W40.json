@@ -39,8 +39,8 @@
  },
  "signal": "2026-W40-001",
  "read_across": [
-  "The week's 18 qualifying items cluster around one theme: the software layer is being locked down by regulators and standardised by consortia simultaneously. The EU Data Act's Article 3 access-by-design rule bit on 12 September, Germany's MiSpeL V2G framework is live, and the FCC has added foreign-produced robots to its Covered List. In parallel, Nissan–Honda, the four-way European OS group and Japan's JASPAR are all racing to fix the API surface below the application layer. Six qualifying items involve named accounts or direct competitors.",
-  "The heat-map shows SDV lit across every domain and connectivity notably thin outside automotive — a gap the Viasat–Space42, Iridium NTN Direct and SGP.32 announcements are moving to close. Robotics and agri/industrial are converging on the same physical-AI, edge-inference and OEM-agnostic autonomy stack spanning AIM, Applied Intuition's Dana and Caterpillar–NVIDIA. Energy is where regulation and product finally meet: VW/Elli's Q4 V2G launch, Hyundai's All Day Energy platform and recorded Brazil and Korea pilots turn the EV battery into a metered grid asset governed by SDV-grade OTA."
+  "This week's 18 qualifying items cluster around one theme: the software layer is being locked down by regulators and standardised by consortia simultaneously. The EU Data Act's Article 3 access-by-design rule bit on 12 September, Germany's MiSpeL V2G framework is live, and the FCC has added foreign-produced robots to its Covered List. In parallel, Nissan–Honda, the four-way European OS group and Japan's JASPAR are all racing to fix the API surface below the application layer. Six qualifying items involve named accounts or direct competitors.",
+  "The heat-map shows SDV lit across every domain, with connectivity notably thin outside automotive — a gap the Viasat–Space42, Iridium NTN Direct and SGP.32 announcements are moving to close. Robotics and agri-industrial are converging on the same physical-AI, edge-inference and OEM-agnostic autonomy stack spanning AIM, Applied Intuition's Dana and Caterpillar–NVIDIA. Energy is where regulation and product finally meet: VW/Elli's Q4 V2G launch, Hyundai's All Day Energy platform and recorded pilots in Brazil and Korea turn the EV battery into a metered grid asset governed by SDV-grade OTA."
  ],
  "implications": {
   "position": "Position Cubic³ as the neutral SGP.32 orchestrator now that Onomondo, G+D/Rivian/AT&T and KDDI/Verizon/BMW have set the reference architecture; the differentiator is multi-domain, not just automotive.",
@@ -57,8 +57,8 @@
     "connectivity"
    ],
    "headline": "EU Data Act Article 3 access-by-design rule bites on connected-vehicle OEMs",
-   "summary": "From 12 September 2026, all connected products sold in the EU, including vehicles, must let users access and redirect their data. Several OEMs integrated in time via vendors such as Grape Up's Databoostr and Smartcar; laggards now face member-state enforcement.",
-   "so_what": "Every EU OEM programme now needs an audited data-access path — our orchestration and consent layer becomes a compliance line item.",
+   "summary": "From 12 September 2026, all connected products sold in the EU, including vehicles, must let users access and redirect their data. Several OEMs integrated via vendors including Grape Up's Databoostr and Smartcar; others now face member-state enforcement.",
+   "so_what": "Every EU OEM programme now requires an audited data-access path — our orchestration and consent layer becomes a compliance line item.",
    "sources": [
     {
      "outlet": "Automotive IQ",
@@ -96,7 +96,7 @@
     "sdv"
    ],
    "headline": "Nissan and Honda agree to standardise ECUs, in-vehicle OS and middleware",
-   "summary": "On 31 August 2026, Nissan and Honda formalised a joint development agreement covering ECUs, vehicle OS and middleware for their next-generation software-defined vehicles, mirroring a parallel European effort by Volkswagen, BMW, Mercedes-Benz and Stellantis.",
+   "summary": "On 31 August 2026, Nissan and Honda formalised a joint development agreement covering ECUs, vehicle OS and middleware for next-generation software-defined vehicles, mirroring a parallel effort by Volkswagen, BMW, Mercedes-Benz and Stellantis.",
    "so_what": "Two named accounts are consolidating their software stack; connectivity proposals must now clear both companies' shared architecture.",
    "sources": [
     {
@@ -126,7 +126,7 @@
    "deal": {
     "who": "Nissan",
     "with": "Honda",
-    "what": "Joint development of standard ECUs, in-vehicle OS and middleware for next-gen SDVs",
+    "what": "Joint development of standard ECUs, in-vehicle OS and middleware for next-gen SDVs.",
     "relevance": "Prospect"
    },
    "relationship_flags": [
@@ -142,9 +142,9 @@
     "connectivity",
     "sdv"
    ],
-   "headline": "Verizon becomes US connectivity provider for BMW vehicles via KDDI global platform",
-   "summary": "All newly manufactured BMW Group vehicles now use Verizon for US cellular service, routed through KDDI's global connected-vehicle platform, which handles eSIM profile management before hand-off. The arrangement was confirmed in the week of 6 July 2026.",
-   "so_what": "A named account is running eSIM orchestration through a direct competitor; the counter-pitch must be a like-for-like global platform with better VAS.",
+   "headline": "Verizon becomes US connectivity provider for BMW via KDDI platform",
+   "summary": "All newly manufactured BMW Group vehicles now use Verizon for US cellular service, routed through KDDI's global connected-vehicle platform, which handles eSIM profile management before hand-off. This was confirmed in the week of 6 July 2026.",
+   "so_what": "A named account runs eSIM orchestration through a direct competitor; a counter-pitch must offer a like-for-like global platform with better VAS.",
    "sources": [
     {
      "outlet": "Atomic Mobile",
@@ -168,7 +168,7 @@
    "deal": {
     "who": "BMW Group",
     "with": "KDDI and Verizon",
-    "what": "US cellular connectivity for newly built BMW vehicles through KDDI global platform",
+    "what": "US cellular connectivity for newly built BMW vehicles through KDDI global platform.",
     "relevance": "Competitive"
    },
    "relationship_flags": [
@@ -184,8 +184,8 @@
     "sdv"
    ],
    "headline": "G+D, Rivian and AT&T embed SGP.32 eSIM connectivity into the R2 platform",
-   "summary": "Giesecke+Devrient, Rivian and AT&T are integrating SGP.32-compliant eSIM into Rivian's forthcoming R2 platform, enabling one hardware build to switch network profiles remotely across markets. Berg Insight cites the deal as a lead example of the industry's move to the new IoT eSIM standard.",
-   "so_what": "SGP.32 is now the reference architecture for new vehicle programmes; our orchestration play must be positioned as the neutral profile manager.",
+   "summary": "Giesecke+Devrient, Rivian and AT&T are integrating SGP.32-compliant eSIM into Rivian's forthcoming R2 platform, enabling one hardware build to switch network profiles remotely across markets. Berg Insight cites the deal as a lead example of the industry's shift to the IoT eSIM standard.",
+   "so_what": "SGP.32 is now the reference architecture for new vehicle programmes; our orchestration platform must be positioned as the neutral profile manager.",
    "sources": [
     {
      "outlet": "Auto Connected Car News",
@@ -226,8 +226,8 @@
     "ai"
    ],
    "headline": "Stellantis and Applied Intuition expand STLA Brain collaboration",
-   "summary": "On 1 September 2026, Stellantis and Applied Intuition announced an expanded partnership around the STLA Brain platform, deepening Applied Intuition's simulation and software toolchain inside Stellantis's OTA and autonomous-drive workflows across its multi-brand portfolio.",
-   "so_what": "Applied Intuition is becoming the default agentic-AI toolchain across OEMs; without a partnership we will meet it on every RFP.",
+   "summary": "On 1 September 2026, Stellantis and Applied Intuition announced an expanded partnership around the STLA Brain platform, deepening Applied Intuition's simulation and software toolchain within Stellantis's OTA and autonomous-drive workflows across its multi-brand portfolio.",
+   "so_what": "Applied Intuition is becoming the default agentic-AI toolchain across OEMs; without a partnership it will appear on every RFP.",
    "sources": [
     {
      "outlet": "Stellantis Newsroom",
@@ -373,7 +373,7 @@
     "ai",
     "sdv"
    ],
-   "headline": "XPeng starts automated humanoid production line and raises $900m at $6.3bn valuation",
+   "headline": "XPeng starts automated humanoid production and raises $900m at $6.3bn valuation",
    "summary": "On 8 September 2026, XPeng commissioned the first automotive-grade automated humanoid production line in Guangzhou, with the IRON robot walking off the line. Its robotics subsidiary raised $900m led by IDG Capital at a $6.3bn post-money valuation, with Tencent and Alibaba as strategic investors; mass production targets end-2026.",
    "so_what": "Shared physical-AI stacks between EVs and humanoids mean one connectivity and data platform can address both — worth a briefing note for the SoftBank robotics team.",
    "sources": [
@@ -439,7 +439,7 @@
    "deal": {
     "who": "Viasat",
     "with": "Space42",
-    "what": "Up to $1bn joint venture to co-found Equatys multi-orbit NTN platform",
+    "what": "Up to $1bn joint venture to co-found Equatys multi-orbit NTN platform.",
     "relevance": "Partner"
    },
    "relationship_flags": [
@@ -497,7 +497,7 @@
     "data"
    ],
    "headline": "Volkswagen and Elli confirm Q4 2026 launch of integrated V2G package in Germany",
-   "summary": "Volkswagen and its energy subsidiary Elli will launch a bundled vehicle-to-grid product in Germany in Q4 2026, combining an EV, app, electricity tariff, smart meter, bidirectional charger and automated energy-management software on Germany's new MiSpeL technical framework.",
+   "summary": "Volkswagen and its energy subsidiary Elli will launch a bundled vehicle-to-grid product in Germany in Q4 2026, combining an EV, app, electricity tariff, smart meter, bidirectional charger and automated energy-management software on Germany's MiSpeL technical framework.",
    "so_what": "This is the first commercial V2G bundle from a global OEM — Fleet Wallet has a clear wedge as the bidirectional settlement rail between driver, CPO and utility.",
    "sources": [
     {
@@ -521,7 +521,7 @@
    "deal": {
     "who": "Volkswagen Group",
     "with": "Elli",
-    "what": "Q4 2026 launch of integrated V2G package for German private customers",
+    "what": "Q4 2026 launch of integrated V2G package for German private customers.",
     "relevance": "Fleet Wallet"
    },
    "relationship_flags": [
@@ -538,7 +538,7 @@
     "connectivity"
    ],
    "headline": "Germany's MiSpeL V2G technical framework goes live, enabling commercial bidirectional charging",
-   "summary": "Germany's MiSpeL framework, setting interoperability and metering rails for commercial V2G, entered force in April 2026 following the November 2025 Energy Industry Act amendment removing double grid fees for EV storage. BMW with E.ON and Volkswagen with Elli are the first OEMs launching products on it.",
+   "summary": "Germany's MiSpeL framework, setting interoperability and metering rails for commercial V2G, entered force in April 2026 following a November 2025 Energy Industry Act amendment removing double grid fees for EV storage. BMW with E.ON and Volkswagen with Elli are the first OEMs launching products on it.",
    "so_what": "Germany is now the reference V2G market; our metering, identity and settlement layer needs a MiSpeL conformance statement in the next sales pack.",
    "sources": [
     {
@@ -678,7 +678,7 @@
     "sdv"
    ],
    "headline": "Komatsu and AIM Intelligent Machines move autonomous dozers and excavators to commercial deployment",
-   "summary": "Komatsu, its EARTHBRAIN subsidiary and AIM Intelligent Machines progressed their autonomous bulldozer and hydraulic excavator programme into commercial deployment at US customer jobsites, with a Japan launch planned for 2027. AIM's physical-AI autonomy stack has already been used at fleet scale on dozers.",
+   "summary": "Komatsu, its EARTHBRAIN subsidiary and AIM Intelligent Machines progressed their autonomous bulldozer and hydraulic excavator programme into commercial deployment at US customer jobsites, with a Japan launch planned for 2027. AIM's physical-AI autonomy stack has already been deployed at fleet scale on dozers.",
    "so_what": "A named account is scaling autonomy across brownfield fleets — the retrofit connectivity and telemetry pipe is a direct proposal opportunity now.",
    "sources": [
     {
@@ -753,7 +753,7 @@
     "connectivity"
    ],
    "headline": "Iridium NTN Direct launches 2026 for agriculture and transport IoT",
-   "summary": "Iridium confirmed its NTN Direct service is launching in 2026, fully aligned with 3GPP NTN standards and integrating into global MNO infrastructure. It targets transport, utilities, agriculture and industrial IoT where terrestrial coverage cannot reach, with real-time tracking, remote diagnostics and global roaming.",
+   "summary": "Iridium confirmed its NTN Direct service is launching in 2026, fully aligned with 3GPP NTN standards and integrating into global MNO infrastructure. It targets transport, utilities, agriculture and industrial IoT where terrestrial coverage is unavailable, with real-time tracking, remote diagnostics and global roaming.",
    "so_what": "Off-highway OEMs will demand terrestrial and NTN in one SKU; an Iridium integration story should be ready alongside the Equatys one.",
    "sources": [
     {
@@ -966,7 +966,7 @@
     "sdv"
    ],
    "headline": "Hitachi Construction Machinery to rebrand as LANDCROS from 2027",
-   "summary": "Hitachi Construction Machinery announced it will rename itself LANDCROS from 2027, signalling a strategic pivot to intelligence-defined machines. The rebrand follows Caterpillar's CES 2026 edge-AI partnership with NVIDIA and Hitachi's own in-cab Assist Program showcased at CONEXPO 2026.",
+   "summary": "Hitachi Construction Machinery announced it will rename itself LANDCROS from 2027, signalling a strategic pivot to intelligence-defined machines. The rebrand follows Caterpillar's CES 2026 edge-AI partnership with NVIDIA and Hitachi's own in-cab Assist Programme showcased at CONEXPO 2026.",
    "so_what": "Watch: another off-highway OEM committing publicly to SDV — pipeline signal, not a near-term deal.",
    "sources": [
     {
