@@ -6,9 +6,13 @@ on:
   workflow_dispatch:           # "Run workflow" button for manual runs
     inputs:
       send_email:
-        description: "Send the email (false = render only)"
+        description: "Send the email (untick = render only)"
         type: boolean
         default: true
+      fresh_scan:
+        description: "Fresh scan (tick = ignore this week's saved results and search again)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -36,11 +40,12 @@ jobs:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.send_email }}" = "false" ]; then
-            python scan.py --no-email
-          else
-            python scan.py
+          ARGS=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ inputs.send_email }}" = "false" ]; then ARGS="$ARGS --no-email"; fi
+            if [ "${{ inputs.fresh_scan }}" = "true" ]; then ARGS="$ARGS --rescan"; fi
           fi
+          python scan.py $ARGS
 
       - name: Archive the edition in the repo
         if: always()
