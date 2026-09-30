@@ -169,7 +169,8 @@ Tasks, in order:
 1. Merge duplicates. Score every candidate per rubric §3, using the actor list in Appendix A and extending
    categories to comparable companies as the appendix instructs (flag those with "inferred").
 2. Apply the selection rules in §4.
-3. Write every item to the house style in §6 and the word limits in §5. British English.
+3. Write every item to the house style in §6. HARD word limits (the layout cuts anything longer): headline 11,
+   summary 30, so_what 16, each read_across paragraph 40, each implications line 25. British English.
 4. Compute the heat-map and counts. Write the read-across (two paragraphs) and the implications box last.
 
 Return ONLY a JSON object with this exact shape (no prose, no markdown fences):
@@ -182,7 +183,8 @@ Return ONLY a JSON object with this exact shape (no prose, no markdown fences):
   "signal": "<item id>",
   "read_across": ["...", "..."],
   "implications": {{"position": "...", "pipeline": "...", "portfolio": "...", "softbank": "" }},
-  "items": [ <item objects per rubric §5, ALL scored candidates with total >= 4, each with a unique "id"> ]
+  "items": [ <item objects per rubric §5: the best 20 at most — every item that will appear on the page (signal,
+             up to 3 per domain with total >= 6, up to 6 watch-list items with total 4-5), each with a unique "id"> ]
 }}"""
     resp = client.messages.create(
         model=CFG["models"]["curate"],
@@ -205,8 +207,8 @@ version. Fix, do not comment.
 Checks: every qualifying item (score.total >= 6) has at least one source with tier 1 or 2 and a date; "signal"
 is the id of the highest-scoring item; heatmap counts equal the number of items with total >= 6 tagged with
 each domain x lens; counts.qualified equals the number of items with total >= 6; no actor appears in more than
-two domain cards; headlines <= 14 words, summaries <= 60 words, so_what <= 25 words, read_across paragraphs
-<= 70 words each, implications <= 35 words each; British English; no banned words (game-changing, leverage,
+two domain cards; headlines <= 11 words, summaries <= 30 words, so_what <= 16 words, read_across paragraphs
+<= 40 words each, implications <= 25 words each; British English; no banned words (game-changing, leverage,
 ecosystem play). Every item keeps its id.
 
 <edition>
@@ -230,6 +232,30 @@ Return ONLY the corrected JSON object, same shape."""
 
 
 # ----------------------------------------------------------------- render
+LIMITS = {"headline": 11, "summary": 30, "so_what": 16}
+
+
+def clip(text, n: int) -> str:
+    words = str(text or "").split()
+    return text if len(words) <= n else " ".join(words[:n]).rstrip(",;:—-") + "…"
+
+
+def enforce_limits(edition: dict) -> dict:
+    """Hard word limits so the layout always fits, whatever the model wrote."""
+    for it in edition.get("items", []):
+        for f, n in LIMITS.items():
+            it[f] = clip(it.get(f, ""), n)
+        it.setdefault("lenses", [])
+        it["lenses"] = [l for l in it["lenses"] if l in LENSES][:3]
+        it.setdefault("sources", [])
+        if it.get("deal"):
+            for f, n in (("who", 4), ("with", 4), ("what", 10)):
+                it["deal"][f] = clip(it["deal"].get(f, ""), n)
+    edition["read_across"] = [clip(p, 40) for p in edition.get("read_across", [])][:2]
+    edition["implications"] = {k: clip(v, 25) for k, v in edition.get("implications", {}).items()}
+    return edition
+
+
 def heat_class(v: int) -> str:
     return "h0" if v == 0 else "h1" if v <= 2 else "h2" if v <= 5 else "h3"
 
@@ -254,7 +280,8 @@ def render(edition: dict, out_pdf: Path, max_per_domain: int = 3, watch_n: int =
 
 def render_two_pages(edition: dict, out_pdf: Path) -> None:
     """Progressively trim optional content until the PDF is exactly two pages."""
-    for max_per_domain, watch_n, deals_n in [(3, 6, 6), (3, 3, 4), (3, 0, 4), (3, 0, 0), (2, 0, 0)]:
+    edition = enforce_limits(edition)
+    for max_per_domain, watch_n, deals_n in [(3, 6, 6), (3, 3, 4), (3, 0, 4), (2, 6, 6), (2, 3, 4), (2, 0, 4), (2, 0, 0)]:
         pages = render(edition, out_pdf, max_per_domain, watch_n, deals_n)
         log(f"render: {pages} pages (cards {max_per_domain}, watch {watch_n}, deals {deals_n})")
         if pages == 2:
@@ -290,7 +317,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-email", action="store_true")
     ap.add_argument("--from-json", help="skip scan/curate/review; render this edition JSON")
-    ap.add_argument("--rescan", action="store_true", help="ignore saved candidates for this week")
+    ap.add_argument("--rescan", action="store_true", help="ignore saved candidates and edition for this week")
     args = ap.parse_args()
 
     start, end, week_id, week_label = week_window()
@@ -299,6 +326,9 @@ def main() -> None:
 
     if args.from_json:
         edition = json.loads(Path(args.from_json).read_text())
+    elif json_path.exists() and not args.rescan:
+        edition = json.loads(json_path.read_text())
+        log(f"reusing curated edition {json_path.name} (delete it, or use --rescan, to curate again)")
     else:
         edition_no = next_edition_number()
         cand_path = EDITIONS / f"{week_id}-candidates.json"
