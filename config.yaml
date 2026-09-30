@@ -1,8 +1,8 @@
 # Cubic³ Market Scan — configuration. Secrets never go here (see README).
 models:
-  scan:   claude-sonnet-5-5
-  curate: claude-opus-5-5
-  review: claude-sonnet-5-5
+  scan:   claude-sonnet-4-6
+  curate: claude-opus-4-7
+  review: claude-sonnet-4-6
 scan:
   max_searches_per_domain: 9  # 5 lenses + 1 Japanese + 3 follow-ups
 email:
