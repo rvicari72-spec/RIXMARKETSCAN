@@ -170,8 +170,8 @@ Tasks, in order:
    categories to comparable companies as the appendix instructs (flag those with "inferred").
 2. Apply the selection rules in §4.
 3. Write every item to the house style in §6. HARD word limits (the layout cuts anything longer): headline 11,
-   summary 30, so_what 16, each read_across paragraph 40, each implications line 25. British English.
-4. Compute the heat-map and counts. Write the read-across (two paragraphs) and the implications box last.
+   summary 30, so_what 16, each read_across paragraph 40. British English.
+4. Compute the heat-map and counts. Write the read-across (two paragraphs) last.
 
 Return ONLY a JSON object with this exact shape (no prose, no markdown fences):
 {{
@@ -182,7 +182,6 @@ Return ONLY a JSON object with this exact shape (no prose, no markdown fences):
   "heatmap": {{"automotive": {{"sdv":0,"connectivity":0,"ai":0,"data":0,"twins":0}}, "robotics": {{...}}, "energy": {{...}}, "agri": {{...}}}},
   "signal": "<item id>",
   "read_across": ["...", "..."],
-  "implications": {{"position": "...", "pipeline": "...", "portfolio": "...", "softbank": "" }},
   "items": [ <item objects per rubric §5: the best 20 at most — every item that will appear on the page (signal,
              up to 3 per domain with total >= 6, up to 6 watch-list items with total 4-5), each with a unique "id"> ]
 }}"""
@@ -208,7 +207,7 @@ Checks: every qualifying item (score.total >= 6) has at least one source with ti
 is the id of the highest-scoring item; heatmap counts equal the number of items with total >= 6 tagged with
 each domain x lens; counts.qualified equals the number of items with total >= 6; no actor appears in more than
 two domain cards; headlines <= 11 words, summaries <= 30 words, so_what <= 16 words, read_across paragraphs
-<= 40 words each, implications <= 25 words each; British English; no banned words (game-changing, leverage,
+<= 40 words each; British English; no banned words (game-changing, leverage,
 ecosystem play). Every item keeps its id.
 
 <edition>
@@ -233,26 +232,94 @@ Return ONLY the corrected JSON object, same shape."""
 
 # ----------------------------------------------------------------- render
 LIMITS = {"headline": 11, "summary": 30, "so_what": 16}
+DEAL_LIMITS = {"who": 4, "with": 4, "what": 10}
+READ_ACROSS_LIMIT = 40
 
 
-def clip(text, n: int) -> str:
-    words = str(text or "").split()
-    return text if len(words) <= n else " ".join(words[:n]).rstrip(",;:—-") + "…"
+def n_words(text) -> int:
+    return len(str(text or "").split())
+
+
+def whole_sentences(text, n: int) -> str:
+    """Keep as many complete sentences as fit in n words. Never cuts mid-sentence:
+    if even the first sentence is longer than n, it is kept whole (tighten() should
+    already have rewritten it; the page-fit loop absorbs the rare overrun)."""
+    text = str(text or "").strip()
+    if n_words(text) <= n:
+        return text
+    sentences = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9“\"'(])", text)
+    kept = []
+    for sen in sentences:
+        if n_words(" ".join(kept + [sen])) > n:
+            break
+        kept.append(sen)
+    return " ".join(kept) if kept else sentences[0]
+
+
+def over_limit(edition: dict) -> dict:
+    """Collect every field longer than its limit, keyed so tighten() can put rewrites back."""
+    todo = {}
+    for it in edition.get("items", []):
+        for f, n in LIMITS.items():
+            if n_words(it.get(f)) > n:
+                todo[f"item|{it['id']}|{f}"] = {"limit": n, "text": it[f]}
+        for f, n in DEAL_LIMITS.items():
+            if it.get("deal") and n_words(it["deal"].get(f)) > n:
+                todo[f"deal|{it['id']}|{f}"] = {"limit": n, "text": it["deal"][f]}
+    for i, p in enumerate(edition.get("read_across", [])):
+        if n_words(p) > READ_ACROSS_LIMIT:
+            todo[f"read|{i}|"] = {"limit": READ_ACROSS_LIMIT, "text": p}
+    return todo
+
+
+def tighten(edition: dict) -> dict:
+    """Ask the model to rewrite over-length fields as complete, shorter text (one cheap call)."""
+    todo = over_limit(edition)
+    if not todo:
+        return edition
+    log(f"tighten: rewriting {len(todo)} over-length fields")
+    prompt = f"""Rewrite each text below so it is AT MOST its word limit, in British English.
+Rules: keep the key facts (who, what, numbers, dates); write complete sentences, or for headlines and table
+cells a complete phrase; never end with an ellipsis or a trailing fragment; do not add facts.
+
+<fields>
+{json.dumps(todo, ensure_ascii=False, indent=1)}
+</fields>
+
+Return ONLY a JSON object mapping each key to its rewritten text, e.g. {{"item|abc|summary": "..."}}."""
+    try:
+        resp = client.messages.create(
+            model=CFG["models"]["review"],
+            max_tokens=8000,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        rewrites = parse_json(text_of(resp), expect=dict)
+    except Exception as exc:  # noqa: BLE001
+        log(f"  tighten failed ({exc}); falling back to whole-sentence trimming")
+        return edition
+    by_id = {it["id"]: it for it in edition.get("items", [])}
+    for key, text in rewrites.items():
+        kind, ref, field = (key.split("|") + ["", ""])[:3]
+        if not isinstance(text, str) or not text.strip():
+            continue
+        text = text.strip().rstrip("…").rstrip()
+        if kind == "item" and ref in by_id:
+            by_id[ref][field] = text
+        elif kind == "deal" and ref in by_id and by_id[ref].get("deal"):
+            by_id[ref]["deal"][field] = text
+        elif kind == "read" and ref.isdigit() and int(ref) < len(edition.get("read_across", [])):
+            edition["read_across"][int(ref)] = text
+    return edition
 
 
 def enforce_limits(edition: dict) -> dict:
-    """Hard word limits so the layout always fits, whatever the model wrote."""
+    """Final safety net before layout: whole sentences only, never an ellipsis."""
     for it in edition.get("items", []):
         for f, n in LIMITS.items():
-            it[f] = clip(it.get(f, ""), n)
-        it.setdefault("lenses", [])
-        it["lenses"] = [l for l in it["lenses"] if l in LENSES][:3]
+            it[f] = whole_sentences(it.get(f, ""), n)
+        it["lenses"] = [l for l in it.get("lenses", []) if l in LENSES][:3]
         it.setdefault("sources", [])
-        if it.get("deal"):
-            for f, n in (("who", 4), ("with", 4), ("what", 10)):
-                it["deal"][f] = clip(it["deal"].get(f, ""), n)
-    edition["read_across"] = [clip(p, 40) for p in edition.get("read_across", [])][:2]
-    edition["implications"] = {k: clip(v, 25) for k, v in edition.get("implications", {}).items()}
+    edition["read_across"] = [whole_sentences(p, READ_ACROSS_LIMIT) for p in edition.get("read_across", [])][:2]
     return edition
 
 
@@ -281,7 +348,7 @@ def render(edition: dict, out_pdf: Path, max_per_domain: int = 3, watch_n: int =
 def render_two_pages(edition: dict, out_pdf: Path) -> None:
     """Progressively trim optional content until the PDF is exactly two pages."""
     edition = enforce_limits(edition)
-    for max_per_domain, watch_n, deals_n in [(3, 6, 6), (3, 3, 4), (3, 0, 4), (2, 6, 6), (2, 3, 4), (2, 0, 4), (2, 0, 0)]:
+    for max_per_domain, watch_n, deals_n in [(3, 6, 6), (3, 3, 4), (3, 3, 0), (3, 0, 4), (3, 0, 0), (2, 6, 6), (2, 3, 4), (2, 0, 4), (2, 0, 0)]:
         pages = render(edition, out_pdf, max_per_domain, watch_n, deals_n)
         log(f"render: {pages} pages (cards {max_per_domain}, watch {watch_n}, deals {deals_n})")
         if pages == 2:
@@ -326,9 +393,14 @@ def main() -> None:
 
     if args.from_json:
         edition = json.loads(Path(args.from_json).read_text())
+        if over_limit(edition) and os.environ.get("ANTHROPIC_API_KEY"):
+            edition = tighten(edition)
     elif json_path.exists() and not args.rescan:
         edition = json.loads(json_path.read_text())
         log(f"reusing curated edition {json_path.name} (delete it, or use --rescan, to curate again)")
+        if over_limit(edition):
+            edition = tighten(edition)
+            json_path.write_text(json.dumps(edition, ensure_ascii=False, indent=1))
     else:
         edition_no = next_edition_number()
         cand_path = EDITIONS / f"{week_id}-candidates.json"
@@ -343,6 +415,7 @@ def main() -> None:
         edition = curate(candidates, edition_no, week_label, start, end)
         edition["counts"]["screened"] = max(edition["counts"].get("screened", 0), len(candidates))
         edition = review(edition)
+        edition = tighten(edition)
         json_path.write_text(json.dumps(edition, ensure_ascii=False, indent=1))
         log(f"saved {json_path.name}")
 

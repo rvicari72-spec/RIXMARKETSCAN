@@ -89,7 +89,7 @@ The curation pass emits one JSON object per item. The publish step fills the tem
   "lenses": ["sdv", "connectivity", "ai", "data", "twins"],
   "headline": "≤ 14 words, present tense, names the actor",
   "summary": "2–3 sentences, ≤ 60 words, facts only",
-  "so_what": "1 sentence, ≤ 25 words, starts with the implication not the event",
+  "so_what": "1 sentence, ≤ 16 words, starts with the implication not the event",
   "sources": [{"outlet": "", "date": "YYYY-MM-DD", "url": "", "tier": 1}],
   "score": {"significance": 3, "novelty": 2, "relevance": 3, "modifiers": 0, "total": 8},
   "actors": ["Company A", "Company B"],
@@ -108,8 +108,7 @@ Edition-level fields:
   "counts": {"screened": 48, "qualified": 11, "customer_relevant": 3},
   "heatmap": {"automotive": {"sdv": 7, "connectivity": 4, "ai": 5, "data": 2, "twins": 3}, "robotics": {}, "energy": {}, "agri": {}},
   "signal": "<item id>",
-  "read_across": ["paragraph 1", "paragraph 2"],
-  "implications": {"position": "", "pipeline": "", "portfolio": "", "softbank": ""}
+  "read_across": ["paragraph 1", "paragraph 2"]
 }
 ```
 
@@ -123,7 +122,6 @@ Edition-level fields:
 - British English, sentence case, numerals for all numbers over nine, currency in the original with a GBP or EUR conversion in brackets where above £10m.
 - Company names as they style themselves; no stock tickers.
 - Sources are named with the date of publication, never "reports say".
-- The Implications box is written to Ric's voice: direct, commercial, ends with something that can be done on Monday. The SoftBank line is omitted when there is nothing to say rather than padded.
 - Total length target: page 1 ≈ 620 words, page 2 ≈ 640 words. The template's fixed slots enforce this; the agent must stay within the per-field word limits in §5 or the PDF spills to three pages.
 
 ---
@@ -139,7 +137,6 @@ Edition-level fields:
 | Domain sections | top 3 items per domain by score; tags from `lenses` |
 | Deals table | items with a non-empty `deal` |
 | Watch list | items with score 4–5 |
-| Implications box | `implications` |
 | Footer | `edition`, `generated`, screened count |
 
 ---
@@ -148,7 +145,7 @@ Edition-level fields:
 
 **Scan pass** — 20 searches: 4 domains × 5 lenses, past 7 days, English and Japanese, returning up to 10 candidates each with outlet, date, URL, and a two-line gist. De-duplicate on actor + event.
 
-**Curation pass** — receives candidate list and this rubric (§1–§4, §6). Scores each candidate, returns the JSON in §5, and writes the read-across and implications last.
+**Curation pass** — receives candidate list and this rubric (§1–§4, §6). Scores each candidate, returns the JSON in §5, and writes the read-across last.
 
 **Review pass** — a second model call checks: every item has a Tier 1–2 source and date; no field exceeds its word limit; no actor exceeds two cards per page; the Signal is the top score; the heat-map counts reconcile with the items. Failures are corrected before render.
 
@@ -159,7 +156,7 @@ Edition-level fields:
 ## 9. Open decisions for Ric
 
 1. Customer, prospect, and competitor lists to feed the Relevance score and the deals-table tags (a simple CSV is enough).
-2. Whether the Japanese-language scan runs every week or only when the SoftBank line is in scope.
+2. Whether the Japanese-language scan runs every week or only when Japanese accounts are in the news.
 3. Send day and time (proposed: Monday 06:00 UK).
 4. Whether the review pass should also flag items to escalate to you mid-week rather than waiting for the edition.
 
