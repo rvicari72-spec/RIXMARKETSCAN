@@ -1,0 +1,996 @@
+{
+ "edition": 1,
+ "week_label": "Week of 28 Sep – 4 Oct 2026",
+ "generated": "2026-09-30",
+ "counts": {
+  "screened": 60,
+  "qualified": 18,
+  "customer_relevant": 6
+ },
+ "heatmap": {
+  "automotive": {
+   "sdv": 6,
+   "connectivity": 3,
+   "ai": 3,
+   "data": 3,
+   "twins": 0
+  },
+  "robotics": {
+   "sdv": 4,
+   "connectivity": 2,
+   "ai": 5,
+   "data": 2,
+   "twins": 0
+  },
+  "energy": {
+   "sdv": 2,
+   "connectivity": 1,
+   "ai": 2,
+   "data": 3,
+   "twins": 2
+  },
+  "agri": {
+   "sdv": 4,
+   "connectivity": 1,
+   "ai": 5,
+   "data": 1,
+   "twins": 1
+  }
+ },
+ "signal": "2026-W40-001",
+ "read_across": [
+  "The week's 18 qualifying items cluster around one theme: the software layer is being locked down by regulators and standardised by consortia at the same moment. UN R156 became mandatory for all new EU vehicles in July, the EU Data Act's Article 3 access-by-design rule bit on 12 September, Germany's MiSpeL V2G framework is now live, and the FCC has added foreign-produced robots to its Covered List. In parallel Nissan–Honda, the four-way European OS group, and Japan's JASPAR are all racing to fix the API surface below the application layer. Six of the qualifying items involve Cubic³ named accounts or direct competitors.",
+  "The heat-map shows SDV lit across every domain and connectivity notably thin outside automotive — a gap the Viasat–Space42, Iridium NTN Direct and Onomondo SGP.32 announcements are moving to close. Robotics and agri/industrial are now converging on the same physical-AI, edge-inference and OEM-agnostic autonomy stack (ASI, AIM, Applied Intuition's Dana, Caterpillar–NVIDIA). Energy is where regulation and product finally meet: VW/Elli's Q4 V2G launch, Hyundai's All Day Energy platform and the IEA-recorded Brazil and Korea pilots turn the EV battery into a metered grid asset governed by SDV-grade OTA."
+ ],
+ "implications": {
+  "position": "Position Cubic³ as the neutral SGP.32 orchestrator now that Onomondo, G+D/Rivian/AT&T and KDDI/Verizon/BMW have set the reference architecture; the differentiator is multi-domain, not just automotive.",
+  "pipeline": "Re-open the BMW, Honda, Hyundai and AGCO conversations against the specific compliance clocks — UN R156, EU Data Act Article 3, MiSpeL — with a one-page mapping of where our orchestration and data-access layer removes their exposure by Monday.",
+  "portfolio": "Fleet Wallet has a clean wedge in Germany on the back of VW/Elli's Q4 V2G launch and Hyundai's All Day Energy rollout: bidirectional settlement between driver, CPO and utility is the missing rail. Brief product this week.",
+  "softbank": ""
+ },
+ "items": [
+  {
+   "id": "2026-W40-001",
+   "domain": "automotive",
+   "lenses": [
+    "data",
+    "connectivity"
+   ],
+   "headline": "EU Data Act Article 3 access-by-design rule bites on connected-vehicle OEMs",
+   "summary": "From 12 September 2026 all connected products sold in the EU, vehicles included, must be built so users can access their data directly and redirect it to third parties. Compliance vendors including Grape Up's Databoostr and Smartcar report several OEMs have integrated in time; laggards now face member-state enforcement.",
+   "so_what": "Every EU OEM programme now needs an audited data-access path — the orchestration and consent layer we already sell becomes a compliance line item, not a nice-to-have.",
+   "sources": [
+    {
+     "outlet": "Automotive IQ",
+     "date": "2026-09-12",
+     "url": "https://www.automotive-iq.com/cybersecurity/how-to-guides/complying-with-the-eu-data-act-in-automotive",
+     "tier": 2
+    },
+    {
+     "outlet": "Grape Up",
+     "date": "2026-09-12",
+     "url": "https://grapeup.com/blog/eu-data-act-vehicle-guidance-2025-what-automotive-oems-must-share-by-september-2026",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "European Commission",
+    "EU automotive OEMs"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W40-002",
+   "domain": "automotive",
+   "lenses": [
+    "sdv"
+   ],
+   "headline": "Nissan and Honda sign joint agreement to standardise ECUs, in-vehicle OS and middleware",
+   "summary": "On 31 August 2026 Nissan and Honda formalised a joint development agreement covering the ECUs, vehicle operating system and middleware layers of their next-generation software-defined vehicles. The pact mirrors the parallel Volkswagen, BMW, Mercedes-Benz and Stellantis European OS effort.",
+   "so_what": "Two Cubic³ named accounts are consolidating their software stack; any connectivity or data-access proposal must now clear both companies' shared architecture, not each brand separately.",
+   "sources": [
+    {
+     "outlet": "MarkLines",
+     "date": "2026-08-31",
+     "url": "https://www.marklines.com/en/news/tag/258/sdv",
+     "tier": 2
+    },
+    {
+     "outlet": "TT News",
+     "date": "2026-08-31",
+     "url": "https://www.ttnews.com/articles/nissan-honda-software-cars",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Nissan",
+    "Honda"
+   ],
+   "deal": {
+    "who": "Nissan",
+    "with": "Honda",
+    "what": "Joint development of standard ECUs, in-vehicle OS and middleware for next-gen SDVs",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "customer",
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-003",
+   "domain": "automotive",
+   "lenses": [
+    "connectivity",
+    "sdv"
+   ],
+   "headline": "Verizon becomes US connectivity provider for BMW vehicles via KDDI global platform",
+   "summary": "All newly manufactured BMW Group vehicles now use Verizon for US cellular service, routed through KDDI's global connected-vehicle platform, which handles the eSIM profile before hand-off. The arrangement was confirmed in the week of 6 July 2026 by MVNO trade trackers.",
+   "so_what": "A named account is running its eSIM orchestration through a direct Cubic³ competitor; the counter-pitch has to be a like-for-like global platform with better VAS.",
+   "sources": [
+    {
+     "outlet": "Atomic Mobile",
+     "date": "2026-07-06",
+     "url": "https://atomicmobile.com/telecom-intelligence/topic/MVNO",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Verizon",
+    "BMW Group",
+    "KDDI"
+   ],
+   "deal": {
+    "who": "BMW Group",
+    "with": "KDDI and Verizon",
+    "what": "US cellular connectivity for newly built vehicles through KDDI global platform",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "customer",
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W40-004",
+   "domain": "automotive",
+   "lenses": [
+    "connectivity",
+    "sdv"
+   ],
+   "headline": "G+D, Rivian and AT&T embed SGP.32 eSIM connectivity into the R2 platform",
+   "summary": "Giesecke+Devrient, Rivian and AT&T are integrating SGP.32-compliant eSIM into Rivian's forthcoming R2 platform, letting one hardware build switch network profiles remotely across markets. Berg Insight cites the deal as a lead example of the industry's move to the new IoT eSIM standard.",
+   "so_what": "SGP.32 is now the reference architecture for new vehicle programmes; our orchestration play must be positioned as the neutral profile manager, not a bundled MNO.",
+   "sources": [
+    {
+     "outlet": "Auto Connected Car News",
+     "date": "2026-07-21",
+     "url": "https://www.autoconnectedcar.com/2026/07/oem-connected-cars-total-583-1-million-as-bandwidth-expands/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Giesecke+Devrient",
+    "Rivian",
+    "AT&T"
+   ],
+   "deal": {
+    "who": "Rivian",
+    "with": "G+D and AT&T",
+    "what": "SGP.32 eSIM integration for R2 platform",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "prospect",
+    "competitor",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-005",
+   "domain": "automotive",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "Stellantis and Applied Intuition expand STLA Brain collaboration",
+   "summary": "Stellantis and Applied Intuition announced on 1 September 2026 an expanded partnership around the STLA Brain platform, deepening Applied Intuition's simulation and software toolchain inside Stellantis's OTA and autonomous-drive workflows across its multi-brand portfolio.",
+   "so_what": "Applied Intuition is becoming the default agentic-AI toolchain across OEMs; if we do not partner into it we will meet it on every RFP.",
+   "sources": [
+    {
+     "outlet": "Stellantis Newsroom",
+     "date": "2026-09-01",
+     "url": "https://www.stellantis.com/en/news/press-releases",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "Stellantis",
+    "Applied Intuition"
+   ],
+   "deal": {
+    "who": "Stellantis",
+    "with": "Applied Intuition",
+    "what": "Expanded STLA Brain software development collaboration",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "prospect",
+    "partner",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-006",
+   "domain": "automotive",
+   "lenses": [
+    "sdv",
+    "connectivity"
+   ],
+   "headline": "Japan's JASPAR and Open SDV Initiative target standard vehicle APIs by December 2026",
+   "summary": "JASPAR committed to publishing standard specifications for high-priority SDV API domains by December 2026, while METI's Open SDV Initiative plans to release autonomous-driving APIs in the same fiscal year. The roadmap is part of Japan's Mobility DX Strategy response to Chinese and Western competition.",
+   "so_what": "A common Japanese API surface makes selling one orchestration platform into Toyota, Honda and Nissan realistic within 18 months; we should have a JASPAR position paper ready.",
+   "sources": [
+    {
+     "outlet": "METI Japan",
+     "date": "2026-09-01",
+     "url": "https://www.mobilitydx.go.jp/event/pdf/ev05_05pdf_ito.pdf",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "JASPAR",
+    "Open SDV Initiative",
+    "METI"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer",
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W40-007",
+   "domain": "robotics",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "NHTSA orders Tesla to answer 21 sworn questions on Cybercab self-certification",
+   "summary": "NHTSA's Special Order AQ26002, issued on 10 September 2026, required Tesla to answer 21 sworn questions on how the steering-wheel-free camera-only Cybercab was self-certified against federal safety standards. Tesla's response deadline fell on 30 September 2026, with civil penalties and a potential stop-sale on the table.",
+   "so_what": "Regulator scrutiny of camera-only autonomy will slow US robotaxi rollouts and re-open the door for connectivity-backed remote supervision and V2X-based safety layers.",
+   "sources": [
+    {
+     "outlet": "NHTSA / Basenor",
+     "date": "2026-09-30",
+     "url": "https://www.basenor.com/blogs/news/nhtsas-cybercab-inquiry-what-tesla-must-answer-today",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Tesla",
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "competitor",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-008",
+   "domain": "robotics",
+   "lenses": [
+    "connectivity",
+    "data",
+    "ai"
+   ],
+   "headline": "FCC adds foreign-produced advanced robots to national-security Covered List",
+   "summary": "The FCC's Third Report and Order, adopted in July 2026, adds foreign-produced humanoids, quadrupeds, AMRs and connected service robots to its Covered List, citing a 2026 remote-access vulnerability in consumer robots and a Unitree fleet exploit. Unitree has warned that current and future US sales face approval hurdles.",
+   "so_what": "US robot fleet operators now need a Western-vetted connectivity and data path — a direct opening for our orchestration stack in the humanoid and AMR segments.",
+   "sources": [
+    {
+     "outlet": "K&L Gates",
+     "date": "2026-08-03",
+     "url": "https://www.klgates.com/thought-leadership/FCC-Adds-Foreign-Produced-Advanced-Robotic-Devices-to-the-Covered-List-Five-Things-to-Know-8-3-2026",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 10
+   },
+   "actors": [
+    "FCC",
+    "Unitree"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-009",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "sdv"
+   ],
+   "headline": "XPeng starts automated humanoid production line and raises $900m at $6.3bn valuation",
+   "summary": "On 8 September 2026 XPeng commissioned the first automotive-grade automated humanoid production line in Guangzhou, with the IRON robot walking off the line. Its robotics subsidiary raised $900m (£710m) led by IDG Capital at a $6.3bn post-money valuation, with Tencent and Alibaba as strategic investors; mass production is targeted for end-2026.",
+   "so_what": "Shared physical-AI stacks between EVs and humanoids mean the same connectivity and data platform can address both — worth a briefing note for the SoftBank robotics team.",
+   "sources": [
+    {
+     "outlet": "XPeng Newsroom",
+     "date": "2026-09-08",
+     "url": "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "XPeng",
+    "IDG Capital",
+    "Tencent",
+    "Alibaba"
+   ],
+   "deal": {
+    "who": "XPeng robotics subsidiary",
+    "with": "IDG Capital, Tencent, Alibaba",
+    "what": "$900m raise at $6.3bn post-money",
+    "relevance": "SoftBank"
+   },
+   "relationship_flags": [
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-010",
+   "domain": "robotics",
+   "lenses": [
+    "connectivity"
+   ],
+   "headline": "Viasat and Space42 commit up to $1bn to found Equatys multi-orbit NTN platform",
+   "summary": "Viasat and Space42 committed up to $1bn (£790m) to co-found Equatys, a shared multi-orbit satellite and ground platform delivering non-terrestrial connectivity as a wholesale service. The venture targets AV, robot and remote-asset operators needing resilient satellite fallback for OTA, telemetry and edge-AI offload.",
+   "so_what": "NTN is moving from experiment to wholesale; our orchestration layer needs an Equatys and Iridium NTN Direct integration path before Q1 or we cede the multi-orbit story.",
+   "sources": [
+    {
+     "outlet": "Atomic Mobile",
+     "date": "2026-09-28",
+     "url": "https://atomicmobile.com/telecom-intelligence/2026",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Viasat",
+    "Space42",
+    "Equatys"
+   ],
+   "deal": {
+    "who": "Viasat",
+    "with": "Space42",
+    "what": "Up to $1bn joint venture to found Equatys multi-orbit NTN platform",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "partner",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-011",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "sdv",
+    "connectivity"
+   ],
+   "headline": "Waymo integrates Google Gemini in-cabin AI on new Ojai robotaxi platform",
+   "summary": "Waymo's new Ojai robotaxi platform launched a revamped in-vehicle interface with Google's Gemini AI embedded in the cabin, available to early-access riders. Waymo is targeting one million rides per week by end-2026 and has separately confirmed a Nashville robotaxi launch with Lyft.",
+   "so_what": "Robotaxi operators are now differentiating on cloud-AI copilots at the seat; connectivity SLAs and in-cabin data pipes become a commercial specification, not a back-office one.",
+   "sources": [
+    {
+     "outlet": "The Driverless Digest",
+     "date": "2026-09-01",
+     "url": "https://www.thedriverlessdigest.com/p/zoox-wins-landmark-us-approval-for",
+     "tier": 2
+    },
+    {
+     "outlet": "Smart Cities Dive",
+     "date": "2026-09-17",
+     "url": "https://www.smartcitiesdive.com/news/robotaxi-waymo-motional-zoox-tesla-uber-lyft/759895/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "Waymo",
+    "Google",
+    "Lyft"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W40-012",
+   "domain": "energy",
+   "lenses": [
+    "sdv",
+    "data"
+   ],
+   "headline": "Volkswagen and Elli confirm Q4 2026 launch of integrated V2G package in Germany",
+   "summary": "Volkswagen and its energy subsidiary Elli will launch a bundled vehicle-to-grid product in Germany in Q4 2026, combining EV, app, electricity tariff, smart meter, bidirectional charger and automated energy-management software. The package sits on Germany's new MiSpeL technical framework.",
+   "so_what": "This is the first commercial V2G bundle from a global OEM — Fleet Wallet has a clean wedge as the bidirectional settlement rail between driver, CPO and utility.",
+   "sources": [
+    {
+     "outlet": "Volkswagen Group Newsroom",
+     "date": "2026-04-16",
+     "url": "https://www.volkswagen-group.com/en/press-releases/electric-vehicle-batteries-as-grid-storage-volkswagen-and-elli-to-launch-vehicle-to-grid-offer-20329",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 10
+   },
+   "actors": [
+    "Volkswagen Group",
+    "Elli"
+   ],
+   "deal": {
+    "who": "Volkswagen Group",
+    "with": "Elli",
+    "what": "Q4 2026 launch of integrated V2G package for German private customers",
+    "relevance": "Fleet Wallet"
+   },
+   "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-013",
+   "domain": "energy",
+   "lenses": [
+    "sdv",
+    "data",
+    "connectivity"
+   ],
+   "headline": "Germany's MiSpeL V2G technical framework goes live, enabling commercial bidirectional charging",
+   "summary": "Germany's Bundesnetzagentur MiSpeL framework, which sets the interoperability and metering rails for commercial V2G, entered force in April 2026 following the November 2025 Energy Industry Act amendment removing double grid fees for EV storage. BMW with E.ON and Volkswagen with Elli are the first OEMs launching products on it.",
+   "so_what": "Germany is now the reference V2G market; our metering, identity and settlement layer needs a MiSpeL conformance statement in the next sales pack.",
+   "sources": [
+    {
+     "outlet": "Eleport",
+     "date": "2026-05-07",
+     "url": "https://eleport.com/v2g-vehicle-to-grid/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Bundesnetzagentur",
+    "BMW",
+    "E.ON",
+    "Volkswagen"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer",
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W40-014",
+   "domain": "energy",
+   "lenses": [
+    "sdv",
+    "data"
+   ],
+   "headline": "Hyundai bundles V2X into 'All Day Energy' platform with UK rollout first",
+   "summary": "Hyundai Motor Group has consolidated V2H, V2B, V2V and V2G into a single 'All Day Energy' service, launching first in the UK and then rolling out through the group's in-vehicle app to further markets. The move turns the EV software stack into a bidirectional energy hub integrated with grid operators.",
+   "so_what": "A Cubic³ named account is going to market with bidirectional energy services in our home market — a direct opening to propose the connectivity and settlement layer.",
+   "sources": [
+    {
+     "outlet": "EV Note",
+     "date": "2026-07-22",
+     "url": "https://ev-note.jp/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Hyundai Motor Group"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W40-015",
+   "domain": "energy",
+   "lenses": [
+    "twins",
+    "data"
+   ],
+   "headline": "EU Battery Regulation triggers digital-twin compliance wave for battery makers",
+   "summary": "The EU Battery Regulation's 2026–2027 tranche requires manufacturers to disclose detailed capacity, recycled-content and cobalt-sourcing data, with digital twins now the preferred infrastructure for automated audit evidence. GE Digital's Predix and comparable platforms are being adopted by storage integrators to meet the requirement.",
+   "so_what": "Battery-passport compliance is a data-flow problem; if our data-access layer can carry it we should be quoting against Predix, not around it.",
+   "sources": [
+    {
+     "outlet": "DataIntelo",
+     "date": "2026-09-30",
+     "url": "https://dataintelo.com/report/battery-digital-twin-models-market",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "European Commission",
+    "Battery OEMs"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-016",
+   "domain": "agri",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "Applied Intuition extends 'Dana' agentic-AI SDV workflow to mining, construction and ag OEMs",
+   "summary": "Applied Intuition published details of Dana, an agentic AI unifying vehicle OS processes, OTA, sensor integration and energy management in one workflow, explicitly extended to mining, construction and agricultural vehicles. The platform aims to compress engineering handoffs across the software lifecycle.",
+   "so_what": "Off-highway OEMs are being handed an automotive-grade SDV toolchain; our connectivity and data-access layer should be pre-integrated with Dana before AGCO or CNH ask.",
+   "sources": [
+    {
+     "outlet": "Applied Intuition",
+     "date": "2026-08-13",
+     "url": "https://www.appliedintuition.com/blog/future-of-vehicle-software-is-agentic",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 10
+   },
+   "actors": [
+    "Applied Intuition"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect",
+    "partner",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-017",
+   "domain": "agri",
+   "lenses": [
+    "ai",
+    "sdv"
+   ],
+   "headline": "Komatsu and AIM Intelligent Machines move autonomous dozers and excavators to commercial deployment",
+   "summary": "Komatsu, its EARTHBRAIN subsidiary and AIM Intelligent Machines progressed their autonomous bulldozer and hydraulic excavator programme into commercial deployment at US customer jobsites, with a Japan launch planned for 2027. AIM's physical-AI autonomy stack has already been used at fleet scale on dozers.",
+   "so_what": "A Cubic³ named account is scaling autonomy across brownfield fleets — the retrofit connectivity and telemetry pipe is a direct proposal, not a future one.",
+   "sources": [
+    {
+     "outlet": "International Mining",
+     "date": "2026-07-31",
+     "url": "https://im-mining.com/2026/07/31/komatsu-and-aim-intelligent-machines-enter-partnership-for-autonomous-operation-of-dozers-excavators/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Komatsu",
+    "AIM Intelligent Machines",
+    "EARTHBRAIN"
+   ],
+   "deal": {
+    "who": "Komatsu / EARTHBRAIN",
+    "with": "AIM Intelligent Machines",
+    "what": "Commercial deployment of autonomous dozers and excavators at US jobsites",
+    "relevance": "Customer"
+   },
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W40-018",
+   "domain": "agri",
+   "lenses": [
+    "ai",
+    "sdv"
+   ],
+   "headline": "AGCO unveils PTx mixed-fleet retrofit and autonomy at Farm Progress Show",
+   "summary": "AGCO's Farm Progress Show exhibit (1–3 September 2026) headlined new mixed-fleet retrofit and autonomy solutions from its PTx brand alongside Fendt and Massey Ferguson debuts. PTx showed precision-ag products spanning seed placement through autonomous harvest, extending OEM-agnostic autonomy across brands.",
+   "so_what": "AGCO's OEM-agnostic direction favours a neutral connectivity and data platform — worth a direct call this week on the retrofit pipe.",
+   "sources": [
+    {
+     "outlet": "AGCO Investor Relations",
+     "date": "2026-08-25",
+     "url": "https://investors.agcocorp.com/news-releases/news-release-details/agco-unveil-global-products-and-farmer-first-innovations-2026",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "AGCO",
+    "Fendt",
+    "Massey Ferguson",
+    "PTx"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W40-019",
+   "domain": "agri",
+   "lenses": [
+    "connectivity"
+   ],
+   "headline": "Iridium NTN Direct launches 2026 for agriculture and transport IoT",
+   "summary": "Iridium confirmed its NTN Direct service is launching in 2026, fully aligned with 3GPP NTN standards and integrating into global MNO infrastructure. It targets transport, utilities, agriculture and industrial IoT where terrestrial coverage cannot reach, with real-time tracking, remote diagnostics and global roaming.",
+   "so_what": "Off-highway OEMs will demand terrestrial and NTN in one SKU; we should have an Iridium integration story ready alongside the Equatys one.",
+   "sources": [
+    {
+     "outlet": "Iridium",
+     "date": "2026-09-01",
+     "url": "https://www.iridium.com/services/iridium-ntn-direct",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "Iridium"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "partner",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-020",
+   "domain": "automotive",
+   "lenses": [
+    "data",
+    "connectivity"
+   ],
+   "headline": "US auto alliance urges Congress to ban Chinese vehicles by year-end",
+   "summary": "On 3 September 2026 the Alliance for Automotive Innovation formally urged Congress to pass legislation barring Chinese-manufactured vehicles from the US market before year-end, citing data-security and supply-chain risk in connected-vehicle software and telematics hardware.",
+   "so_what": "Watch: a ban would harden 'trusted' connectivity and data-handling as a US procurement requirement — helpful tailwind for Western orchestration platforms.",
+   "sources": [
+    {
+     "outlet": "MarkLines",
+     "date": "2026-09-03",
+     "url": "https://www.marklines.com/en/news/tag/258/sdv",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 1,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "Alliance for Automotive Innovation",
+    "GM",
+    "Ford",
+    "Stellantis",
+    "Toyota USA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W40-021",
+   "domain": "automotive",
+   "lenses": [
+    "connectivity",
+    "sdv"
+   ],
+   "headline": "Tata Communications and Tata Motors put 5G into Sierra.ev via MOVE platform",
+   "summary": "Tata Communications and Tata Motors Passenger Vehicles announced on 25 August 2026 that built-in 5G connectivity will be integrated into the Sierra.ev through the MOVE Connected Vehicle Platform and Tata's SDV stack, making it the group's first fully software-defined connected model.",
+   "so_what": "Watch: Tata is bundling captive telco with captive OEM — a model competitors will imitate in adjacent markets.",
+   "sources": [
+    {
+     "outlet": "MarkLines",
+     "date": "2026-08-25",
+     "url": "https://www.marklines.com/en/news/tag/258/sdv",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "Tata Communications",
+    "Tata Motors"
+   ],
+   "deal": {
+    "who": "Tata Motors",
+    "with": "Tata Communications",
+    "what": "Built-in 5G on Sierra.ev via MOVE platform",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-022",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "sdv"
+   ],
+   "headline": "Nevada grants Tesla, Waymo and Uber's Aviari permits for up to 7,100 driverless vehicles",
+   "summary": "On 20 August 2026 the Nevada Transportation Authority unanimously approved full Autonomous Vehicle Network Company permits for Tesla (up to 5,000 vehicles), Waymo (1,000) and Uber's Aviari (1,000) in Clark County, alongside Zoox's existing 100-vehicle permit. Paid Tesla rides are expected within around 30 days.",
+   "so_what": "Watch: the largest single-jurisdiction robotaxi authorisation to date sets a template other US states will copy — connectivity SLAs will follow.",
+   "sources": [
+    {
+     "outlet": "The Charge Port",
+     "date": "2026-08-20",
+     "url": "https://thechargeport.com/robotaxi-tracker",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 6
+   },
+   "actors": [
+    "Nevada Transportation Authority",
+    "Tesla",
+    "Waymo",
+    "Uber"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer",
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W40-023",
+   "domain": "energy",
+   "lenses": [
+    "data",
+    "connectivity"
+   ],
+   "headline": "Nuvve: fleets and utilities now the primary V2G adopters after US tax-credit lapse",
+   "summary": "Nuvve's 2026 outlook confirms that fleet operators, school districts and utilities have replaced retail consumers as the primary adopters of V2G and battery-aggregation, following the lapse of the US federal EV tax credit. Utilities are rewriting interconnection and compensation rules for aggregators managing thousands of batteries.",
+   "so_what": "Watch: the buyer for V2G in the US is now the fleet or utility, not the driver — reshape our energy pitch accordingly.",
+   "sources": [
+    {
+     "outlet": "Nuvve",
+     "date": "2026-01-01",
+     "url": "https://nuvve.com/2026-outlook-report/",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "Nuvve"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "partner",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W40-024",
+   "domain": "agri",
+   "lenses": [
+    "ai",
+    "data"
+   ],
+   "headline": "McKinsey: 15 of 19 major miners now show financial gains from AI in Q3 2026",
+   "summary": "At Mining Forum Americas, McKinsey reported that 15 of 19 tracked major miners recorded financial gains from AI in Q3 2026, up from 4 the prior quarter, as deployments move beyond pilots. McKinsey estimates AI could lift miners' EBITDA by 10–15 per cent through production gains and cash-cost reductions.",
+   "so_what": "Watch: mining AI has moved from experiment to P&L; the connectivity and data pipe that feeds it is now a budgeted line, not a demo.",
+   "sources": [
+    {
+     "outlet": "Mining.com",
+     "date": "2026-09-29",
+     "url": "https://www.mining.com/mining-forum-ai-begins-paying-off-mckinsey-says/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "McKinsey"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W40-025",
+   "domain": "agri",
+   "lenses": [
+    "ai",
+    "sdv"
+   ],
+   "headline": "Hitachi Construction Machinery to rebrand as LANDCROS from 2027",
+   "summary": "Hitachi Construction Machinery announced it will rename itself LANDCROS from 2027, signalling a strategic pivot to intelligence-defined machines. The rebrand follows Caterpillar's CES 2026 edge-AI partnership with NVIDIA and Hitachi's own in-cab Assist Program showcased at CONEXPO 2026.",
+   "so_what": "Watch: another off-highway OEM committing publicly to SDV — pipeline signal, not a near-term deal.",
+   "sources": [
+    {
+     "outlet": "Highways Today",
+     "date": "2026-07-10",
+     "url": "https://highways.today/2026/07/10/the-intelligent-machine-has-arrived/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "Hitachi Construction Machinery"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  }
+ ]
+}
