@@ -8,6 +8,6 @@ scan:
 email:
   from_name: Cubic³ Market Scan
   to:
-    - ricv@cubic3.com          # <- replace with your work address; add more lines for more recipients
+    - ricv@cubic3.com          
   smtp_host: smtp.gmail.com
   smtp_port: 465
