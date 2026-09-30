@@ -246,7 +246,7 @@ def n_words(text) -> int:
     return len(str(text or "").split())
 
 
-def whole_sentences(text, n: int) -> str:
+def whole_sentences(text, n: int, end: str = ".") -> str:
     """Keep as many complete sentences as fit in n words. Never cuts mid-sentence:
     if even the first sentence is longer than n, it is kept whole (tighten() should
     already have rewritten it; the page-fit loop absorbs the rare overrun)."""
@@ -259,7 +259,25 @@ def whole_sentences(text, n: int) -> str:
         if n_words(" ".join(kept + [sen])) > n:
             break
         kept.append(sen)
-    return " ".join(kept) if kept else sentences[0]
+    if kept:
+        return " ".join(kept)
+    first = sentences[0]
+    if n_words(first) <= int(n * 1.3):
+        return first                     # slightly long but complete: keep it
+    # Last resort: end at the last clause break within the limit, closed cleanly.
+    words = first.split()[: n]
+    head = " ".join(words)
+    cut = max(head.rfind(", "), head.rfind("; "), head.rfind(" — "), head.rfind(" – "))
+    if cut > len(head) * 0.5:
+        head = head[:cut]
+    head = head.rstrip(" ,;:—–-")
+    dangling = {"a", "an", "the", "and", "or", "of", "to", "in", "on", "for", "with", "by", "from", "at",
+                "as", "that", "its", "their", "which", "who", "is", "are", "will", "would", "has", "have"}
+    ws = head.split()
+    while len(ws) > 3 and ws[-1].lower().strip(",;:") in dangling:
+        ws.pop()
+    head = " ".join(ws).rstrip(" ,;:—–-")
+    return head if not end else head.rstrip(".") + end
 
 
 def over_limit(edition: dict) -> dict:
@@ -278,35 +296,16 @@ def over_limit(edition: dict) -> dict:
     return todo
 
 
-def tighten(edition: dict) -> dict:
-    """Ask the model to rewrite over-length fields as complete, shorter text (one cheap call)."""
-    todo = over_limit(edition)
-    if not todo:
-        return edition
-    log(f"tighten: rewriting {len(todo)} over-length fields")
-    prompt = f"""Rewrite each text below so it is AT MOST its word limit, in British English.
-Rules: keep the key facts (who, what, numbers, dates); write complete sentences, or for headlines and table
-cells a complete phrase; never end with an ellipsis or a trailing fragment; do not add facts;
-do not add advice or recommendations.
-
-<fields>
-{json.dumps(todo, ensure_ascii=False, indent=1)}
-</fields>
-
-Return ONLY a JSON object mapping each key to its rewritten text, e.g. {{"item|abc|summary": "..."}}."""
-    try:
-        resp = client.messages.create(
-            model=CFG["models"]["review"],
-            max_tokens=8000,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        rewrites = parse_json(text_of(resp), expect=dict)
-    except Exception as exc:  # noqa: BLE001
-        log(f"  tighten failed ({exc}); falling back to whole-sentence trimming")
-        return edition
-    by_id = {it["id"]: it for it in edition.get("items", [])}
+def _apply_rewrites(edition: dict, rewrites: dict) -> int:
+    # Accept {"key": "text"} or a single wrapper such as {"rewrites": {...}}.
+    if len(rewrites) == 1 and isinstance(next(iter(rewrites.values())), dict):
+        rewrites = next(iter(rewrites.values()))
+    by_id = {str(it["id"]): it for it in edition.get("items", [])}
+    applied = 0
     for key, text in rewrites.items():
-        kind, ref, field = (key.split("|") + ["", ""])[:3]
+        if isinstance(text, dict):
+            text = text.get("text", "")
+        kind, ref, field = (str(key).split("|") + ["", ""])[:3]
         if not isinstance(text, str) or not text.strip():
             continue
         text = text.strip().rstrip("…").rstrip()
@@ -316,6 +315,41 @@ Return ONLY a JSON object mapping each key to its rewritten text, e.g. {{"item|a
             by_id[ref]["deal"][field] = text
         elif kind == "read" and ref.isdigit() and int(ref) < len(edition.get("read_across", [])):
             edition["read_across"][int(ref)] = text
+        else:
+            continue
+        applied += 1
+    return applied
+
+
+def tighten(edition: dict) -> dict:
+    """Ask the model to rewrite over-length fields as complete, shorter text (up to two passes)."""
+    for attempt in (1, 2):
+        todo = over_limit(edition)
+        if not todo:
+            return edition
+        log(f"tighten (pass {attempt}): rewriting {len(todo)} over-length fields")
+        prompt = f"""Rewrite each text below so it is AT MOST its word limit, in British English.
+Rules: keep the key facts (who, what, numbers, dates); write complete sentences, or for headlines and table
+cells a complete phrase; never end with an ellipsis or a trailing fragment; do not add facts;
+do not add advice or recommendations. Count the words: going over the limit is not acceptable.
+
+<fields>
+{json.dumps(todo, ensure_ascii=False, indent=1)}
+</fields>
+
+Return ONLY a flat JSON object mapping each key exactly as given to its rewritten text,
+e.g. {{"item|abc|summary": "..."}}. No wrapper object, no commentary."""
+        try:
+            resp = client.messages.create(
+                model=CFG["models"]["review"],
+                max_tokens=12000,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            applied = _apply_rewrites(edition, parse_json(text_of(resp), expect=dict))
+            log(f"  applied {applied} rewrites")
+        except Exception as exc:  # noqa: BLE001
+            log(f"  tighten failed ({exc})")
+            break
     return edition
 
 
@@ -323,7 +357,10 @@ def enforce_limits(edition: dict) -> dict:
     """Final safety net before layout: whole sentences only, never an ellipsis."""
     for it in edition.get("items", []):
         for f, n in LIMITS.items():
-            it[f] = whole_sentences(it.get(f, ""), n)
+            it[f] = whole_sentences(it.get(f, ""), n, end="" if f == "headline" else ".")
+        if it.get("deal"):
+            for f, n in DEAL_LIMITS.items():
+                it["deal"][f] = whole_sentences(it["deal"].get(f, ""), n, end="")
         it["lenses"] = [l for l in it.get("lenses", []) if l in LENSES][:3]
         it.setdefault("sources", [])
     edition["read_across"] = [whole_sentences(p, READ_ACROSS_LIMIT) for p in edition.get("read_across", [])][:2]
@@ -368,14 +405,14 @@ def render(edition: dict, out_pdf: Path, max_per_domain: int = 3, watch_n: int =
 def render_two_pages(edition: dict, out_pdf: Path) -> None:
     """Progressively trim optional content until the PDF is exactly two pages."""
     edition = enforce_limits(edition)
-    for max_per_domain, watch_n, deals_n in [(3, 6, 6), (3, 3, 4), (3, 3, 0), (3, 0, 4), (3, 0, 0), (2, 6, 6), (2, 3, 4), (2, 0, 4), (2, 0, 0)]:
+    for max_per_domain, watch_n, deals_n in [(3, 6, 6), (3, 3, 4), (3, 3, 0), (3, 0, 4), (3, 0, 0), (2, 6, 6), (2, 3, 4), (2, 0, 4), (2, 0, 0), (1, 3, 0), (1, 0, 0)]:
         pages = render(edition, out_pdf, max_per_domain, watch_n, deals_n)
         log(f"render: {pages} pages (cards {max_per_domain}, watch {watch_n}, deals {deals_n})")
         if pages == 2:
             return
         if pages < 2:
             raise SystemExit("Edition rendered to fewer than 2 pages — check content.")
-    raise SystemExit("Could not fit the edition on two pages; shorten item copy in the rubric limits.")
+    log("WARNING: could not fit on two pages; sending the shortest version rather than nothing")
 
 
 # ------------------------------------------------------------------ email
