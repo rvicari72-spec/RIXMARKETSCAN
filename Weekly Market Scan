@@ -1,5 +1,3 @@
-name: Weekly Market Scan
-
 on:
   schedule:
     - cron: "0 5 * * 1"
