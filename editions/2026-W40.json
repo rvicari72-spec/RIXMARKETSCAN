@@ -183,8 +183,8 @@
     "connectivity",
     "sdv"
    ],
-   "headline": "G+D, Rivian and AT&T embed SGP.32 eSIM connectivity into the R2 platform",
-   "summary": "Giesecke+Devrient, Rivian and AT&T are integrating SGP.32-compliant eSIM into Rivian's forthcoming R2 platform, enabling one hardware build to switch network profiles remotely across markets. Berg Insight cites the deal as a lead example of the industry's shift to the IoT eSIM standard.",
+   "headline": "G+D, Rivian and AT&T embed SGP.32 eSIM into the R2 platform",
+   "summary": "Giesecke+Devrient, Rivian and AT&T are integrating SGP.32-compliant eSIM into Rivian's forthcoming R2 platform, enabling one hardware build to switch network profiles remotely across markets. Berg Insight cites this as a lead example of the industry's shift to the IoT eSIM standard.",
    "so_what": "SGP.32 is now the reference architecture for new vehicle programmes; our orchestration platform must be positioned as the neutral profile manager.",
    "sources": [
     {
