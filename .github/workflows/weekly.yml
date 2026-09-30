@@ -43,6 +43,7 @@ jobs:
           fi
 
       - name: Archive the edition in the repo
+        if: always()
         run: |
           git config user.name "market-scan-bot"
           git config user.email "bot@users.noreply.github.com"
@@ -51,6 +52,7 @@ jobs:
           git push
 
       - uses: actions/upload-artifact@v5
+        if: always()
         with:
           name: market-scan-pdf
-          path: editions/*.pdf
+          path: editions/*
