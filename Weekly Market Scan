@@ -1,0 +1,50 @@
+name: Weekly Market Scan
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: "Send the email (false = render only)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: System libraries for WeasyPrint
+        run: sudo apt-get update -q && sudo apt-get install -y -q libpango-1.0-0 libpangoft2-1.0-0 libharfbuzz0b fonts-dejavu fonts-crosextra-carlito
+      - run: pip install -r requirements.txt
+      - name: Run the scan
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.send_email }}" = "false" ]; then
+            python scan.py --no-email
+          else
+            python scan.py
+          fi
+      - name: Archive the edition in the repo
+        run: |
+          git config user.name "market-scan-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add editions/
+          git commit -m "Market Scan $(date -u +%Y-%m-%d)" || echo "nothing to commit"
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: market-scan-pdf
+          path: editions/*.pdf
