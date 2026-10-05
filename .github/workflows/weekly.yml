@@ -10,9 +10,9 @@ on:
         type: boolean
         default: true
       fresh_scan:
-        description: "Fresh scan (tick = ignore this week's saved results and search again)"
+        description: "Fresh scan (untick = reuse this week's saved results, quick and almost free)"
         type: boolean
-        default: false
+        default: true
 
 permissions:
   contents: write
@@ -41,10 +41,13 @@ jobs:
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
         run: |
           ARGS=""
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            ARGS="--rescan"                       # Monday runs always search afresh
+          else
             if [ "${{ inputs.send_email }}" = "false" ]; then ARGS="$ARGS --no-email"; fi
             if [ "${{ inputs.fresh_scan }}" = "true" ]; then ARGS="$ARGS --rescan"; fi
           fi
+          echo "Running: python scan.py $ARGS"
           python scan.py $ARGS
 
       - name: Archive the edition in the repo
