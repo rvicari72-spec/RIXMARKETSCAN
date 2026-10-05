@@ -9,8 +9,8 @@
  },
  "signal": "2026-W40-001",
  "read_across": [
-  "Regulators dominated the week. NHTSA activity around Tesla's Cybercab self-certification, Zoox's robotaxi exemption, Waymo's flooded-road OTA recall and the Recalls Next notice signals a US framework being rewritten around driverless vehicles. In Europe, Volkswagen and Elli's Q4 V2G launch and the IEA's first standalone V2G report coincide with a maturing EU Data Act regime that has moved fleet telematics access closer to a commodity.",
-  "Connectivity and cyber signals reinforced each other. Kigen's SGP.32 v1.3 eSIM certification, the Iridium–Deutsche Telekom–Toyota NB-IoT satellite voice demonstration and Thales's five-operator SGP.32 rollout show the eSIM-plus-NTN stack reaching commercial readiness. UN R155/R156, the EU Cyber Resilience Act and Japan's Active Cyber Defence law extend certified CSMS and SBOM obligations from cars to robots, chargers and off-highway machines, with quality and cyber recalls increasingly indistinguishable."
+  "Regulators dominated the week. NHTSA activity around Tesla's Cybercab self-certification, Zoox's robotaxi exemption, Waymo's flooded-road OTA recall, and the Recalls Next notice signals a US framework being rewritten around driverless vehicles. In Europe, Volkswagen and Elli's Q4 V2G launch and the IEA's first standalone V2G report coincide with a maturing EU Data Act regime that has moved fleet telematics access closer to a commodity.",
+  "Connectivity and cyber signals reinforced each other. Kigen's SGP.32 v1.3 eSIM certification, the Iridium–Deutsche Telekom–Toyota NB-IoT satellite demonstration, and Thales's five-operator SGP.32 rollout show the eSIM-plus-NTN stack reaching commercial readiness. UN R155/R156, the EU Cyber Resilience Act, and Japan's Active Cyber Defence law extend CSMS and SBOM obligations from cars to robots, chargers, and off-highway machines, with quality and cyber recalls increasingly indistinguishable."
  ],
  "items": [
   {
@@ -282,7 +282,7 @@
     "sdv"
    ],
    "headline": "Rivian recalls 100,700 vehicles over prompt obscuring rearview camera",
-   "summary": "Rivian filed a recall on 23 September 2026 covering 2022–2026 R1T, 2022–2027 R1S and 2027 R2 vehicles because a stability-control prompt can obscure the rearview image in reverse, breaching FMVSS 111. Over 95% of affected vehicles already carried the OTA fix.",
+   "summary": "Rivian filed a recall on 23 September 2026 covering 2022–2026 R1T, 2022–2027 R1S and 2027 R2 vehicles. A stability-control prompt can obscure the rearview image in reverse, breaching FMVSS 111. Over 95% of affected vehicles already had the OTA fix.",
    "so_what": "Illustrates recalls becoming administrative closure of already-deployed OTA remedies, not workshop events.",
    "sources": [
     {
@@ -473,7 +473,7 @@
     "sdv"
    ],
    "headline": "Toyota recalls 8,521 2026 C-HR EVs for BEV ECU software allowing battery overcharge",
-   "summary": "NHTSA recall 26V570000 covers 8,521 MY2026 Toyota C-HR EVs built February–July 2026 after a Denso ECU software flaw can allow regenerative braking to overcharge the traction battery and trigger a full drive shutdown. Dealers apply a software update; owner letters began mid-October 2026.",
+   "summary": "NHTSA recall 26V570000 covers 8,521 MY2026 Toyota C-HR EVs built February–July 2026. A Denso ECU software flaw can cause regenerative braking to overcharge the traction battery and trigger a full drive shutdown. Dealers apply a software update; owner letters began mid-October 2026.",
    "so_what": "Named-account EV recall centres on battery-management software, a growing category of electric-drive defects.",
    "sources": [
     {
@@ -619,7 +619,7 @@
     "regulatory"
    ],
    "headline": "NMFTA reveals Bendix EC80 truck brake recall silently patched remote code execution flaws",
-   "summary": "At Black Hat USA 2026, NMFTA researchers disclosed that a 2024 safety recall for Bendix's EC80 brake controller also fixed cyber vulnerabilities, including a wirelessly reachable remote code execution flaw and a hardcoded password able to disable traction control. Security fixes were not publicly disclosed.",
+   "summary": "At Black Hat USA 2026, NMFTA researchers revealed that a 2024 Bendix EC80 brake controller recall had also addressed cyber vulnerabilities, including a remotely exploitable code-execution flaw and a hardcoded password capable of disabling traction control. The security fixes were not publicly disclosed at the time.",
    "so_what": "Raises questions about transparency when safety recalls also carry undisclosed cybersecurity remediations.",
    "sources": [
     {
@@ -652,7 +652,7 @@
     "telematics"
    ],
    "headline": "EU Data Act one year on: OEM APIs live, fleet data access nearing commodity",
-   "summary": "A September 2026 Optivo analysis found all major automotive groups completed API infrastructure between October 2025 and March 2026 to expose telematics data to third parties under Regulation (EU) 2023/2854. Fleet managers can nominate telematics recipients without OEM contracts, though EU adoption remains uneven.",
+   "summary": "A September 2026 Optivo analysis found all major automotive groups completed API infrastructure between October 2025 and March 2026 to share telematics data with third parties under Regulation (EU) 2023/2854. Fleet managers can nominate recipients without OEM contracts, though EU adoption remains uneven.",
    "so_what": "Confirms the EU has moved from mandate to live infrastructure, shifting negotiating power to fleet operators.",
    "sources": [
     {
@@ -693,7 +693,7 @@
     "regulatory"
    ],
    "headline": "Waymo recalls 3,791 robotaxis after ADS failed to stop on flooded road",
-   "summary": "NHTSA reported that Waymo recalled 3,791 vehicles with 5th- and 6th-generation ADS after a driverless vehicle failed to stop on a flooded high-speed road, with a 100% assumed defect rate. All affected units received an OTA fix by 20 April 2026.",
+   "summary": "NHTSA reported that Waymo recalled 3,791 vehicles fitted with 5th- and 6th-generation ADS after a driverless vehicle failed to stop on a flooded high-speed road. The defect rate was assumed at 100%. All affected units received an OTA fix by 20 April 2026.",
    "so_what": "Established robotaxi operator uses OTA to close a safety recall covering its entire ADS fleet.",
    "sources": [
     {
@@ -727,7 +727,7 @@
     "regulatory"
    ],
    "headline": "CSA Group reissues intent to publish EV charger cybersecurity standard",
-   "summary": "CSA Group reissued a public notice of intent for a Canadian cybersecurity standard covering all EV charging equipment, from residential Level 1/2 to DC fast chargers and V2G units, across design, procurement, operation and decommissioning. A second comment period ran through 30 June 2026.",
+   "summary": "CSA Group reissued a public notice of intent for a Canadian cybersecurity standard covering all EV charging equipment, from residential Level 1/2 to DC fast chargers and V2G units, across design, procurement, operation, and decommissioning. A second comment period closed 30 June 2026.",
    "so_what": "Signals a formal North American cyber baseline for charger OEMs and CPOs is close to publication.",
    "sources": [
     {
