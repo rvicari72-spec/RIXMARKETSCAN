@@ -1,0 +1,809 @@
+{
+ "edition": 4,
+ "week_label": "Week of 12–16 Oct 2026",
+ "generated": "2026-10-12",
+ "counts": {
+  "screened": 75,
+  "qualified": 14,
+  "customer_relevant": 6
+ },
+ "signal": "2026-W42-001",
+ "read_across": [
+  "Software quality dominates the week: NHTSA campaigns at Toyota, Ford, Stellantis, Rivian, and Greenpower all trace back to ECU or infotainment code. Rivian's OTA-only remedy sits alongside Stellantis's 1.08 million-vehicle radio reflash. Regulatory activity spans UNECE R155/R156 amendments, Japan's Active Cyber Defence Law, and India's CEA power-sector rules. Honda and Nissan's joint SDV OS pact, plus Applied Intuition and Wayve supply deals, extend Japanese OEM strategy.",
+  "Connectivity activity clusters around fleets and energy: GM OnStar Fleet Intelligence, Geotab's Openreach trial, AtoB's embedded fuel card, and Michelin EV Charge layer services on existing telematics estates, whilst emnify-Skylo converges cellular and NTN on one eSIM. Ruter's Yutong SIM-shutdown finding and ENISA's 214% rise in EV-charger attacks place cyber alongside connectivity. FMCSA's autonomous-truck exemption, Komatsu's Tier IV and AIM partnerships, and Hitachi-Pronto AI mark a shift to OEM-agnostic autonomy stacks."
+ ],
+ "items": [
+  {
+   "id": "2026-W42-001",
+   "domain": "automotive",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "Honda and Nissan agree to share SDV ECUs, OS and middleware from 2029",
+   "summary": "Honda and Nissan will co-develop a high-performance SoC main computer, zone ECUs, in-vehicle OS and middleware for next-generation SDVs from fiscal 2029, covering roughly 6.72 million annual vehicles between them.",
+   "so_what": "First Japanese OEM pairing to standardise vehicle OS at platform level, following collapsed 2025 merger talks.",
+   "sources": [
+    {
+     "outlet": "Honda Global Newsroom",
+     "date": "2026-08-31",
+     "url": "https://global.honda/en/newsroom/news/2026/c260831beng.html",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 11
+   },
+   "actors": [
+    "Honda",
+    "Nissan"
+   ],
+   "deal": {
+    "who": "Honda",
+    "with": "Nissan",
+    "what": "Joint SDV development agreement for shared ECUs, OS and middleware from FY2029",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W42-002",
+   "domain": "automotive",
+   "lenses": [
+    "cyber",
+    "connectivity",
+    "regulatory"
+   ],
+   "headline": "Ruter finds Yutong buses remotely stoppable via embedded SIM; UK and Denmark open probes",
+   "summary": "Norwegian operator Ruter discovered a Romanian SIM in a Yutong electric bus linked to battery and power systems, theoretically letting the maker halt the vehicle over cellular. UK DfT with NCSC and Denmark opened investigations.",
+   "so_what": "Elevates eSIM and OTA channels to national-security concern for connected commercial vehicles under R155.",
+   "sources": [
+    {
+     "outlet": "CBT News / CNBC",
+     "date": "2026-07-18",
+     "url": "https://www.cbtnews.com/cybersecurity-risks-in-vehicles-grow/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 11
+   },
+   "actors": [
+    "Ruter",
+    "Yutong",
+    "UK Department for Transport",
+    "NCSC"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": [
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W42-003",
+   "domain": "automotive",
+   "lenses": [
+    "quality",
+    "sdv"
+   ],
+   "headline": "Stellantis recalls 1.08 million Jeep, Ram, Chrysler and Dodge vehicles for radio software defect",
+   "summary": "Two NHTSA campaigns, 26V531000 and 26V560000, together cover 1,083,157 US vehicles whose radio software can prevent the rearview camera displaying in reverse. Fixes are delivered over the air or at dealers; owner letters began September 2026.",
+   "so_what": "Largest OTA-eligible rearview-camera recall of 2026, broadening Stellantis's run of software-quality campaigns.",
+   "sources": [
+    {
+     "outlet": "Settlement Insight (NHTSA API)",
+     "date": "2026-10-08",
+     "url": "https://settlementinsight.com/news/stellantis-recall-check-two-rearview-camera-recalls-1083157-us-vehicles-844027-in-26v531-239130-ram-1500-in-26v560-letters-september-2-and-24-2026",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 1,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 6
+   },
+   "actors": [
+    "Stellantis",
+    "NHTSA"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": [
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W42-004",
+   "domain": "automotive",
+   "lenses": [
+    "regulatory",
+    "telematics",
+    "connectivity"
+   ],
+   "headline": "EU Next Generation eCall mandate covers all new M1 and N1 approvals",
+   "summary": "From 1 January 2026 all newly type-approved M1 and N1 vehicles in the EU must support eCall over 4G and 5G, replacing 2G and 3G. OEMs and suppliers are upgrading telematics control units and modules accordingly.",
+   "so_what": "Forces embedded 4G/5G telematics into every new EU car line, enlarging the base for connected services.",
+   "sources": [
+    {
+     "outlet": "GlobeNewswire / Vehicle Telematics Market Report",
+     "date": "2026-09-24",
+     "url": "https://www.globenewswire.com/news-release/2026/09/24/3368146/0/en/vehicle-telematics-market-forecasts-growth-from-11-18b-2026-to-18-25b-by-2033-profiling-verizon-connect-geotab-trimble-harman.html",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "European Commission"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W42-005",
+   "domain": "robotics",
+   "lenses": [
+    "regulatory",
+    "ai",
+    "quality"
+   ],
+   "headline": "FMCSA grants five-year beacon exemption for Level 4 autonomous Class-8 trucks",
+   "summary": "The US Federal Motor Carrier Safety Administration gave Aurora, Kodiak AI, Waabi and Stack AV a five-year exemption to replace reflective triangles with cab-mounted beacons. The ruling mandates pre-notification, hardware specs, five-day crash reporting and annual malfunction logs.",
+   "so_what": "Removes a persistent commercialisation blocker for driverless freight on US highways.",
+   "sources": [
+    {
+     "outlet": "TechCrunch Mobility",
+     "date": "2026-10-11",
+     "url": "https://techcrunch.com/2026/10/11/techcrunch-mobility-a-roadblock-clears-for-self-driving-trucks",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "Aurora Innovation",
+    "Kodiak AI",
+    "Waabi",
+    "Stack AV",
+    "FMCSA"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": [
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W42-006",
+   "domain": "robotics",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "Applied Intuition signs separate Vehicle OS deals with Honda and Nissan",
+   "summary": "Applied Intuition announced distinct agreements to supply its Vehicle OS platform to Honda and to Nissan, extending its SDV toolchain into both Japanese groups alongside their joint ECU and OS programme.",
+   "so_what": "Places one US software vendor inside two of Japan's biggest OEM SDV roadmaps simultaneously.",
+   "sources": [
+    {
+     "outlet": "Self Drive News",
+     "date": "2026-10-06",
+     "url": "https://selfdrivenews.com/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Applied Intuition",
+    "Honda",
+    "Nissan"
+   ],
+   "deal": {
+    "who": "Applied Intuition",
+    "with": "Honda and Nissan",
+    "what": "Separate Vehicle OS platform supply agreements",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "prospect",
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W42-007",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "sdv"
+   ],
+   "headline": "Nissan picks Valeo as lead integrator and Wayve as AI software for next ProPilot",
+   "summary": "Automotive World reported on 6 October 2026 that Nissan has selected Valeo as lead system integrator and Wayve as AI driving-software provider for next-generation ProPilot ADAS, mirroring the Stellantis-Wayve arrangement.",
+   "so_what": "Puts Wayve's embodied-AI stack into a second global OEM programme within weeks of Stellantis demos.",
+   "sources": [
+    {
+     "outlet": "Automotive World",
+     "date": "2026-10-06",
+     "url": "https://www.automotiveworld.com/newsletters/autonomous-mobility-newsletter-october-5-2026/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Nissan",
+    "Valeo",
+    "Wayve"
+   ],
+   "deal": {
+    "who": "Nissan",
+    "with": "Valeo and Wayve",
+    "what": "Lead integrator and AI software selection for next-gen ProPilot ADAS",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W42-008",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "sdv",
+    "regulatory"
+   ],
+   "headline": "XPENG opens public registration for YOYO robotaxi service running on in-house Turing chips",
+   "summary": "XPENG launched its mass-produced Level 4 ride-hailing service in China as XPENG YOYO, opening invitation-code public registration. Each vehicle runs four in-house Turing chips at 3,000 TOPS and VLA 2.0, without LiDAR or HD maps.",
+   "so_what": "Moves XPENG from employee pilots to commercial robotaxi fleet, using domestic silicon end to end.",
+   "sources": [
+    {
+     "outlet": "Auto Connected Car",
+     "date": "2026-10-08",
+     "url": "https://www.autoconnectedcar.com/2026/10/autonomous-self-driving-vehicle-news-stellantis-wayve-xpeng-tier-iv-avride-sodexo-campus-helm-ai-pilot-tesla/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "XPENG"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": [
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W42-009",
+   "domain": "fleets",
+   "lenses": [
+    "telematics",
+    "ai",
+    "data"
+   ],
+   "headline": "GM launches OnStar Fleet Intelligence platform with embedded AI assistant",
+   "summary": "GM unveiled OnStar Fleet Intelligence on 30 September 2026, unifying connected-vehicle data, order tracking, diagnostics and geofencing with an AI assistant answering natural-language queries on idling and utilisation. Rollout starts with selected GM Fleet customers.",
+   "so_what": "Extends OnStar from retail telematics into a GM-owned fleet-management product category.",
+   "sources": [
+    {
+     "outlet": "GM Newsroom",
+     "date": "2026-10-01",
+     "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2026/sep/0930-onstar-fleet-intelligence.html",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "General Motors",
+    "OnStar"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W42-010",
+   "domain": "fleets",
+   "lenses": [
+    "telematics",
+    "data",
+    "quality"
+   ],
+   "headline": "Geotab signs telematics trial with Openreach covering 23,000-vehicle UK fleet",
+   "summary": "Geotab announced on 6 October 2026 a telematics partnership with BT's Openreach, starting with volunteer engineers and covering driver safety, predictive maintenance, fuel insight and net-zero transition. Success leads to rollout across all 23,000 cars and vans.",
+   "so_what": "Puts Geotab inside one of the UK's largest commercial fleet modernisations.",
+   "sources": [
+    {
+     "outlet": "Fleet News",
+     "date": "2026-10-06",
+     "url": "https://www.fleetnews.co.uk/news/geotab-strikes-telematics-deal-with-openreach",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Geotab",
+    "Openreach"
+   ],
+   "deal": {
+    "who": "Geotab",
+    "with": "Openreach",
+    "what": "Telematics trial across 23,000 UK vehicles",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W42-011",
+   "domain": "fleets",
+   "lenses": [
+    "connectivity",
+    "telematics"
+   ],
+   "headline": "emnify and Skylo converge cellular and NTN satellite on single eSIM for fleet IoT",
+   "summary": "emnify's SuperNetwork SatPlus combines IoT-dedicated cellular access with Skylo's NTN satellite service on one eSIM and management platform, compatible with 3GPP 5G Release 17 hybrid modules, giving fleets uninterrupted cross-border coverage.",
+   "so_what": "Lowers hardware and SKU count for fleet operators needing coverage beyond cellular footprints.",
+   "sources": [
+    {
+     "outlet": "IoT World Congress / emnify",
+     "date": "2026-10-06",
+     "url": "https://www.iotsworldcongress.com/a-3-minute-read-on-converged-satellite-and-cellular-connectivity-in-fleet-management/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "emnify",
+    "Skylo"
+   ],
+   "deal": {
+    "who": "emnify",
+    "with": "Skylo",
+    "what": "Cellular and NTN satellite converged on one eSIM",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W42-012",
+   "domain": "energy",
+   "lenses": [
+    "telematics",
+    "data"
+   ],
+   "headline": "Michelin launches EV Charge card integrated with MyConnectedFleet telematics",
+   "summary": "Michelin launched MICHELIN EV Charge on 8 October 2026, offering European fleets one card and app covering over 1.2 million charge points. The service feeds into MyConnectedFleet, combining charging records with telematics data for cost analysis.",
+   "so_what": "Links public charging to a telematics platform, consolidating EV fleet cost data in one view.",
+   "sources": [
+    {
+     "outlet": "WebWire (Michelin)",
+     "date": "2026-10-08",
+     "url": "https://webwire.com/ViewPressRel.asp?aId=362623",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "Michelin"
+   ],
+   "deal": {
+    "who": "Michelin",
+    "with": "MyConnectedFleet users",
+    "what": "EV Charge card integrated with fleet telematics",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "partner"
+   ]
+  },
+  {
+   "id": "2026-W42-013",
+   "domain": "energy",
+   "lenses": [
+    "cyber",
+    "regulatory"
+   ],
+   "headline": "ENISA reports 214% rise in EV charging cyberattacks as NIS2 covers networks",
+   "summary": "ENISA data for 2026 shows a 214% year-on-year rise in reported incidents against EV charging infrastructure, with OCPP manipulation and payment skimming the top vectors. NIS2, fully enforced this year, treats charging networks as essential infrastructure.",
+   "so_what": "Shifts charge-point operators into mandatory incident reporting and baseline security controls.",
+   "sources": [
+    {
+     "outlet": "Hive Project citing ENISA",
+     "date": "2026-10-06",
+     "url": "https://hive-project.com/blog/ev-charging-cybersecurity-in-2026-how-attackers-exploit-ocpp-and-payment-systems-at-scale-and-how-ai-defends-the-grid-edge/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "ENISA",
+    "European Union"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W42-014",
+   "domain": "energy",
+   "lenses": [
+    "regulatory",
+    "cyber",
+    "data"
+   ],
+   "headline": "US executive order targets Chinese grid hardware, sweeping battery storage into scope",
+   "summary": "A US executive order covers battery energy storage and UPS supporting critical infrastructure, expressly including behind-the-meter batteries at AI data centres. Rystad Energy warns a December 2026 rulemaking could draw Chinese capital in Korean or Mexican plants into scope.",
+   "so_what": "Links energy storage supply chains to US national-security review, with knock-on effects for AI power build-out.",
+   "sources": [
+    {
+     "outlet": "Rystad Energy",
+     "date": "2026-10-09",
+     "url": "https://www.rystadenergy.com/news/us-executive-order-targets-chinese-grid-hardware-but-battery-storage-serving-ai-d",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "US Government",
+    "Rystad Energy"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W42-015",
+   "domain": "agri",
+   "lenses": [
+    "sdv",
+    "ai",
+    "connectivity"
+   ],
+   "headline": "Komatsu, EARTHBRAIN and Tier IV target autonomous dump trucks by FY2027",
+   "summary": "Komatsu, data subsidiary EARTHBRAIN and Autoware developer Tier IV are co-developing fully autonomous dump trucks for civil-engineering and quarry sites, aiming for commercial deployment within FY2027. The stack pairs Komatsu remote-operation hardware with Tier IV's open-source Autoware.",
+   "so_what": "Brings an open-source autonomy stack into a named-account off-highway OEM programme.",
+   "sources": [
+    {
+     "outlet": "Nikkei Xtech",
+     "date": "2026-10-05",
+     "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00142/02645/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Komatsu",
+    "EARTHBRAIN",
+    "Tier IV"
+   ],
+   "deal": {
+    "who": "Komatsu",
+    "with": "EARTHBRAIN and Tier IV",
+    "what": "Autonomous dump truck co-development for FY2027",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W42-016",
+   "domain": "agri",
+   "lenses": [
+    "regulatory",
+    "data"
+   ],
+   "headline": "FTC and USDA open joint inquiry into Deere, CNH and AGCO dealer contracts",
+   "summary": "On 7 October 2026 the FTC and USDA announced a joint fact-gathering inquiry into agricultural OEMs' restrictive dealer contracts, hidden fees and alleged retaliation against farmers who bypass dealers. Deere, CNH and AGCO shares each fell 5–6%.",
+   "so_what": "Puts US regulatory focus on OEM control of equipment data and repair access.",
+   "sources": [
+    {
+     "outlet": "Investing.com",
+     "date": "2026-10-07",
+     "url": "https://www.investing.com/news/stock-market-news/farm-equipment-stocks-after-the-ftc-and-usda-joint-inquiry-agco-deere-and-cnh-compared-93CH-4937277",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "FTC",
+    "USDA",
+    "Deere & Company",
+    "CNH Industrial",
+    "AGCO"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W42-017",
+   "domain": "agri",
+   "lenses": [
+    "sdv",
+    "connectivity",
+    "data"
+   ],
+   "headline": "Hitachi's LANDCROS partners with Akkodis to accelerate smart attachments and ICT",
+   "summary": "Hitachi Construction Machinery Europe, rebranding as LANDCROS, announced on 8 October 2026 a partnership with Akkodis (Adecco Group) to expand engineering capacity at its Amsterdam Customisation Centre for smart attachments, ICT and integrated engineering.",
+   "so_what": "Signals co-engineered digital construction equipment rather than purely in-house software development.",
+   "sources": [
+    {
+     "outlet": "Hitachi / LECTURA Press",
+     "date": "2026-10-08",
+     "url": "https://lectura.press/en/article/hitachi-construction-machinery-europe-and-akkodis-partner-to-make-advanced-integrated-solutions-easier-and-more-accessible-for-landcros-customers/69831",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 6
+   },
+   "actors": [
+    "Hitachi Construction Machinery Europe",
+    "Akkodis"
+   ],
+   "deal": {
+    "who": "LANDCROS",
+    "with": "Akkodis",
+    "what": "Engineering partnership for smart attachments and ICT",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "partner",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W42-018",
+   "domain": "fleets",
+   "lenses": [
+    "telematics",
+    "data"
+   ],
+   "headline": "AtoB payments platform embedded in Geotab as first fleet-management integration",
+   "summary": "On 8 October 2026, Geotab launched a fleet card built on AtoB's payments platform, marking the first native integration into a fleet-management system. The card verifies every fuel purchase against the vehicle's telematics data before approval across 13 spend categories.",
+   "so_what": "Couples payment authorisation to live vehicle data, tightening fleet spend controls.",
+   "sources": [
+    {
+     "outlet": "Business Wire / Yahoo Finance",
+     "date": "2026-10-08",
+     "url": "https://finance.yahoo.com/technology/articles/atob-announces-geotab-first-fleet-120000049.html",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "AtoB",
+    "Geotab"
+   ],
+   "deal": {
+    "who": "AtoB",
+    "with": "Geotab",
+    "what": "Native fleet card integrated with telematics",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W42-019",
+   "domain": "automotive",
+   "lenses": [
+    "cyber",
+    "regulatory"
+   ],
+   "headline": "Japan's Active Cyber Defence Law enters force covering connected vehicle operators",
+   "summary": "Japan's Cyber Response Capability Enhancement Act entered force on 1 October 2026, requiring 258 critical-infrastructure operators across 15 sectors including transport to register assets and report incidents, with telecoms interception provisions following in autumn 2027.",
+   "so_what": "Draws connected-vehicle and AV operators into a government-industry intelligence-sharing council.",
+   "sources": [
+    {
+     "outlet": "Innovatopia.jp",
+     "date": "2026-10-01",
+     "url": "https://innovatopia.jp/cyber-security/cyber-security-news/118417/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "Japan NCO"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W42-020",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "twins",
+    "quality"
+   ],
+   "headline": "UBTECH humanoid robots expand into FAW-Volkswagen factory logistics",
+   "summary": "UBTECH announced expanded deployment of its humanoid robots at FAW-Volkswagen automotive plants for intralogistics tasks, combining foundation, world and action models in its proprietary control stack. Large-scale operation at line rate has not yet been validated.",
+   "so_what": "Moves humanoid robots from showcases toward recurring factory work at a Chinese OEM.",
+   "sources": [
+    {
+     "outlet": "Physical AI News",
+     "date": "2026-10-08",
+     "url": "https://note.com/yasuhitoo/n/n01326a682d24",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "UBTECH Robotics",
+    "FAW-Volkswagen"
+   ],
+   "deal": {
+    "who": "",
+    "with": "",
+    "what": "",
+    "relevance": ""
+   },
+   "relationship_flags": [
+    "inferred"
+   ]
+  }
+ ],
+ "news_window": "5–11 Oct 2026"
+}
