@@ -1,0 +1,736 @@
+{
+ "edition": 5,
+ "week_label": "Week of 19–23 Oct 2026",
+ "generated": "2026-10-19",
+ "counts": {
+  "screened": 75,
+  "qualified": 18,
+  "customer_relevant": 6
+ },
+ "signal": "2026-W43-001",
+ "read_across": [
+  "Software now dominates both vehicle recalls and OEM strategy. Toyota plans to deploy Arene across all 50 nameplates by 2030; Honda and Nissan have a joint SDV contract with Applied Intuition; Xpeng is licensing technology to European OEMs. Alongside these, NHTSA campaigns cover Toyota RAV4 PHEV, C-HR BEV, Stellantis Ram and Volvo Trucks braking faults, all rooted in ECU software.",
+  "Regulation is a key thread. EU Data Act obligations and CRA reporting duties went live in September; the Commission is folding UN R185 into the General Safety Regulation; UNECE GRPE met ahead of November's 200th WP.29 plenary; the FCC placed foreign robots on its Covered List; and China's MIIT set a year-end safety self-assessment deadline. Connectivity developments — Geotab at Openreach and Renault–EDF V2G — show the commercial layer building on these rules."
+ ],
+ "items": [
+  {
+   "id": "2026-W43-001",
+   "domain": "automotive",
+   "lenses": [
+    "sdv",
+    "ai",
+    "data"
+   ],
+   "headline": "Toyota commits all 50 nameplates to Arene software platform by 2030",
+   "summary": "Toyota said on 16 October it will fit its in-house Arene OS across roughly 50 global nameplates by 2030, targeting ¥3 trillion in non-vehicle operating profit via OTA subscriptions and feature-on-demand, and will license Arene to third-party OEMs.",
+   "so_what": "A top-three global OEM is making a single vehicle OS the baseline for its whole range.",
+   "sources": [
+    {
+     "outlet": "Reuters via Infoseek",
+     "date": "2026-10-16",
+     "url": "https://news.infoseek.co.jp/article/16reutersJAPAN_KBN3VW19P/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "Toyota Motor Corporation",
+    "Woven by Toyota"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W43-002",
+   "domain": "automotive",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "Honda and Nissan sign joint SDV contract for shared OS and ECUs from 2029",
+   "summary": "Honda and Nissan signed an August 2026 contract, confirmed in mid-October coverage, to co-develop common next-generation ECUs, in-vehicle OS, middleware and vehicle-control software for electric architectures from FY2029. The agreement sits separately from earlier merger talks.",
+   "so_what": "Two of Japan's largest OEMs will share the core software stack rather than build it alone.",
+   "sources": [
+    {
+     "outlet": "Transcarweb citing Reuters",
+     "date": "2026-10-16",
+     "url": "https://transcarweb.com/2610-toyota-sdv-arene/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "Honda Motor Co.",
+    "Nissan Motor Co."
+   ],
+   "deal": {
+    "who": "Honda",
+    "with": "Nissan",
+    "what": "Joint SDV development contract for shared OS, ECUs and middleware from FY2029",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W43-003",
+   "domain": "automotive",
+   "lenses": [
+    "quality",
+    "sdv"
+   ],
+   "headline": "Toyota recalls 30,978 RAV4 PHEVs for motor-generator ECU software defect",
+   "summary": "NHTSA acknowledged on 13 October Toyota recall 26V659 covering 30,978 model-year 2026 RAV4 Plug-in Hybrids for a motor-generator ECU software error that may cause loss of drive power. Remedy is a dealer software update; no OTA path is available.",
+   "so_what": "Toyota's first Arene-equipped flagship takes a functional-safety recall on its powertrain software.",
+   "sources": [
+    {
+     "outlet": "NHTSA",
+     "date": "2026-10-13",
+     "url": "https://static.nhtsa.gov/odi/rcl/2026/RCAK-26V659-0794.pdf",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Toyota",
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W43-004",
+   "domain": "automotive",
+   "lenses": [
+    "regulatory",
+    "data"
+   ],
+   "headline": "EU Data Act design obligations now apply to connected vehicles",
+   "summary": "The EU Data Act's design obligations applied from 12 September 2026, requiring connected products, including vehicles, to give users direct data access and share specified data with authorised third parties such as repairers and insurers.",
+   "so_what": "EU OEMs must now technically enable third-party access to in-vehicle data on request.",
+   "sources": [
+    {
+     "outlet": "Automotive IQ",
+     "date": "2026-10-12",
+     "url": "https://www.automotive-iq.com/autonomous-drive/how-to-guides/european-regulations-in-automotive-product-liability-act-and-data-act",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "European Commission",
+    "Automotive OEMs"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W43-005",
+   "domain": "robotics",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "Applied Intuition signs Vehicle OS and AI-dev-tool deals with Honda and Nissan",
+   "summary": "Applied Intuition announced on 5–6 October it will deploy its Vehicle OS and AI-native development toolchain with Honda and Nissan to underpin their next-generation SDV platforms. Honda keeps governance of core architecture; Nissan extends a simulation partnership running since 2020.",
+   "so_what": "A US autonomy-stack vendor becomes a core SDV supplier to two major Japanese OEMs.",
+   "sources": [
+    {
+     "outlet": "PRNewswire via Yahoo Finance",
+     "date": "2026-10-06",
+     "url": "https://finance.yahoo.com/technology/ai/articles/applied-intuition-announces-collaboration-nissan-230000181.html",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Applied Intuition",
+    "Honda Motor",
+    "Nissan Motor"
+   ],
+   "deal": {
+    "who": "Applied Intuition",
+    "with": "Honda and Nissan",
+    "what": "Vehicle OS and AI development toolchain deployment for next-gen SDV platforms",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor",
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W43-006",
+   "domain": "robotics",
+   "lenses": [
+    "cyber",
+    "regulatory",
+    "sdv"
+   ],
+   "headline": "NHTSA chief warns ML tools cut cost of finding vehicle software flaws",
+   "summary": "NHTSA Administrator Jonathan Morrison told the Auto-ISAC Cybersecurity Summit on 7 October that generative ML lowers the cost of exploiting vehicle vulnerabilities. NHTSA is reviewing its cybersecurity guidance after a March breathalyser breach and a hardcoded key found in two million anti-theft modules.",
+   "so_what": "The US vehicle regulator signals that R155-style cyber oversight is widening to cloud back-ends and chargers.",
+   "sources": [
+    {
+     "outlet": "NHTSA",
+     "date": "2026-10-08",
+     "url": "https://www.nhtsa.gov/speeches-and-presentations/Auto-ISAC-Cybersecurity-Summit-2026",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "NHTSA",
+    "Auto-ISAC"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W43-007",
+   "domain": "robotics",
+   "lenses": [
+    "sdv",
+    "ai",
+    "data"
+   ],
+   "headline": "Xpeng offers full SDV stack to foreign OEMs using Volkswagen deal as template",
+   "summary": "Xpeng is offering its Turing AI chips, VLA software, E/E architecture and cockpit OS to carmakers beyond Volkswagen. Services revenue rose 93.9% year-on-year to 2.7 billion yuan in Q2 2026, driven mainly by VW R&D fees.",
+   "so_what": "A Chinese EV maker is turning its software stack into a licensable platform for Western OEMs.",
+   "sources": [
+    {
+     "outlet": "Automotive World",
+     "date": "2026-10-16",
+     "url": "https://www.automotiveworld.com/intelligence-briefs/software-defined-vehicle-intelligence-brief-october-15-2026/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "XPeng",
+    "Volkswagen"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W43-008",
+   "domain": "fleets",
+   "lenses": [
+    "telematics",
+    "ai"
+   ],
+   "headline": "Cadent picks Samsara for AI dash cams and telematics across 2,800 UK vehicles",
+   "summary": "Cadent, the UK gas distribution operator, selected Samsara to deploy AI dash cams, telematics and in-cab coaching across around 2,800 commercial vehicles to improve driver safety and manage road risk, as reported on 16 October.",
+   "so_what": "A large UK utility fleet standardises on a US telematics competitor to Cubic³'s partners.",
+   "sources": [
+    {
+     "outlet": "Fleet World / PAVE Insight",
+     "date": "2026-10-16",
+     "url": "https://www.paveinsight.com/news/fleet-telematics",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "Cadent Gas",
+    "Samsara"
+   ],
+   "deal": {
+    "who": "Samsara",
+    "with": "Cadent Gas",
+    "what": "AI dash cams, telematics and driver coaching across ~2,800 UK vehicles",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W43-009",
+   "domain": "fleets",
+   "lenses": [
+    "telematics",
+    "data"
+   ],
+   "headline": "Geotab and Openreach trial connected-vehicle telematics across 23,000-vehicle UK fleet",
+   "summary": "Geotab has partnered with Openreach Fleet to trial connected-vehicle telematics with volunteer engineers across more than 23,000 vehicles, focusing on safety, maintenance and use. Data collection is restricted outside working hours, and a successful trial will trigger fleet-wide rollout.",
+   "so_what": "The UK's second-largest commercial fleet moves to a single telematics platform with embedded privacy controls.",
+   "sources": [
+    {
+     "outlet": "Essential Fleet Operator",
+     "date": "2026-10-06",
+     "url": "https://myessentialfleet.co.uk/geotab-partners-with-openreach-to-support-safety-and-efficiency-across-vehicle-fleet/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "Geotab",
+    "Openreach"
+   ],
+   "deal": {
+    "who": "Geotab",
+    "with": "Openreach",
+    "what": "Connected-vehicle telematics trial across 23,000+ vehicles with path to fleet-wide rollout",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W43-010",
+   "domain": "fleets",
+   "lenses": [
+    "telematics",
+    "ai",
+    "data",
+    "connectivity"
+   ],
+   "headline": "GM launches OnStar Fleet Intelligence with generative-AI assistant",
+   "summary": "General Motors launched OnStar Fleet Intelligence on 30 September, combining connected-vehicle data, order tracking, diagnostics, geofencing, fuel efficiency and risk-management tools with an AI assistant responding to natural-language queries. Initial access is rolling out to selected GM Fleet customers.",
+   "so_what": "A named OEM account moves into fleet-management software, overlapping with specialist telematics vendors.",
+   "sources": [
+    {
+     "outlet": "Automotive Fleet",
+     "date": "2026-10-06",
+     "url": "https://www.automotive-fleet.com/news/gm-launches-onstar-fleet-intelligence-platform-with-ai-assistant",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "General Motors",
+    "OnStar"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W43-011",
+   "domain": "fleets",
+   "lenses": [
+    "regulatory",
+    "data"
+   ],
+   "headline": "EU Data Act lets fleet owners redirect vehicle data from 12 September",
+   "summary": "From 12 September 2026 the EU Data Act's design obligations require connected vehicles to be technically capable of sending fleet owners' raw operational data to nominated third-party providers on FRAND terms, without OEM mediation.",
+   "so_what": "Fleet operators across the EU gain a legal right to break OEM lock-in on telematics data.",
+   "sources": [
+    {
+     "outlet": "Optivo Logistics / Automotive IQ",
+     "date": "2026-09-12",
+     "url": "https://www.optivologistics.com/en/blog/eu-data-act-fleets/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "European Commission",
+    "EU fleets"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W43-012",
+   "domain": "energy",
+   "lenses": [
+    "regulatory",
+    "data",
+    "telematics"
+   ],
+   "headline": "Renault and EDF sign French V2G home-charging bundle targeting summer 2027",
+   "summary": "Renault Group and EDF announced on 13 October a bundled offer covering EV purchase, IZI by EDF home charger installation and DREEV-managed smart charging, with bidirectional V2G services for Renault, Alpine and Dacia models at single-family homes from summer 2027.",
+   "so_what": "A major European OEM-utility pairing commits to productised V2G at national scale.",
+   "sources": [
+    {
+     "outlet": "The EV Report",
+     "date": "2026-10-14",
+     "url": "https://theevreport.com/renault-edf-v2g-smart-charging-france",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "Renault Group",
+    "EDF",
+    "DREEV"
+   ],
+   "deal": {
+    "who": "Renault Group",
+    "with": "EDF (via IZI and DREEV)",
+    "what": "Bundled EV, home charger install and V2G smart-charging service in France from summer 2027",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "customer",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W43-013",
+   "domain": "energy",
+   "lenses": [
+    "regulatory",
+    "cyber"
+   ],
+   "headline": "Dutch regulator calls for CRA certification of cloud-controlled home batteries",
+   "summary": "A Dutch regulator published on 16 October that EU cyber rules should target companies by volume of remotely controlled power rather than size, and that home energy storage devices should be independently certified under the Cyber Resilience Act.",
+   "so_what": "The CRA's scope for connected energy assets may widen to catch distributed grid-edge devices.",
+   "sources": [
+    {
+     "outlet": "ESS News",
+     "date": "2026-10-16",
+     "url": "https://www.ess-news.com/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "ACM (Dutch regulator)",
+    "European Commission"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W43-014",
+   "domain": "energy",
+   "lenses": [
+    "quality",
+    "sdv"
+   ],
+   "headline": "Toyota recalls 8,521 C-HR EVs for BEV ECU software overcharge risk",
+   "summary": "Toyota recalled 8,521 model-year 2026 C-HR BEVs under NHTSA campaign 26V570 for a Denso ECU software error that may overcharge the traction battery during cold regenerative braking and cut drive power. No OTA fix exists; owner letters began 18 October.",
+   "so_what": "A second October Toyota EV recall tied to powertrain software requires a dealer visit, not an OTA fix.",
+   "sources": [
+    {
+     "outlet": "HotCars",
+     "date": "2026-10-18",
+     "url": "https://www.hotcars.com/2026-toyota-c-hr-ev-recall-drive-loss/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 7
+   },
+   "actors": [
+    "Toyota",
+    "Denso",
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W43-015",
+   "domain": "agri",
+   "lenses": [
+    "telematics",
+    "connectivity"
+   ],
+   "headline": "New Holland Construction launches five machines with seven-year standard telematics",
+   "summary": "New Holland Construction debuted five new machines at Equip Exposition on 19 October, including mini loaders, rough-terrain forklifts and compact wheel loaders. All ship with seven years of complimentary telematics via myNewHollandConstruction, including geofencing, curfew monitoring and machine-health data.",
+   "so_what": "A major agri/construction OEM makes long-duration connected services the default on new compact iron.",
+   "sources": [
+    {
+     "outlet": "Green Industry Pros",
+     "date": "2026-10-19",
+     "url": "https://greenindustrypros.com/design-installation/compact-equipment/press-release/22976523/new-holland-construction-new-mini-loaders-forklifts-new-holland",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "New Holland Construction",
+    "CNH Industrial"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W43-016",
+   "domain": "agri",
+   "lenses": [
+    "regulatory",
+    "data"
+   ],
+   "headline": "FTC and USDA open joint antitrust inquiry into agricultural equipment market",
+   "summary": "The FTC and USDA launched a joint inquiry on 7 October into potential anticompetitive conduct in agricultural equipment manufacture and distribution, with public comments open until 7 December. Shares of Deere, AGCO, CNH and Caterpillar fell 3.8–6.2% on the news.",
+   "so_what": "US regulators place the connected-equipment data and repair debate at the centre of a formal antitrust review.",
+   "sources": [
+    {
+     "outlet": "MarketBeat",
+     "date": "2026-10-13",
+     "url": "https://www.marketbeat.com/articles/ag-equipments-recovery-trade-meets-washingtons-scrutiny/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "FTC",
+    "USDA",
+    "Deere",
+    "AGCO",
+    "CNH Industrial",
+    "Caterpillar"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W43-017",
+   "domain": "agri",
+   "lenses": [
+    "quality",
+    "sdv"
+   ],
+   "headline": "Volvo Trucks recalled under NHTSA 26V619 for braking software calculation error",
+   "summary": "NHTSA issued recall 26V619 on 5 October against Volvo Trucks North America for a software calculation error that may reduce braking performance on 2025–2027 VNL and 2026–2027 VNR models. The defect originates in software controlling the braking function.",
+   "so_what": "A heavy-truck OEM takes a software-root-cause braking recall across its newest tractor platforms.",
+   "sources": [
+    {
+     "outlet": "WBIW / NHTSA",
+     "date": "2026-10-05",
+     "url": "https://www.wbiw.com/2026/10/05/federal-authorities-issue-safety-recalls-covering-major-auto-manufacturers-commercial-trucks-and-rvs/",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "Volvo Trucks North America",
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W43-018",
+   "domain": "agri",
+   "lenses": [
+    "ai",
+    "twins",
+    "sdv"
+   ],
+   "headline": "Komatsu, Earthbrain and AIM move autonomous bulldozer solution to US commercial phase",
+   "summary": "Komatsu, subsidiary Earthbrain and AIM Intelligent Machines confirmed by mid-October that their joint autonomous bulldozer and excavator solution has entered commercial deployment in the US, combining Komatsu's Smart Construction platform with AIM's physical AI. A Japan rollout is planned for 2027.",
+   "so_what": "A named agri/industrial account moves autonomous earthmoving from pilot to paying commercial sites.",
+   "sources": [
+    {
+     "outlet": "Power Progress",
+     "date": "2026-08-05",
+     "url": "https://www.powerprogress.com/news/komatsu-aim-intelligent-machines-partner-on-autonomy/8128401.article",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "Komatsu",
+    "Earthbrain",
+    "AIM Intelligent Machines"
+   ],
+   "deal": {
+    "who": "Komatsu / Earthbrain",
+    "with": "AIM Intelligent Machines",
+    "what": "Commercial US deployment of joint autonomous bulldozer and excavator solution",
+    "relevance": "Customer"
+   },
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W43-019",
+   "domain": "automotive",
+   "lenses": [
+    "connectivity",
+    "sdv"
+   ],
+   "headline": "Viasat wins Connected Car Innovation of the Year for satellite NTN automotive integration",
+   "summary": "On 15 October Viasat received the AutoTech Breakthrough Connected Car Innovation of the Year award for its 3GPP Release 17 NTN deployment, including live satellite voice calling on a BMW iX3 at the 5GAA Munich meeting using standard in-dash infotainment.",
+   "so_what": "Standards-based satellite-direct-to-vehicle is being validated inside production OEM infotainment.",
+   "sources": [
+    {
+     "outlet": "SatNews",
+     "date": "2026-10-15",
+     "url": "https://satnews.com/2026/10/15/viasat-named-connected-car-innovation-of-the-year-for-satellite-ntn-automotive-integration/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "Viasat",
+    "BMW",
+    "5GAA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "partner",
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W43-020",
+   "domain": "robotics",
+   "lenses": [
+    "regulatory",
+    "cyber"
+   ],
+   "headline": "FCC adds foreign-produced advanced robots to Covered List under security rules",
+   "summary": "The FCC added foreign-produced advanced robotic devices — including autonomous mobile robots, humanoids and quadrupeds — to its Covered List on 28 July 2026, barring their use in US federal networks. October 2026 analyst commentary identified regulation as the key variable for robotics OEM access to the US market.",
+   "so_what": "US network-security rules now shape which robots can be sold to federal buyers.",
+   "sources": [
+    {
+     "outlet": "Cervicorn Consulting",
+     "date": "2026-10-15",
+     "url": "https://www.cervicornconsulting.com/blog/physical-ai-intelligence-update",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 6
+   },
+   "actors": [
+    "FCC"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  }
+ ],
+ "news_window": "12–18 Oct 2026"
+}
