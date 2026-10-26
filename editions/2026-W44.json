@@ -1,0 +1,768 @@
+{
+ "edition": 6,
+ "week_label": "Week of 26–30 Oct 2026",
+ "generated": "2026-10-26",
+ "counts": {
+  "screened": 75,
+  "qualified": 18,
+  "customer_relevant": 7
+ },
+ "signal": "2026-W44-002",
+ "read_across": [
+  "Software-defined vehicles dominated the week across every domain, with quality and cybersecurity themes catching up with the architecture shift. Volkswagen's remote 80% charge cap on 73,000 EVs, Toyota's software-driven recall campaigns, and OTA fixes across Ram, Ford and Rivian show software defects now driving mainstream recall activity. ISO/SAE 21434 entering revision resets compliance roadmaps industry-wide.",
+  "Waymo entered Madrid and Pony.ai with NVIDIA moved into Astana, whilst GM narrowed its autonomy scope to L3 highway driving. Toyota committed all 50 nameplates to a single vehicle OS by 2030. NTT wrapped Komatsu's Saudi Arabian fleet in a compliant IoT solution, and E.ON and BMW opened Germany's first commercial V2G tariff on the iX3."
+ ],
+ "items": [
+  {
+   "id": "2026-W44-001",
+   "domain": "energy",
+   "lenses": [
+    "quality",
+    "sdv",
+    "regulatory",
+    "cyber"
+   ],
+   "headline": "Volkswagen recalls 73,000 EVs worldwide and caps charging at 80% by OTA",
+   "summary": "Volkswagen expanded a US ID.4 recall to 72,668 ID.3, ID.4, ID.7, ID.Buzz and Cupra Born EVs globally after SK Battery America cells from 2022–2025 were found to risk thermal propagation above 80% charge. An OTA update caps charging; owner notices go out on 27 November 2026.",
+   "so_what": "First mass remote charge limit imposed as a safety recall under R156-style OTA rules.",
+   "sources": [
+    {
+     "outlet": "Electrek",
+     "date": "2026-10-21",
+     "url": "https://electrek.co/2026/10/21/volkswagen-recalls-nearly-73000-evs-faulty-batteries/",
+     "tier": 2
+    },
+    {
+     "outlet": "Electrek",
+     "date": "2026-10-20",
+     "url": "https://electrek.co/2026/10/20/volkswagen-id-4-recall-caps-charging-at-80-or-remotely-enforces-it/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 10
+   },
+   "actors": [
+    "Volkswagen Group",
+    "SK Battery America",
+    "NHTSA",
+    "KBA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W44-002",
+   "domain": "automotive",
+   "lenses": [
+    "sdv",
+    "data"
+   ],
+   "headline": "Toyota commits all 50 global nameplates to SDV platform by 2030",
+   "summary": "Toyota told European investors that all roughly 50 global nameplates will run its SDV platform by 2030, with Woven by Toyota's Arene OS moving from the 2025 RAV4 to the 2026 Lexus ES. Connected software services are framed as a new revenue line beyond vehicle sales.",
+   "so_what": "Largest OEM commits its full line-up to a single vehicle OS within four years.",
+   "sources": [
+    {
+     "outlet": "Mynavi",
+     "date": "2026-10-21",
+     "url": "https://news.mynavi.jp/premium/article/automotive-industry-66/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 10
+   },
+   "actors": [
+    "Toyota",
+    "Woven by Toyota"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W44-003",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "regulatory"
+   ],
+   "headline": "Waymo wins Spanish DGT authorisation to launch Madrid robotaxi service in 2027",
+   "summary": "Waymo confirmed on 20 October 2026 that it will launch fully autonomous ride-hailing in the Madrid region in 2027, its first Spanish deployment, after the DGT issued authorisation FVA-03/2026 covering 16 SAE Level 4 Jaguar I-PACE vehicles.",
+   "so_what": "First Level 4 robotaxi authorisation in Spain extends Waymo's European footprint.",
+   "sources": [
+    {
+     "outlet": "The Olive Press",
+     "date": "2026-10-22",
+     "url": "https://www.theolivepress.es/spain-news/2026/10/22/spain-waymo-robotaxis-driverless-cars-madrid/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "Waymo",
+    "DGT"
+   ],
+   "deal": {
+    "who": "Waymo",
+    "with": "DGT (Spain)",
+    "what": "FVA-03/2026 authorisation for 16 L4 robotaxis in Madrid",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W44-004",
+   "domain": "energy",
+   "lenses": [
+    "regulatory",
+    "connectivity",
+    "telematics",
+    "sdv"
+   ],
+   "headline": "E.ON and BMW launch Germany's first commercial V2G tariff on iX3",
+   "summary": "E.ON and BMW launched Germany's first regulator-approved commercial vehicle-to-grid product, paying BMW iX3 50 xDrive owners a connection bonus plus roughly €0.40 per kWh discharged, with charge and discharge cycles managed automatically by joint BMW–E.ON algorithms.",
+   "so_what": "Sets a European template for grid-interactive EV tariffs tied to OEM telematics.",
+   "sources": [
+    {
+     "outlet": "Versinetic",
+     "date": "2026-10-07",
+     "url": "https://www.versinetic.com/resources/insights/is-v2g-available-uk",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 10
+   },
+   "actors": [
+    "E.ON",
+    "BMW"
+   ],
+   "deal": {
+    "who": "E.ON",
+    "with": "BMW",
+    "what": "First commercial V2G tariff in Germany on iX3",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "customer",
+    "partner"
+   ]
+  },
+  {
+   "id": "2026-W44-005",
+   "domain": "automotive",
+   "lenses": [
+    "cyber",
+    "regulatory",
+    "sdv"
+   ],
+   "headline": "ISO formally decides to revise ISO/SAE 21434 after systematic review closes",
+   "summary": "ISO closed the systematic review of ISO/SAE 21434:2021 on 2 October 2026 and decided to revise the standard, with a second edition expected to take three or more years. OEM and Tier-1 R155 CSMS certifications referencing the first edition face planning obligations.",
+   "so_what": "Baseline automotive cybersecurity standard enters formal revision, resetting compliance roadmaps.",
+   "sources": [
+    {
+     "outlet": "Articlesedge",
+     "date": "2026-10-25",
+     "url": "https://www.articlesedge.com/post/automotive-cybersecurity",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "ISO",
+    "SAE International"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W44-006",
+   "domain": "automotive",
+   "lenses": [
+    "quality",
+    "sdv"
+   ],
+   "headline": "Toyota's six biggest 2026 US recalls hit 1.7 million vehicles, half software-caused",
+   "summary": "An NHTSA analysis published on 22 October 2026 found Toyota's six largest 2026 US recalls cover nearly 1.7 million vehicles, with three caused by software defects. The largest software fault affects 81,893 Toyota and Lexus models whose digital instrument cluster can appear blank at startup.",
+   "so_what": "Software now drives half of Toyota's largest recall campaigns, reshaping warranty economics.",
+   "sources": [
+    {
+     "outlet": "Autoblog",
+     "date": "2026-10-22",
+     "url": "https://www.autoblog.com/features/ranking-toyotas-5-biggest-recalls-of-2026",
+     "tier": 2
+    },
+    {
+     "outlet": "NHTSA",
+     "date": "2026-10-13",
+     "url": "https://static.nhtsa.gov/odi/rcl/2026/RCAK-26V659-0794.pdf",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Toyota",
+    "Lexus",
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W44-007",
+   "domain": "automotive",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "Xpeng offers to license full SDV stack to other automakers on VW template",
+   "summary": "Xpeng has formally offered to licence its SDV software stack, including centralised architecture and AI-driven ADAS, to other automakers, citing its Volkswagen partnership as the commercial template. The arrangement gives Xpeng recurring revenue outside EU tariff reach.",
+   "so_what": "Chinese vehicle OS enters the market as a licensable platform for Western OEMs.",
+   "sources": [
+    {
+     "outlet": "Automotive World",
+     "date": "2026-10-16",
+     "url": "https://www.automotiveworld.com/intelligence-briefs/software-defined-vehicle-intelligence-brief-october-15-2026/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Xpeng",
+    "Volkswagen"
+   ],
+   "deal": {
+    "who": "Xpeng",
+    "with": "Volkswagen (template)",
+    "what": "SDV stack licensing offer to third-party OEMs",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor",
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W44-008",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "regulatory",
+    "connectivity"
+   ],
+   "headline": "inDrive, Pony.ai and NVIDIA sign MOU to pilot Gen-7 L4 robotaxis in Astana",
+   "summary": "inDrive signed a memorandum of understanding with Pony.ai and NVIDIA on 23 October 2026 to pilot Level 4 autonomous ride-hailing in Astana, Kazakhstan, deploying Pony.ai's Gen-7 robotaxis on NVIDIA's Hyperion platform, with testing targeted for H1 2027 under a government sandbox agreement.",
+   "so_what": "Named-account robotaxi expansion opens Central Asia on an NVIDIA reference stack.",
+   "sources": [
+    {
+     "outlet": "Business Wire",
+     "date": "2026-10-23",
+     "url": "https://www.financialcontent.com/article/bizwire-2026-10-23-indrive-and-ponyai-announce-collaboration-to-explore-autonomous-mobility-in-kazakhstan-built-on-nvidia-hyperion",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "inDrive",
+    "Pony.ai",
+    "NVIDIA"
+   ],
+   "deal": {
+    "who": "Pony.ai",
+    "with": "inDrive and NVIDIA",
+    "what": "MOU for L4 robotaxi pilot in Astana H1 2027",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "customer",
+    "partner"
+   ]
+  },
+  {
+   "id": "2026-W44-009",
+   "domain": "fleets",
+   "lenses": [
+    "ai",
+    "regulatory"
+   ],
+   "headline": "GM exits robotaxi, pivots autonomy to L3 highway in Cadillac Escalade IQ by 2028",
+   "summary": "GM's Q3 2026 shareholder letter, published 20 October 2026, describes autonomy as a highway technology targeting eyes-off Level 3 driving in the Cadillac Escalade IQ from 2028, with no reference to a robotaxi business and a call for state laws recognising ADS as the driver when engaged.",
+   "so_what": "Named account retreats from robotaxi, narrowing US L4 competition and lobbying ADS legal status.",
+   "sources": [
+    {
+     "outlet": "General Motors investor relations",
+     "date": "2026-10-20",
+     "url": "https://carbuzz.com/gm-level-4-autonomy-october-2026/",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "General Motors"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W44-010",
+   "domain": "fleets",
+   "lenses": [
+    "telematics",
+    "connectivity",
+    "data"
+   ],
+   "headline": "Coastr and Volteras partner to offer OEM telematics across 31 brands to leasing fleets",
+   "summary": "Coastr announced a partnership with Volteras on 26 October 2026 to provide rental and leasing firms with OEM-integrated telematics spanning 31 vehicle brands through a single platform, covering tracking, mileage, fault codes and servicing data without aftermarket hardware.",
+   "so_what": "Named-account leasing segment moves to embedded OEM data in place of hardware telematics.",
+   "sources": [
+    {
+     "outlet": "Business Motoring",
+     "date": "2026-10-26",
+     "url": "https://businessmotoring.co.uk/coastr-and-volteras-to-offer-oem-telematics-to-leasing-and-rental-firms/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Coastr",
+    "Volteras"
+   ],
+   "deal": {
+    "who": "Coastr",
+    "with": "Volteras",
+    "what": "OEM telematics access across 31 brands for leasing and rental",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "partner",
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W44-011",
+   "domain": "agri",
+   "lenses": [
+    "connectivity",
+    "telematics",
+    "regulatory"
+   ],
+   "headline": "NTT DOCOMO BUSINESS and stc Group launch compliant IoT for Komatsu in Saudi Arabia",
+   "summary": "NTT DOCOMO BUSINESS and Saudi Arabia's stc Group launched an IoT connectivity service for Komatsu's construction equipment fleet in the Kingdom to meet local telecoms regulations, supporting the Komtrax telematics platform and enabling wireless collection of operational data.",
+   "so_what": "Connectivity competitor NTT wraps a named account in a regulated-market IoT solution.",
+   "sources": [
+    {
+     "outlet": "The Machine Maker",
+     "date": "2026-10-19",
+     "url": "https://themachinemaker.com/news/ntt-docomo-business-and-stc-group-launch-compliant-iot-connectivity-for-komatsu-equipment-in-saudi-arabia",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "NTT DOCOMO BUSINESS",
+    "stc Group",
+    "Komatsu"
+   ],
+   "deal": {
+    "who": "NTT DOCOMO BUSINESS",
+    "with": "stc Group and Komatsu",
+    "what": "Compliant IoT connectivity for Komatsu fleet in Saudi Arabia",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor",
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W44-012",
+   "domain": "robotics",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "Rivian opens invite-only Autonomy Early Access with December hands-off, eyes-off delivery",
+   "summary": "Rivian launched an invite-only Autonomy Early Access Programme on 20 October 2026, targeting December delivery of its hands-off, eyes-off Point-to-Point feature to Autonomy+ subscribers on Gen 2 R1 and R2 vehicles in California and Florida.",
+   "so_what": "Second US OEM after Tesla opens a consumer eyes-off ADS programme on highways.",
+   "sources": [
+    {
+     "outlet": "Self Drive News",
+     "date": "2026-10-20",
+     "url": "https://selfdrivenews.com/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Rivian"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "prospect"
+   ]
+  },
+  {
+   "id": "2026-W44-013",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "telematics"
+   ],
+   "headline": "Volvo and Waabi start commercial driverless freight runs in Texas",
+   "summary": "Volvo Trucks and Waabi began commercial autonomous freight operations in Texas around 13 October 2026, with VNL Autonomous trucks powered by the Waabi Driver hauling loads to third-party customer facilities in the first revenue-generating driverless long-haul service from their 2025 partnership.",
+   "so_what": "First revenue-grade driverless long-haul lane for a major truck OEM in the US.",
+   "sources": [
+    {
+     "outlet": "Trucking Info",
+     "date": "2026-10-13",
+     "url": "https://truckinginfo.com/news/motive-adds-ai-agents-for-fleet-operations",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Volvo Trucks",
+    "Waabi"
+   ],
+   "deal": {
+    "who": "Volvo Trucks",
+    "with": "Waabi",
+    "what": "Commercial driverless freight operations in Texas",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "partner",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W44-014",
+   "domain": "fleets",
+   "lenses": [
+    "cyber",
+    "connectivity",
+    "regulatory"
+   ],
+   "headline": "AUTOCRYPT details nationwide C-ITS security across 5,000 km at ITS World Congress",
+   "summary": "At ITS World Congress 2026 in Gangneung on 19–23 October, AUTOCRYPT highlighted C-ITS security deployments across 10 South Korean sites spanning over 5,000 km, and presented on privacy-preserving V2X tolling, secure vehicle-infrastructure data exchange and global cyber regulations.",
+   "so_what": "V2X cybersecurity moves from pilots to national-scale infrastructure deployment in South Korea.",
+   "sources": [
+    {
+     "outlet": "PR Newswire",
+     "date": "2026-10-26",
+     "url": "https://prnewswire.com/news-releases/autocrypt-highlights-v2x-security-technologies-and-c-its-research-initiatives-at-its-world-congress-2026-302917791.html",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "AUTOCRYPT"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "partner",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W44-015",
+   "domain": "energy",
+   "lenses": [
+    "sdv",
+    "ai",
+    "quality"
+   ],
+   "headline": "GM unveils fourth-generation EV platform with LMR cells and centralised compute",
+   "summary": "At GM Forward in New York on 21 October 2026, GM detailed a fourth-generation EV platform using lithium manganese-rich prismatic cells with roughly 33% more energy density than LFP, central compute delivering 40 times more processing power and 30% less wiring, with LMR production starting in Tennessee from 2028.",
+   "so_what": "Named account resets EV architecture around centralised compute and new cell chemistry.",
+   "sources": [
+    {
+     "outlet": "GM Newsroom",
+     "date": "2026-10-21",
+     "url": "https://news.gm.com/home.detail.html/Pages/news/us/en/2026/oct/1021-gm-fourth-generation-ev-platform.html",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "General Motors",
+    "LG Energy Solution",
+    "Ultium Cells"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W44-016",
+   "domain": "agri",
+   "lenses": [
+    "ai",
+    "telematics",
+    "twins"
+   ],
+   "headline": "Komatsu commissions its 1,000th autonomous ultra-class haul truck in Nevada",
+   "summary": "Komatsu, which first commercialised autonomous haulage in 2008, commissioned its 1,000th autonomous ultra-class truck at a Nevada gold mine in April 2026, marking a scaling inflection for Autonomous Haulage System deployments across global mining.",
+   "so_what": "Named account reaches 1,000-truck autonomous fleet, setting the benchmark for off-highway AHS.",
+   "sources": [
+    {
+     "outlet": "The Manifest Archive",
+     "date": "2026-10-08",
+     "url": "https://www.themanifestarchive.com/deeres-autonomy-kit-starts-at-model-year-2020-a-rivals-kit-fits-deere-tractors-from-2014/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "Komatsu"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W44-017",
+   "domain": "fleets",
+   "lenses": [
+    "quality",
+    "sdv"
+   ],
+   "headline": "Chrysler, Ram, Ford and Rivian issue October fleet recalls remedied by OTA",
+   "summary": "October 2026 NHTSA filings cover 201,975 Ram 1500s with a TPMS software error, 239,130 Ram 1500s with a rearview camera software error fixed OTA, a Ford F-150 battery energy control module fire risk after DC fast charging, and a Rivian OTA fix for an obstructed rearview camera notification.",
+   "so_what": "OTA is now the default remedy channel for software-caused fleet recalls in the US.",
+   "sources": [
+    {
+     "outlet": "Work Truck Online",
+     "date": "2026-10-01",
+     "url": "https://www.worktruckonline.com/news/recalls-you-need-to-know-about-in-october-2026",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 1,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "Chrysler",
+    "Ram",
+    "Ford",
+    "Rivian",
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W44-018",
+   "domain": "automotive",
+   "lenses": [
+    "connectivity"
+   ],
+   "headline": "Viasat named Connected Car Innovation of the Year for standards-based NTN in vehicles",
+   "summary": "On 15 October 2026, Viasat received the AutoTech Breakthrough Connected Car Innovation of the Year award for deploying standards-based Non-Terrestrial Network technology enabling satellite voice, emergency alerts and bidirectional telemetry embedded in consumer and commercial vehicles.",
+   "so_what": "Standards-based NTN gains industry recognition as an automotive connectivity layer.",
+   "sources": [
+    {
+     "outlet": "SatNews",
+     "date": "2026-10-15",
+     "url": "https://satnews.com/2026/10/15/viasat-named-connected-car-innovation-of-the-year-for-satellite-ntn-automotive-integration/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 6
+   },
+   "actors": [
+    "Viasat"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "competitor",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W44-019",
+   "domain": "automotive",
+   "lenses": [
+    "telematics"
+   ],
+   "headline": "Samsara opens Germany office to enter European fleet telematics market",
+   "summary": "In October 2026, fleet telematics platform Samsara opened a regional office in Germany, marking its formal entry into the European commercial fleet management market. The expansion targets European operators seeking AI-driven GPS tracking, remote diagnostics and compliance tools.",
+   "so_what": "Named telematics competitor opens a European base against incumbent fleet telematics providers.",
+   "sources": [
+    {
+     "outlet": "Market Research Future",
+     "date": "2026-10-13",
+     "url": "https://www.marketresearchfuture.com/reports/fleet-telematics-market-40320",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 4
+   },
+   "actors": [
+    "Samsara"
+   ],
+   "deal": {
+    "who": "Samsara",
+    "with": "Germany market",
+    "what": "New regional office for European fleet telematics expansion",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W44-020",
+   "domain": "energy",
+   "lenses": [
+    "connectivity",
+    "cyber"
+   ],
+   "headline": "Simplex Wireless outlines SGP.32 eSIM retrofit path for EV chargers",
+   "summary": "Simplex Wireless published a technical article on 19 October 2026 detailing how the GSMA SGP.32 IoT eSIM specification enables remote carrier switching and profile management for deployed EV charge points without physical SIM replacement, highlighting eIM interoperability across multiple eUICC vendors.",
+   "so_what": "Standardised eSIM swap for installed charger estates moves from specification to vendor playbook.",
+   "sources": [
+    {
+     "outlet": "Simplex Wireless",
+     "date": "2026-10-19",
+     "url": "https://www.simplexwireless.com/2026/10/19/esim-for-ev-chargers-retrofitting-with-sgp-32/",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "Simplex Wireless",
+    "GSMA"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  }
+ ],
+ "news_window": "19–25 Oct 2026"
+}
