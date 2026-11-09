@@ -1,0 +1,746 @@
+{
+ "edition": 8,
+ "week_label": "Week of 9–13 Nov 2026",
+ "generated": "2026-11-09",
+ "counts": {
+  "screened": 75,
+  "qualified": 15,
+  "customer_relevant": 6
+ },
+ "signal": "2026-W46-007",
+ "read_across": [
+  "Regulation set the pace this week. The EU AI Act's Article 50 transparency duties went live, ISO/SAE 21434 entered formal revision, UNECE WP.29 queued ADS and R155/R156 amendments for its 200th session, and the UK opened a consultation on charge-point cybersecurity. Software recalls at Hyundai and GM reinforced the shift from mechanical to software-mediated safety remedies.",
+  "AI and SDV activity concentrated around Level 4 pilots and data governance. Toyota and Waymo set a 2027 bZ4X test in Japan with a later UK phase; Nvidia and Kakao Mobility signed a Level 4 agreement in Seoul. China's block of SoftBank's ABB Robotics deal on data-sovereignty grounds and ISO 24882's progress for agricultural and construction machinery show industrial data governance tightening alongside vehicle rules."
+ ],
+ "items": [
+  {
+   "id": "2026-W46-001",
+   "domain": "automotive",
+   "lenses": [
+    "regulatory",
+    "cyber"
+   ],
+   "headline": "Japan completes R155 cybersecurity phase-in for all new vehicles",
+   "summary": "From November 2026 every newly sold vehicle in Japan, including non-OTA continuing-production models, must comply with UNECE R155 cybersecurity management requirements. Japan transposed the rule in December 2021 and phased it in from OTA-capable models in July 2022.",
+   "so_what": "Closes the last gap in R155 coverage across a major UNECE market, affecting every Japanese OEM line.",
+   "sources": [
+    {
+     "outlet": "Yahoo! Japan News / carview!",
+     "date": "2026-11-02",
+     "url": "https://news.yahoo.co.jp/articles/22f8a5240ef7186a0c18d0a31ba38d45ccd7cf70",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 9
+   },
+   "actors": [
+    "MLIT Japan",
+    "UNECE WP.29"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W46-002",
+   "domain": "automotive",
+   "lenses": [
+    "ai",
+    "sdv",
+    "regulatory"
+   ],
+   "headline": "Stellantis, Wayve, Nvidia and French government plan L4 deployment in Paris",
+   "summary": "Stellantis will combine its STLA AutoDrive platform with Wayve's AI Driver and Nvidia's Halos OS on Hyperion compute for a Level 4 programme across Métropole du Grand Paris, covering 129 municipalities. Deployment is scheduled to begin in 2028.",
+   "so_what": "Binds a European OEM, a UK autonomy vendor and a US compute platform to a public L4 rollout in France.",
+   "sources": [
+    {
+     "outlet": "The Driven",
+     "date": "2026-11-04",
+     "url": "https://thedriven.io/2026/11/04/volkswagen-and-stellantis-advance-self-driving-car-plans-in-china-and-france/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Stellantis",
+    "Wayve",
+    "Nvidia",
+    "Métropole du Grand Paris"
+   ],
+   "deal": {
+    "who": "Stellantis",
+    "with": "Wayve, Nvidia, Métropole du Grand Paris",
+    "what": "L4 AV deployment programme from 2028",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W46-003",
+   "domain": "automotive",
+   "lenses": [
+    "quality",
+    "cyber",
+    "sdv"
+   ],
+   "headline": "Hyundai recalls 37,901 vehicles for ZF airbag control unit software defect",
+   "summary": "Hyundai filed NHTSA recall 26V728 on 2 November 2026 for a ZF-supplied airbag control unit software flaw causing data corruption that could prevent airbag deployment. The fix preserves last known valid data when transfers are interrupted; VINs became searchable on 6 November.",
+   "so_what": "Software data-integrity flaw in a safety-critical ECU adds to the rising count of software-driven recalls at a named account.",
+   "sources": [
+    {
+     "outlet": "BizzyCar / NHTSA",
+     "date": "2026-11-02",
+     "url": "https://www.bizzycar.com/blog/november-2026-hyundai-recall-for-airbag-control-unit-data-corruption-affecting-37901-vehicles",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "Hyundai Motor America",
+    "ZF"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W46-004",
+   "domain": "robotics",
+   "lenses": [
+    "ai",
+    "sdv",
+    "twins"
+   ],
+   "headline": "Nvidia and Kakao Mobility sign L4 autonomous-driving MOU at Seoul AI Day",
+   "summary": "At Nvidia AI Day Seoul on 9 November, Nvidia and Kakao Mobility agreed to co-develop a Level 4 system using Hyperion sensors, Halos validation and Kakao software on a Kia PBV. Nvidia also announced physical-AI partnerships with Hyundai Motor Group, Doosan Robotics and LG Electronics via Omniverse digital twins.",
+   "so_what": "Draws Korea's ride-hailing leader and a named automotive group into a single Nvidia-centred L4 stack.",
+   "sources": [
+    {
+     "outlet": "Korea JoongAng Daily",
+     "date": "2026-11-09",
+     "url": "https://www.koreajoongangdaily.com/business/kakao-mobility-and-nvidia-partner-on-level-4-autonomous-driving/12962591",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "NVIDIA",
+    "Kakao Mobility",
+    "Hyundai Motor Group",
+    "Doosan Robotics",
+    "LG Electronics"
+   ],
+   "deal": {
+    "who": "Kakao Mobility",
+    "with": "NVIDIA",
+    "what": "MOU to co-develop L4 autonomous driving on Kia PBV",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "customer",
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W46-005",
+   "domain": "robotics",
+   "lenses": [
+    "regulatory",
+    "data",
+    "cyber"
+   ],
+   "headline": "China blocks SoftBank's $5.4bn acquisition of ABB robotics business",
+   "summary": "Chinese regulators rejected SoftBank's roughly $5.4bn acquisition of ABB's robotics unit, citing risks that factory-floor robot data could flow abroad and train AI models at OpenAI, in which SoftBank is a major shareholder. Japanese sources confirmed the decision on 5 November 2026.",
+   "so_what": "Treats industrial robot data as a national-security asset and constrains SoftBank's physical-AI consolidation strategy.",
+   "sources": [
+    {
+     "outlet": "Note.com / AI News digest",
+     "date": "2026-11-05",
+     "url": "https://note.com/hirokimiyano/n/n2db897fb5f9f",
+     "tier": 3
+    }
+   ],
+   "score": {
+    "significance": 4,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": -2,
+    "total": 8
+   },
+   "actors": [
+    "SoftBank Group",
+    "ABB",
+    "Chinese Regulators"
+   ],
+   "deal": {
+    "who": "SoftBank Group",
+    "with": "ABB",
+    "what": "$5.4bn acquisition of ABB robotics business blocked in China",
+    "relevance": "SoftBank"
+   },
+   "relationship_flags": [
+    "softbank"
+   ]
+  },
+  {
+   "id": "2026-W46-006",
+   "domain": "robotics",
+   "lenses": [
+    "sdv",
+    "ai"
+   ],
+   "headline": "TIER IV leads Autoware 2.0 with Arm, AWS and Red Hat for AI-defined vehicles",
+   "summary": "TIER IV announced on 2 November 2026 it is leading Autoware 2.0, adding end-to-end AI and hybrid driving stacks to the open-source platform. Arm contributes compute, AWS provides cloud CI/CD, and Red Hat integrates Autoware 2.0 with its AutoSD in-vehicle operating system.",
+   "so_what": "Realigns the main open-source autonomy stack around end-to-end AI with named cloud and OS partners.",
+   "sources": [
+    {
+     "outlet": "TIER IV Newsroom",
+     "date": "2026-11-02",
+     "url": "https://tier4.co.jp/en/updates/press-release/20261102-tieriv-spearheads-autoware2.0-initiatives",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "TIER IV",
+    "Autoware Foundation",
+    "Arm",
+    "AWS",
+    "Red Hat"
+   ],
+   "deal": {
+    "who": "TIER IV",
+    "with": "Arm, AWS, Red Hat",
+    "what": "Autoware 2.0 joint development programme",
+    "relevance": "Partner"
+   },
+   "relationship_flags": [
+    "partner"
+   ]
+  },
+  {
+   "id": "2026-W46-007",
+   "domain": "fleets",
+   "lenses": [
+    "ai",
+    "regulatory",
+    "telematics"
+   ],
+   "headline": "Toyota and Waymo to test autonomous bZ4X fleet in Japan from 2027",
+   "summary": "Toyota and Waymo will begin testing a Level 4 autonomous bZ4X fleet in Japan in 2027, with Waymo hardware integrated at Toyota's Takaoka plant. Tokyo commercial operations target around 100 vehicles via Nihon Kotsu and the Go app, subject to regulatory approval; UK deployment is planned later.",
+   "so_what": "Commits a named OEM customer and a leading robotaxi operator to a Japanese and later UK fleet launch.",
+   "sources": [
+    {
+     "outlet": "Waymo Newsroom",
+     "date": "2026-11-03",
+     "url": "https://waymo.com/blog/2026/10/toyota-bz4x-partnership/",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 3,
+    "modifiers": 1,
+    "total": 10
+   },
+   "actors": [
+    "Toyota",
+    "Waymo",
+    "Nihon Kotsu",
+    "Go"
+   ],
+   "deal": {
+    "who": "Toyota",
+    "with": "Waymo",
+    "what": "L4 bZ4X fleet programme, Japan 2027 then UK",
+    "relevance": "Customer"
+   },
+   "relationship_flags": [
+    "customer",
+    "partner"
+   ]
+  },
+  {
+   "id": "2026-W46-008",
+   "domain": "fleets",
+   "lenses": [
+    "quality",
+    "sdv"
+   ],
+   "headline": "GM recalls 67,380 Cadillac and Chevy EVs over brake software defect",
+   "summary": "GM recalled 67,380 Cadillac Celestiq, Vistiq and Chevrolet EV models after a slip-calculation software bug caused temporary loss of braking at low speeds during sharp turns over bumps. The defect is remediated via an OTA update already being delivered; dealer software is available at no charge.",
+   "so_what": "OTA-remediated brake-software recall at a named account illustrates the direction NHTSA's recall framework is moving.",
+   "sources": [
+    {
+     "outlet": "Detroit News",
+     "date": "2026-11-04",
+     "url": "https://detroitnews.com/story/business/autos/general-motors/2026/11/04/general-motors-recalls-67k-evs-for-potential-loss-of-braking/92617531007",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "General Motors",
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W46-009",
+   "domain": "fleets",
+   "lenses": [
+    "cyber",
+    "quality",
+    "sdv"
+   ],
+   "headline": "eSync Alliance warns workshop-only cyber fixes leave safety-critical ECUs exposed",
+   "summary": "The eSync Alliance warned that many safety-critical controllers covering braking, steering and driver assistance cannot receive remote OTA security patches and must be fixed via workshop recall, leaving fleets exposed until owners book service. It noted this is precisely the attack surface adversaries target.",
+   "so_what": "Reframes OTA coverage as a cybersecurity exposure metric, not just a feature-delivery capability.",
+   "sources": [
+    {
+     "outlet": "AM Online",
+     "date": "2026-11-05",
+     "url": "https://www.am-online.com/news/workshop-only-cyber-fixes-could-leave-cars-exposed-for-months",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "eSync Alliance"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "partner"
+   ]
+  },
+  {
+   "id": "2026-W46-010",
+   "domain": "energy",
+   "lenses": [
+    "regulatory",
+    "cyber"
+   ],
+   "headline": "UK consults on cybersecurity standard for public EV charge points",
+   "summary": "The UK Department for Transport opened a consultation on a minimum cybersecurity standard for all newly sold or installed public EV chargers in Britain, citing threats including direct attacks and manipulation of charging networks. It runs until 20 December 2026, with a possible second phase for CPOs and EMSPs.",
+   "so_what": "First UK move to formalise charge-point cyber requirements, with CPOs and EMSPs flagged as next scope.",
+   "sources": [
+    {
+     "outlet": "electrive.com",
+     "date": "2026-11-02",
+     "url": "https://www.electrive.com/2026/11/02/uk-reviews-cybersecurity-requirements-for-public-ev-chargers/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "UK Department for Transport"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W46-011",
+   "domain": "energy",
+   "lenses": [
+    "telematics",
+    "data"
+   ],
+   "headline": "Mercedes-Benz exits European charging, sells 47 hubs to Electra",
+   "summary": "From 1 November 2026 Mercedes-Benz transferred all 47 of its European High Power Charging hubs, comprising 374 charge points, to French operator Electra following a July 2026 board decision. Drivers retain access via MB.CHARGE and the Mercedes-Benz app under a preferential-rate deal.",
+   "so_what": "A named OEM withdraws from running its own charging estate while keeping the in-car service layer.",
+   "sources": [
+    {
+     "outlet": "electrive.com",
+     "date": "2026-11-03",
+     "url": "https://www.electrive.com/2026/11/03/electra-takes-over-mercedes-benz-charging-hubs-in-europe/",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 8
+   },
+   "actors": [
+    "Mercedes-Benz",
+    "Electra"
+   ],
+   "deal": {
+    "who": "Mercedes-Benz",
+    "with": "Electra",
+    "what": "Sale of 47 European HPC hubs (374 charge points)",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W46-012",
+   "domain": "energy",
+   "lenses": [
+    "data",
+    "telematics"
+   ],
+   "headline": "GridPoint targets 2 GW of distributed battery storage across 20,000 commercial sites",
+   "summary": "GridPoint, a commercial energy intelligence platform deployed at more than 20,000 US buildings, will add on-site battery storage targeting 2 GW of distributed capacity. The primary use cases are bill optimisation, grid services revenue and resilience on its existing software layer.",
+   "so_what": "Converts a connected building-energy platform into a distributed storage operator at material scale.",
+   "sources": [
+    {
+     "outlet": "GlobeNewswire",
+     "date": "2026-11-05",
+     "url": "https://www.globenewswire.com/news-release/2026/11/05/3396942/0/en/gridpoint-targets-2-gw-of-battery-storage-across-20-000-commercial-sites-as-u-s-power-demand-surges.html",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 7
+   },
+   "actors": [
+    "GridPoint"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W46-013",
+   "domain": "agri",
+   "lenses": [
+    "data",
+    "telematics"
+   ],
+   "headline": "CNH to sell 70% of construction equipment business to Kobelco",
+   "summary": "On 9 November 2026 CNH agreed to sell a 70% controlling interest in its construction equipment operations to Japan's Kobelco Construction Machinery for an estimated $700m–$1bn. CNH Capital retains financing, leasing and insurance services; dealer networks and customer support continue.",
+   "so_what": "A named agri OEM exits majority ownership of its construction line, reshaping off-highway telematics footprints.",
+   "sources": [
+    {
+     "outlet": "The Construction Index",
+     "date": "2026-11-09",
+     "url": "https://theconstructionindex.co.uk/news/view/cnh-to-sell-70-stake-to-kobelco",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "CNH Industrial",
+    "Kobelco Construction Machinery",
+    "Kobe Steel Group"
+   ],
+   "deal": {
+    "who": "CNH Industrial",
+    "with": "Kobelco Construction Machinery",
+    "what": "Sale of 70% stake in CNH construction equipment business",
+    "relevance": "Prospect"
+   },
+   "relationship_flags": [
+    "prospect",
+    "inferred"
+   ]
+  },
+  {
+   "id": "2026-W46-014",
+   "domain": "agri",
+   "lenses": [
+    "regulatory",
+    "cyber"
+   ],
+   "headline": "ISO 24882 cybersecurity standard for agri and construction machinery nears publication",
+   "summary": "ISO 24882, the first international cybersecurity standard for agricultural and construction machinery, has reached Draft International Standard stage, with FDIS expected April–July 2026 and publication within 36 months. It extends ISO/SAE 21434 principles and aligns with the EU Cyber Resilience Act.",
+   "so_what": "Gives off-highway OEMs a dedicated cyber standard distinct from automotive R155 and ISO/SAE 21434.",
+   "sources": [
+    {
+     "outlet": "NRI Secure Technologies blog",
+     "date": "2026-11-01",
+     "url": "https://www.nri-secure.co.jp/blog/iso-24882",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 3,
+    "relevance": 2,
+    "modifiers": 1,
+    "total": 9
+   },
+   "actors": [
+    "ISO",
+    "NRI Secure Technologies",
+    "CEMA"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W46-015",
+   "domain": "agri",
+   "lenses": [
+    "sdv",
+    "connectivity",
+    "telematics"
+   ],
+   "headline": "John Deere launches G5e universal display with feature-on-demand precision tools",
+   "summary": "John Deere introduced the G5e Universal Display, an 8-inch ISOBUS-certified touchscreen providing a central interface for control, documentation and connectivity across mixed equipment. Optional licensed features such as AutoTrac and Section Control activate without hardware replacement, integrating with the John Deere Operations Centre.",
+   "so_what": "Extends a feature-on-demand SDV model to smaller farms via a lower-cost display at a named account.",
+   "sources": [
+    {
+     "outlet": "LECTURA Press",
+     "date": "2026-11-06",
+     "url": "https://lectura.press/en/article/weekly-overview-2-11-6-11-2026/70059",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 3,
+    "modifiers": 0,
+    "total": 8
+   },
+   "actors": [
+    "John Deere"
+   ],
+   "deal": {},
+   "relationship_flags": [
+    "customer"
+   ]
+  },
+  {
+   "id": "2026-W46-016",
+   "domain": "automotive",
+   "lenses": [
+    "quality",
+    "regulatory",
+    "sdv"
+   ],
+   "headline": "NHTSA 'Recalls Next' meeting focuses on OTA remedies and ADS defects",
+   "summary": "NHTSA held its Recalls Next: Technological Innovations and Safety Recalls event on 5 November 2026, bringing together government, industry and researchers on OTA software recall mechanisms, automated driving system defects and heavy-vehicle safety, addressing completion-rate challenges in a software-intensive fleet.",
+   "so_what": "Signals how the US regulator intends to update recall frameworks for software-defined and automated vehicles.",
+   "sources": [
+    {
+     "outlet": "NHTSA.gov",
+     "date": "2026-11-05",
+     "url": "https://www.nhtsa.gov/events/recalls-next-technological-innovations-safety-recalls",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 2,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "NHTSA"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W46-017",
+   "domain": "robotics",
+   "lenses": [
+    "regulatory",
+    "ai"
+   ],
+   "headline": "EU AI Act Article 50 transparency duties enter force for robots and AVs",
+   "summary": "The EU AI Act's Article 50 transparency obligations came into effect on 2 November 2026, requiring deployers of AI systems in humanoid robots and autonomous vehicles marketed in the EU to disclose AI interactions to users. This follows September 2026's Cyber Resilience Act vulnerability-reporting duties.",
+   "so_what": "Adds a further EU compliance layer for robotics and AV makers alongside CRA and type-approval duties.",
+   "sources": [
+    {
+     "outlet": "Roboselect360",
+     "date": "2026-11-02",
+     "url": "https://roboselect360.com/en/ressources/humanoid-robot-regulation-eu.html",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 1,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "European Commission"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W46-018",
+   "domain": "automotive",
+   "lenses": [
+    "telematics",
+    "data",
+    "ai"
+   ],
+   "headline": "Targa Telematics ties OEM data into Jurni Leasing's UK fleet of 31,000",
+   "summary": "Targa Telematics announced a partnership with Jurni Leasing on 2 November 2026 to integrate OEM data from over 45 car brands into Jurni's platform serving 31,000 customers, including around 3,000 school minibuses. The integration uses AI-driven insights for performance, maintenance and efficiency without aftermarket hardware.",
+   "so_what": "Shows a leasing fleet shifting from aftermarket devices to embedded OEM data as its telematics source.",
+   "sources": [
+    {
+     "outlet": "Insurance-Edge.net",
+     "date": "2026-11-02",
+     "url": "https://insurance-edge.net/2026/11/02/targa-telematics-teams-up-with-jurni-leasing",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "Targa Telematics",
+    "Jurni Leasing"
+   ],
+   "deal": {
+    "who": "Targa Telematics",
+    "with": "Jurni Leasing",
+    "what": "OEM data integration for 31,000-customer fleet",
+    "relevance": "Competitive"
+   },
+   "relationship_flags": [
+    "competitor"
+   ]
+  },
+  {
+   "id": "2026-W46-019",
+   "domain": "automotive",
+   "lenses": [
+    "regulatory",
+    "ai",
+    "sdv"
+   ],
+   "headline": "UNECE WP.29 200th session queues ADS and Euro 7 amendments",
+   "summary": "UNECE's World Forum for Harmonization of Vehicle Regulations will hold its 200th session on 17–20 November 2026 in Geneva, with ADS regulatory amendment packages and Euro 7 submissions from June 2026 on the agenda. June's session adopted the first global driverless-ADS framework and companion GTR.",
+   "so_what": "Next step in turning June's driverless-ADS framework into detailed amendments for UNECE contracting parties.",
+   "sources": [
+    {
+     "outlet": "UNECE.org",
+     "date": "2026-11-05",
+     "url": "https://unece.org/transport/vehicle-regulations",
+     "tier": 1
+    }
+   ],
+   "score": {
+    "significance": 2,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": 0,
+    "total": 5
+   },
+   "actors": [
+    "UNECE WP.29"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  },
+  {
+   "id": "2026-W46-020",
+   "domain": "automotive",
+   "lenses": [
+    "cyber",
+    "regulatory"
+   ],
+   "headline": "ISO/SAE 21434 enters formal revision after October 2026 systematic review",
+   "summary": "ISO's systematic review of ISO/SAE 21434:2021 closed on 2 October 2026 with a decision to revise the standard. A working-group co-convener indicated in December 2025 that development would begin in 2026 and take three or more years. The standard underpins UNECE R155 type approval.",
+   "so_what": "Begins a multi-year rewrite of the core automotive cybersecurity engineering standard behind R155.",
+   "sources": [
+    {
+     "outlet": "ArticlesLedge",
+     "date": "2026-11-02",
+     "url": "https://www.articlesladge.com/post/automotive-cybersecurity",
+     "tier": 2
+    }
+   ],
+   "score": {
+    "significance": 3,
+    "novelty": 2,
+    "relevance": 1,
+    "modifiers": -1,
+    "total": 5
+   },
+   "actors": [
+    "ISO",
+    "SAE International"
+   ],
+   "deal": {},
+   "relationship_flags": []
+  }
+ ],
+ "news_window": "2–8 Nov 2026"
+}
